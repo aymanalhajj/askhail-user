@@ -1,0 +1,147 @@
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "0jb-j0-JFT"; */
+"0jb-j0-JFT.text" = "لمكاتب التسويق والإستثمارات العقارية";
+
+/* Class = "UILabel"; text = "SA01234567899876543210"; ObjectID = "4Zz-43-hyL"; */
+"4Zz-43-hyL.text" = "SA01234567899876543210";
+
+/* Class = "UILabel"; text = "حدد احد الخيارات التالية لمتابعة الشراء"; ObjectID = "4cT-tR-79I"; */
+"4cT-tR-79I.text" = "Select one of the following options to continue purchasing.";
+
+/* Class = "UILabel"; text = "دفع الكتروني"; ObjectID = "4cs-Ig-AKG"; */
+"4cs-Ig-AKG.text" = "E-Payment";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "6vI-8i-xIe"; */
+"6vI-8i-xIe.text" = "60";
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "7c4-MB-DOl"; */
+"7c4-MB-DOl.text" = "For Marketing and Real Estate Investments Offices";
+
+/* Class = "UILabel"; text = "حدد احد الخيارات التالية لمتابعة الشراء"; ObjectID = "9kY-5H-z2t"; */
+"9kY-5H-z2t.text" = "Select one of the following options to continue purchasing.";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "ArK-Kb-8at"; */
+"ArK-Kb-8at.text" = "price";
+
+/* Class = "UILabel"; text = "اسم المستفيد"; ObjectID = "BPS-nZ-7ZR"; */
+"BPS-nZ-7ZR.text" = "Beneficiary Name";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "E4m-n3-AKF"; */
+"E4m-n3-AKF.text" = "day";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "EP6-m2-yrS"; */
+"EP6-m2-yrS.text" = "SAR";
+
+/* Class = "UILabel"; text = "تمييز الإعلان"; ObjectID = "GM5-Ft-UIL"; */
+"GM5-Ft-UIL.text" = "Special Ad";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "JFb-sc-Mzr"; */
+"JFb-sc-Mzr.text" = "duration";
+
+/* Class = "UITextField"; placeholder = "مكان الظهور"; ObjectID = "Jsm-JJ-dZo"; */
+"Jsm-JJ-dZo.placeholder" = "Display place";
+
+/* Class = "UIButton"; normalTitle = "التالي"; ObjectID = "KJI-cy-prg"; */
+"KJI-cy-prg.normalTitle" = "next";
+
+/* Class = "UITextField"; placeholder = "البنك المحول منه"; ObjectID = "L0o-ZX-t0Q"; */
+"L0o-ZX-t0Q.placeholder" = "The bank from which it is transferred";
+
+/* Class = "UILabel"; text = "يضمن تمييز إعلانك نسبة نجاح أكبر مع المستخدمين حيث يظهر الإعلان دائماً على رأس الصفحة المعروض بها"; ObjectID = "NDS-kK-sd8"; */
+"NDS-kK-sd8.text" = "Distinguishing your ad guarantees a greater success rate with users, as the ad always appears on the top of the page on which it is displayed.";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "NIZ-Zp-6dU"; */
+"NIZ-Zp-6dU.text" = "الباقة المتكاملة";
+
+/* Class = "UIButton"; normalTitle = "تأكيد التحويل"; ObjectID = "Npu-me-pzn"; */
+"Npu-me-pzn.normalTitle" = "Transfer Confirmation";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "Or2-Ub-5Tf"; */
+"Or2-Ub-5Tf.text" = "60";
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "QKl-RD-cgR"; */
+"QKl-RD-cgR.text" = "لمكاتب التسويق والإستثمارات العقارية";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "QvK-gP-JGa"; */
+"QvK-gP-JGa.text" = "duration";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "TJV-i7-JVE"; */
+"TJV-i7-JVE.text" = "500";
+
+/* Class = "UILabel"; text = "987654321123456789"; ObjectID = "TRc-d9-eD0"; */
+"TRc-d9-eD0.text" = "987654321123456789";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "TYe-DB-CbU"; */
+"TYe-DB-CbU.text" = "500";
+
+/* Class = "UILabel"; text = "اختر أين تريد أن يظهر إعلانك"; ObjectID = "V60-aM-CoA"; */
+"V60-aM-CoA.text" = "Choose where you want your ad to appear.";
+
+/* Class = "UILabel"; text = "دفع تكلفة الباقة"; ObjectID = "XHQ-cg-c0g"; */
+"XHQ-cg-c0g.text" = "Pay the package cost";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "XNf-XG-2fW"; */
+"XNf-XG-2fW.text" = "day";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "YH6-Rs-jr8"; */
+"YH6-Rs-jr8.text" = "الباقة المتكاملة";
+
+/* Class = "UILabel"; text = "تحويل بنكي"; ObjectID = "ZOA-Ag-Qe4"; */
+"ZOA-Ag-Qe4.text" = "Bank transfer";
+
+/* Class = "UILabel"; text = "المستفيد"; ObjectID = "aFg-IZ-R0L"; */
+"aFg-IZ-R0L.text" = "beneficiary";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "bbe-VO-vSn"; */
+"bbe-VO-vSn.text" = "price";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "bx9-Ky-fLH"; */
+"bx9-Ky-fLH.text" = "price";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "czb-9m-z47"; */
+"czb-9m-z47.text" = "duration";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "dLz-y3-mts"; */
+"dLz-y3-mts.text" = "SAR";
+
+/* Class = "UILabel"; text = "دفع تكلفة الباقة"; ObjectID = "dNE-vv-9fM"; */
+"dNE-vv-9fM.text" = "Pay the package cost";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "kYs-XV-h05"; */
+"kYs-XV-h05.text" = "SAR";
+
+/* Class = "UILabel"; text = "الأيبان"; ObjectID = "lLi-B0-DnZ"; */
+"lLi-B0-DnZ.text" = "IBAN";
+
+/* Class = "UITextField"; placeholder = "رقم الحساب المحول منه"; ObjectID = "qCj-Cz-4Wf"; */
+"qCj-Cz-4Wf.placeholder" = "The account number from which he is transferred";
+
+/* Class = "UILabel"; text = "دفع تكلفة الباقة"; ObjectID = "rFS-FT-Awr"; */
+"rFS-FT-Awr.text" = "Pay the package cost";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "sPq-RV-RaZ"; */
+"sPq-RV-RaZ.text" = "500";
+
+/* Class = "UILabel"; text = "تمييز الإعلان"; ObjectID = "sgk-Ej-ByQ"; */
+"sgk-Ej-ByQ.text" = "Special Ad";
+
+/* Class = "UITextField"; placeholder = "إسم المحول"; ObjectID = "skw-zH-kG4"; */
+"skw-zH-kG4.placeholder" = "Transfer Name";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "ubk-bp-gdl"; */
+"ubk-bp-gdl.text" = "day";
+
+/* Class = "UILabel"; text = "رقم الحساب"; ObjectID = "uuI-Hh-Gqd"; */
+"uuI-Hh-Gqd.text" = "account number";
+
+/* Class = "UILabel"; text = "تمييز الإعلان"; ObjectID = "vcj-db-6vD"; */
+"vcj-db-6vD.text" = "Special Ad";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "vdE-pf-wMa"; */
+"vdE-pf-wMa.text" = "60";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "xGC-oK-5Br"; */
+"xGC-oK-5Br.text" = "الباقة المتكاملة";
+
+/* Class = "UILabel"; text = "أدخل بيانات التحويل لإتمام الإشتراك"; ObjectID = "ymE-Sn-HbW"; */
+"ymE-Sn-HbW.text" = "Enter the transfer information to complete the subscription.";

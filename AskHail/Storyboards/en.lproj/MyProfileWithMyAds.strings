@@ -1,0 +1,276 @@
+
+/* Class = "UILabel"; text = "البريد"; ObjectID = "0DF-Pm-1Y3"; */
+"0DF-Pm-1Y3.text" = "E-Mail";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "0MT-GU-rm7"; */
+"0MT-GU-rm7.normalTitle" = "Save modifications";
+
+/* Class = "UILabel"; text = "حذف"; ObjectID = "0pw-83-maR"; */
+"0pw-83-maR.text" = "delete";
+
+/* Class = "UILabel"; text = "طلباتي"; ObjectID = "1on-f1-diT"; */
+"1on-f1-diT.text" = "My order";
+
+/* Class = "UILabel"; text = "لم تقم بنشر أي سؤال حتى الآن اضغط علامة + لإضافة سؤال جديد"; ObjectID = "1vw-cU-plg"; */
+"1vw-cU-plg.text" = "You have not posted any questions yet. Click the + sign to add a new question.";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "5Sy-0W-eCp"; */
+"5Sy-0W-eCp.text" = "Integrated Package";
+
+/* Class = "UILabel"; text = "رقم الجوال"; ObjectID = "5cq-TO-Ui2"; */
+"5cq-TO-Ui2.text" = "Mobile number";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6ha-vm-8JO"; */
+"6ha-vm-8JO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "تاريخ التجديد"; ObjectID = "71j-Dc-AaA"; */
+"71j-Dc-AaA.text" = "Renewal date";
+
+/* Class = "UILabel"; text = "تفاصيل الباقة"; ObjectID = "79K-qw-p9Y"; */
+"79K-qw-p9Y.text" = "Package Details";
+
+/* Class = "UILabel"; text = "بياناتي"; ObjectID = "7HJ-gF-Orj"; */
+"7HJ-gF-Orj.text" = "My Info";
+
+/* Class = "UITextField"; placeholder = "كلمة المرور الجديدة"; ObjectID = "7NB-Zc-lio"; */
+"7NB-Zc-lio.placeholder" = "New Password";
+
+/* Class = "UIButton"; normalTitle = "انطلق تجديد الباقة"; ObjectID = "7b2-xE-2Zg"; */
+"7b2-xE-2Zg.normalTitle" = "Package renewal started";
+
+/* Class = "UILabel"; text = "ستنتهي صلاحية الباقة قريباً"; ObjectID = "7gC-jt-Aai"; */
+"7gC-jt-Aai.text" = "The package will expire soon";
+
+/* Class = "UILabel"; text = "احمد رجب"; ObjectID = "8FG-QU-WYm"; */
+"8FG-QU-WYm.text" = "احمد رجب";
+
+/* Class = "UITextField"; placeholder = "كلمة المرور الحالية"; ObjectID = "AVl-1e-ZCB"; */
+"AVl-1e-ZCB.placeholder" = "Current Password";
+
+/* Class = "UIButton"; normalTitle = "تفعيل الكل"; ObjectID = "B01-7c-gDE"; */
+"B01-7c-gDE.normalTitle" = "Activate all";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "BdI-vk-wKH"; */
+"BdI-vk-wKH.text" = "الباقة المتكاملة";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "CuV-gO-fvr"; */
+"CuV-gO-fvr.text" = "day";
+
+/* Class = "UILabel"; text = "لم يتم الاشتراك فى اى باقة"; ObjectID = "Eii-un-roZ"; */
+"Eii-un-roZ.text" = "No package has been subscribed";
+
+/* Class = "UILabel"; text = "باقة الحساب"; ObjectID = "F7A-u3-jBa"; */
+"F7A-u3-jBa.text" = "Account Package";
+
+/* Class = "UILabel"; text = "تاريخ الشراء"; ObjectID = "HUZ-8b-vei"; */
+"HUZ-8b-vei.text" = "The date of purchase";
+
+/* Class = "UILabel"; text = "لم تقم بحفظ أي إعلانات"; ObjectID = "Ix7-Mk-9qh"; */
+"Ix7-Mk-9qh.text" = "You have not saved any ads";
+
+/* Class = "UILabel"; text = "تراجع"; ObjectID = "JJ3-Tn-SXJ"; */
+"JJ3-Tn-SXJ.text" = "Retreat";
+
+/* Class = "UILabel"; text = "تعديل البيانات"; ObjectID = "LTh-DK-X9U"; */
+"LTh-DK-X9U.text" = "Modify data";
+
+/* Class = "UILabel"; text = "إعلانات"; ObjectID = "Ma3-4f-uKh"; */
+"Ma3-4f-uKh.text" = "Ads";
+
+/* Class = "UILabel"; text = "تاريخ الشراء"; ObjectID = "NEy-B8-lGP"; */
+"NEy-B8-lGP.text" = "The date of purchase";
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "NNy-4U-XdK"; */
+"NNy-4U-XdK.text" = "Marketing and real estate investment offices";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "NOf-rI-60M"; */
+"NOf-rI-60M.text" = "500";
+
+/* Class = "UILabel"; text = "الأيام المتبقية"; ObjectID = "Ndv-e1-dir"; */
+"Ndv-e1-dir.text" = "remaining days";
+
+/* Class = "UILabel"; text = "إعلانات"; ObjectID = "NhU-IS-Som"; */
+"NhU-IS-Som.text" = "Ads";
+
+/* Class = "UILabel"; text = "إعلانات"; ObjectID = "Ogr-vg-cR6"; */
+"Ogr-vg-cR6.text" = "Ads";
+
+/* Class = "UILabel"; text = "الإعلانات"; ObjectID = "Oj6-fw-Neo"; */
+"Oj6-fw-Neo.text" = "Ads";
+
+/* Class = "UILabel"; text = "قم بالتجديد حتى لا تتعطل إعلاناتك"; ObjectID = "OkI-l9-MG1"; */
+"OkI-l9-MG1.text" = "Renew so your ads don't get stuck.";
+
+/* Class = "UILabel"; text = "تميز الإعلان"; ObjectID = "QIk-py-65p"; */
+"QIk-py-65p.text" = "Special";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "Qdw-nf-8kT"; */
+"Qdw-nf-8kT.text" = "SAR";
+
+/* Class = "UIButton"; normalTitle = "تعديل البيانات"; ObjectID = "Qqh-dI-Edm"; */
+"Qqh-dI-Edm.normalTitle" = "Modify data";
+
+/* Class = "UILabel"; text = "الاسم"; ObjectID = "R2O-Qb-TBX"; */
+"R2O-Qb-TBX.text" = "name";
+
+/* Class = "UILabel"; text = "بيانات الحساب"; ObjectID = "RA8-H0-qKh"; */
+"RA8-H0-qKh.text" = "Account details";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "Rmv-RV-Pej"; */
+"Rmv-RV-Pej.text" = "Price";
+
+/* Class = "UILabel"; text = "إعلاناتي"; ObjectID = "SH2-eb-X66"; */
+"SH2-eb-X66.text" = "My Ads";
+
+/* Class = "UILabel"; text = "باقاتي"; ObjectID = "UX5-nR-l5C"; */
+"UX5-nR-l5C.text" = "My bouquets";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "Uxg-lg-2C7"; */
+"Uxg-lg-2C7.text" = "My package";
+
+/* Class = "UIButton"; normalTitle = "عرض إلاعلانات المعطل"; ObjectID = "VSS-cw-xVw"; */
+"VSS-cw-xVw.normalTitle" = "Display ads disabled";
+
+/* Class = "UILabel"; text = "الأيام المتبقية"; ObjectID = "Wab-ki-SID"; */
+"Wab-ki-SID.text" = "remaining days";
+
+/* Class = "UILabel"; text = "اعلاناتي"; ObjectID = "Why-xO-mCx"; */
+"Why-xO-mCx.text" = "My ads";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "X8c-xr-V4j"; */
+"X8c-xr-V4j.text" = "Duration";
+
+/* Class = "UILabel"; text = "الإعلانات المستخدمة"; ObjectID = "XHe-zN-IzD"; */
+"XHe-zN-IzD.text" = "Used ads";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "XI1-Zy-Amn"; */
+"XI1-Zy-Amn.text" = "SAR";
+
+/* Class = "UILabel"; text = "باقاتي"; ObjectID = "ZQW-oy-lll"; */
+"ZQW-oy-lll.text" = "My package";
+
+/* Class = "UIButton"; normalTitle = "تسجيل الخروج"; ObjectID = "Zh6-a8-gmc"; */
+"Zh6-a8-gmc.normalTitle" = "sign out";
+
+/* Class = "UILabel"; text = "تأكيد التحويل البنكي"; ObjectID = "aFc-kP-th6"; */
+"aFc-kP-th6.text" = "Confirm Bank Transfer";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "aM2-a0-qA8"; */
+"aM2-a0-qA8.text" = "+966";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cnz-DP-Moj"; */
+"cnz-DP-Moj.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "كلمة المرور"; ObjectID = "dct-X0-eny"; */
+"dct-X0-eny.placeholder" = "password";
+
+/* Class = "UILabel"; text = "حذف الإعلان"; ObjectID = "ePj-td-AVx"; */
+"ePj-td-AVx.text" = "Delete the ad";
+
+/* Class = "UILabel"; text = "تراجع"; ObjectID = "eem-DC-bo4"; */
+"eem-DC-bo4.text" = "Cancel";
+
+/* Class = "UILabel"; text = "564123957"; ObjectID = "fCp-2T-Shk"; */
+"fCp-2T-Shk.text" = "564123957";
+
+/* Class = "UILabel"; text = "حسابي"; ObjectID = "feT-3w-WIZ"; */
+"feT-3w-WIZ.text" = "My Accout";
+
+/* Class = "UILabel"; text = "بياناتي"; ObjectID = "gla-A0-aIs"; */
+"gla-A0-aIs.text" = "My Info";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "gq1-Nu-TxT"; */
+"gq1-Nu-TxT.text" = "Day";
+
+/* Class = "UILabel"; text = "طلباتي"; ObjectID = "h72-D3-Vv0"; */
+"h72-D3-Vv0.text" = "My order";
+
+/* Class = "UILabel"; text = "إعلانات محفوظة"; ObjectID = "hzn-PF-ivg"; */
+"hzn-PF-ivg.text" = "Saved ads";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "ivL-q0-lwc"; */
+"ivL-q0-lwc.text" = "Duration";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "jZm-LM-ag9"; */
+"jZm-LM-ag9.text" = "60";
+
+/* Class = "UIButton"; normalTitle = "تعديل الباقة"; ObjectID = "k1w-cK-myM"; */
+"k1w-cK-myM.normalTitle" = "Edit package";
+
+/* Class = "UILabel"; text = "أيام"; ObjectID = "kDW-ae-fx3"; */
+"kDW-ae-fx3.text" = "days";
+
+/* Class = "UITextField"; placeholder = "    الاسم بالكامل"; ObjectID = "m1O-ZK-U91"; */
+"m1O-ZK-U91.placeholder" = "    full name";
+
+/* Class = "UILabel"; text = "باقة الحساب"; ObjectID = "mDr-BG-Aa3"; */
+"mDr-BG-Aa3.text" = "Account Package";
+
+/* Class = "UILabel"; text = "تاريخ التجديد"; ObjectID = "mfp-HM-YWK"; */
+"mfp-HM-YWK.text" = "Renewal date";
+
+/* Class = "UILabel"; text = "أسئلتي"; ObjectID = "nyI-L7-c9W"; */
+"nyI-L7-c9W.text" = "My questions";
+
+/* Class = "UILabel"; text = "عملية التحويل البنكي قيد المراجعة الان"; ObjectID = "oBT-ix-e72"; */
+"oBT-ix-e72.text" = "The bank transfer process is under review now.";
+
+/* Class = "UILabel"; text = "تعديل كلمة المرور"; ObjectID = "oDP-s0-0gN"; */
+"oDP-s0-0gN.text" = "Password Modify";
+
+/* Class = "UILabel"; text = "إعلانات الباقة"; ObjectID = "oR3-BB-DIH"; */
+"oR3-BB-DIH.text" = "Package ads";
+
+/* Class = "UILabel"; text = "حذف"; ObjectID = "pLe-6H-jD7"; */
+"pLe-6H-jD7.text" = "delete";
+
+/* Class = "UILabel"; text = "أيام"; ObjectID = "pnA-Ps-Yxw"; */
+"pnA-Ps-Yxw.text" = "days";
+
+/* Class = "UILabel"; text = "إعلانات معطلة"; ObjectID = "pqK-55-zgS"; */
+"pqK-55-zgS.text" = "Disabled ads";
+
+/* Class = "UILabel"; text = "لم تقم بنشر أي إعلانات إضغط على + لإضافة إعلان جديد"; ObjectID = "qxy-zb-t1q"; */
+"qxy-zb-t1q.text" = "You have not posted any ads. Click on + to add a new one.";
+
+/* Class = "UILabel"; text = "ahmad96ragab@gmail.com"; ObjectID = "rLK-vC-xxW"; */
+"rLK-vC-xxW.text" = "ahmad96ragab@gmail.com";
+
+/* Class = "UILabel"; text = "محفوظاتي"; ObjectID = "rVd-AE-o6U"; */
+"rVd-AE-o6U.text" = "My Favorite";
+
+/* Class = "UILabel"; text = "60"; ObjectID = "s4i-oM-hmj"; */
+"s4i-oM-hmj.text" = "60";
+
+/* Class = "UITextField"; placeholder = "      رقم الجوال"; ObjectID = "shg-15-LLg"; */
+"shg-15-LLg.placeholder" = "      Mobile number";
+
+/* Class = "UIButton"; normalTitle = "تعديل كلمة المرور"; ObjectID = "tIp-2F-3D2"; */
+"tIp-2F-3D2.normalTitle" = "Password Modify";
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "trk-Q5-Bl1"; */
+"trk-Q5-Bl1.text" = "For Marketing and Real Estate Investments Offices";
+
+/* Class = "UILabel"; text = "حذف الطلب"; ObjectID = "vfU-yc-Kmj"; */
+"vfU-yc-Kmj.text" = "Delete order";
+
+/* Class = "UILabel"; text = "أسئلتي"; ObjectID = "vs2-Wz-K14"; */
+"vs2-Wz-K14.text" = "My questions";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "w2H-9s-kgg"; */
+"w2H-9s-kgg.normalTitle" = "Save modifications";
+
+/* Class = "UIButton"; normalTitle = "ازالة الكل"; ObjectID = "wAA-gm-uis"; */
+"wAA-gm-uis.normalTitle" = "Remove all";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "wiN-Z1-ETv"; */
+"wiN-Z1-ETv.text" = "25";
+
+/* Class = "UITextField"; placeholder = "    البريد الإلكتروني"; ObjectID = "xi1-R5-hmA"; */
+"xi1-R5-hmA.placeholder" = "    E-mail";
+
+/* Class = "UILabel"; text = "لا توجد طلبات جديدة في الوقت الحالي اضفط أيقونة + لإضافة طلب جديد"; ObjectID = "yx0-hj-WEf"; */
+"yx0-hj-WEf.text" = "There are no new requests at the moment. Click the icon + add new order.";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "zbS-o0-Eib"; */
+"zbS-o0-Eib.text" = "500";

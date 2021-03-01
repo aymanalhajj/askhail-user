@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="332" id="KGk-i7-Jjw" customClass="JobCell" customModule="Markati" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عنوان الوظيفة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buc-gz-9nC">
+                        <rect key="frame" x="16" y="8" width="288" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Va2-il-kY3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="16"/>
+                        <color key="textColor" red="0.0078431372549019607" green="0.29019607843137252" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-aR-NiA">
+                        <rect key="frame" x="16" y="40" width="288" height="276"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="VAe-qF-Cif"/>
+                        </constraints>
+                        <string key="text">وصف نصّي قصير عن الوظيفة ومهامهاوصف نصّي قصير عن الوظيفة ومهامهاوصف نصّي قصير عن الوظيفة ومهامهاوصف نصّي قصير عن الوظيفة ومهامهاوصف نصّي قصير عن الوظيفة ومهامهاوصف نصّي قصير عن الوظيفة ومهامها</string>
+                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
+                        <color key="textColor" red="0.0078431372550000003" green="0.2901960784" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="buc-gz-9nC" secondAttribute="trailing" constant="16" id="1GI-hD-x6L"/>
+                    <constraint firstAttribute="bottom" secondItem="ZMy-aR-NiA" secondAttribute="bottom" constant="16" id="DPu-0x-3pM"/>
+                    <constraint firstItem="ZMy-aR-NiA" firstAttribute="leading" secondItem="buc-gz-9nC" secondAttribute="leading" id="btt-rb-Wek"/>
+                    <constraint firstItem="ZMy-aR-NiA" firstAttribute="trailing" secondItem="buc-gz-9nC" secondAttribute="trailing" id="s9J-jd-NqW"/>
+                    <constraint firstItem="ZMy-aR-NiA" firstAttribute="top" secondItem="buc-gz-9nC" secondAttribute="bottom" constant="8" id="w4x-Oh-WUR"/>
+                    <constraint firstItem="buc-gz-9nC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="y3g-YC-gsl"/>
+                    <constraint firstItem="buc-gz-9nC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yiB-ny-hOj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="JobDescription" destination="ZMy-aR-NiA" id="rNv-gn-cbG"/>
+                <outlet property="JobTitle" destination="buc-gz-9nC" id="I7x-lT-ySK"/>
+            </connections>
+            <point key="canvasLocation" x="334.78260869565219" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

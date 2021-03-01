@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo DetialsVC-->
+        <scene sceneID="uS5-ab-3m1">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetialsVC" id="ZUM-uM-WcX" customClass="PhotoDetialsVC" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0y2-e0-EBf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eo5-Zk-1oZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3id-Ne-B2Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkn-Tt-p6x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="ZUM-uM-WcX" eventType="touchUpInside" id="7ca-eW-Md8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3id-Ne-B2Z" firstAttribute="centerY" secondItem="eo5-Zk-1oZ" secondAttribute="centerY" id="5Ou-gj-uz3"/>
+                                    <constraint firstItem="3id-Ne-B2Z" firstAttribute="top" secondItem="eo5-Zk-1oZ" secondAttribute="top" id="91t-J5-N6w"/>
+                                    <constraint firstItem="bkn-Tt-p6x" firstAttribute="top" secondItem="eo5-Zk-1oZ" secondAttribute="top" id="Gj4-55-lgy"/>
+                                    <constraint firstItem="3id-Ne-B2Z" firstAttribute="leading" secondItem="eo5-Zk-1oZ" secondAttribute="leading" id="NqW-dg-oav"/>
+                                    <constraint firstItem="bkn-Tt-p6x" firstAttribute="leading" secondItem="eo5-Zk-1oZ" secondAttribute="leading" id="YER-LG-9aa"/>
+                                    <constraint firstAttribute="bottom" secondItem="bkn-Tt-p6x" secondAttribute="bottom" id="aoF-Rn-J60"/>
+                                    <constraint firstAttribute="bottom" secondItem="3id-Ne-B2Z" secondAttribute="bottom" id="bWV-fT-DLh"/>
+                                    <constraint firstAttribute="trailing" secondItem="3id-Ne-B2Z" secondAttribute="trailing" id="dS5-Sd-L9H"/>
+                                    <constraint firstItem="3id-Ne-B2Z" firstAttribute="centerX" secondItem="eo5-Zk-1oZ" secondAttribute="centerX" id="eBN-I4-RYd"/>
+                                    <constraint firstAttribute="trailing" secondItem="bkn-Tt-p6x" secondAttribute="trailing" id="jUT-31-f5o"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="ZUM-uM-WcX" id="LAl-N6-wsi"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-0p-f8t">
+                                <rect key="frame" x="354" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="TTF-J9-aW2"/>
+                                    <constraint firstAttribute="height" constant="40" id="ehL-g2-qw1"/>
+                                </constraints>
+                                <state key="normal" image="closeIcon">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="ZUM-uM-WcX" eventType="touchUpInside" id="EM3-Ta-8Zu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yIl-cW-66r"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yIl-cW-66r" firstAttribute="bottom" secondItem="eo5-Zk-1oZ" secondAttribute="bottom" id="0H0-SQ-n6v"/>
+                            <constraint firstItem="jfE-0p-f8t" firstAttribute="top" secondItem="yIl-cW-66r" secondAttribute="top" constant="20" id="7ry-ai-Viq"/>
+                            <constraint firstItem="eo5-Zk-1oZ" firstAttribute="top" secondItem="0y2-e0-EBf" secondAttribute="top" id="IU7-KN-HFI"/>
+                            <constraint firstItem="yIl-cW-66r" firstAttribute="trailing" secondItem="jfE-0p-f8t" secondAttribute="trailing" constant="20" id="nlm-3d-a28"/>
+                            <constraint firstItem="eo5-Zk-1oZ" firstAttribute="leading" secondItem="yIl-cW-66r" secondAttribute="leading" id="r4U-lt-eyL"/>
+                            <constraint firstItem="yIl-cW-66r" firstAttribute="trailing" secondItem="eo5-Zk-1oZ" secondAttribute="trailing" id="zuy-rF-Lr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgPhoto" destination="3id-Ne-B2Z" id="aRe-Kd-ZE3"/>
+                        <outlet property="scrollView" destination="eo5-Zk-1oZ" id="UoN-hD-sfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHH-0l-ofB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="302"/>
+        </scene>
+        <!--Photo DetialsVC1-->
+        <scene sceneID="3aU-qD-gCg">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetialsVC1" id="JOu-DY-Toy" customClass="PhotoDetialsVC1" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CAj-zY-7hd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSy-h1-sCG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="JOu-DY-Toy" eventType="touchUpInside" id="xpy-V2-oe2"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZC-zH-XG7">
+                                <rect key="frame" x="0.0" y="260.5" width="414" height="375"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-lI-gm9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kuC-lI-gm9" secondAttribute="height" multiplier="1:1" id="Uql-FL-O00"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kuC-lI-gm9" secondAttribute="trailing" id="Plm-xZ-2Tl"/>
+                                    <constraint firstAttribute="bottom" secondItem="kuC-lI-gm9" secondAttribute="bottom" id="Xd0-LD-tul"/>
+                                    <constraint firstItem="kuC-lI-gm9" firstAttribute="centerY" secondItem="tZC-zH-XG7" secondAttribute="centerY" id="a0I-Ne-oDO"/>
+                                    <constraint firstItem="kuC-lI-gm9" firstAttribute="top" secondItem="tZC-zH-XG7" secondAttribute="top" id="jJS-65-CuK"/>
+                                    <constraint firstItem="kuC-lI-gm9" firstAttribute="leading" secondItem="tZC-zH-XG7" secondAttribute="leading" id="jdG-8u-kAb"/>
+                                    <constraint firstItem="kuC-lI-gm9" firstAttribute="centerX" secondItem="tZC-zH-XG7" secondAttribute="centerX" id="oQU-V2-RgR"/>
+                                    <constraint firstAttribute="height" constant="375" id="qOr-zj-mDD"/>
+                                    <constraint firstAttribute="width" secondItem="tZC-zH-XG7" secondAttribute="height" multiplier="1:1" id="wo6-XS-VQn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="JOu-DY-Toy" id="LH2-6X-hl2"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNM-Ib-06J">
+                                <rect key="frame" x="354" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7bk-gn-NbY"/>
+                                    <constraint firstAttribute="width" constant="40" id="wUF-ma-GMm"/>
+                                </constraints>
+                                <state key="normal" image="closeIcon">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="JOu-DY-Toy" eventType="touchUpInside" id="xcB-wo-ld5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bHh-fJ-Ofe"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.85852581520000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bHh-fJ-Ofe" firstAttribute="trailing" secondItem="nNM-Ib-06J" secondAttribute="trailing" constant="20" id="0uH-ez-Wld"/>
+                            <constraint firstItem="kuC-lI-gm9" firstAttribute="leading" secondItem="bHh-fJ-Ofe" secondAttribute="leading" id="BWd-nB-0rn"/>
+                            <constraint firstItem="NSy-h1-sCG" firstAttribute="top" secondItem="bHh-fJ-Ofe" secondAttribute="top" id="XaL-eB-zUu"/>
+                            <constraint firstItem="NSy-h1-sCG" firstAttribute="leading" secondItem="bHh-fJ-Ofe" secondAttribute="leading" id="ZFr-Ji-x1K"/>
+                            <constraint firstItem="bHh-fJ-Ofe" firstAttribute="trailing" secondItem="kuC-lI-gm9" secondAttribute="trailing" id="ZKb-uM-bAy"/>
+                            <constraint firstItem="nNM-Ib-06J" firstAttribute="top" secondItem="bHh-fJ-Ofe" secondAttribute="top" constant="20" id="cnr-JV-5vU"/>
+                            <constraint firstItem="bHh-fJ-Ofe" firstAttribute="bottom" secondItem="NSy-h1-sCG" secondAttribute="bottom" id="fIW-es-fQL"/>
+                            <constraint firstItem="tZC-zH-XG7" firstAttribute="centerY" secondItem="CAj-zY-7hd" secondAttribute="centerY" id="pPd-7e-q2q"/>
+                            <constraint firstItem="bHh-fJ-Ofe" firstAttribute="trailing" secondItem="tZC-zH-XG7" secondAttribute="trailing" id="q4Y-ez-cHY"/>
+                            <constraint firstItem="bHh-fJ-Ofe" firstAttribute="trailing" secondItem="NSy-h1-sCG" secondAttribute="trailing" id="qLY-sl-k3c"/>
+                            <constraint firstItem="tZC-zH-XG7" firstAttribute="centerX" secondItem="CAj-zY-7hd" secondAttribute="centerX" id="qa6-RF-zeX"/>
+                            <constraint firstItem="tZC-zH-XG7" firstAttribute="leading" secondItem="bHh-fJ-Ofe" secondAttribute="leading" id="rJX-eS-uXZ"/>
+                            <constraint firstItem="tZC-zH-XG7" firstAttribute="centerY" secondItem="CAj-zY-7hd" secondAttribute="centerY" id="wIp-m7-Gbw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgPhoto" destination="kuC-lI-gm9" id="CdL-Ei-paZ"/>
+                        <outlet property="scrollView" destination="tZC-zH-XG7" id="edn-Nf-681"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A29-e8-bSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="closeIcon" width="120" height="120"/>
+    </resources>
+</document>

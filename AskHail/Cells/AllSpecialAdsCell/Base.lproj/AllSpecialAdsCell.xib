@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b1i-UE-k7s" customClass="AllSpecialAdsCell" customModule="Markati" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starAdsImage" translatesAutoresizingMaskIntoConstraints="NO" id="uhB-eW-JzK">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+                    </imageView>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-Ka-7jH">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.2901960784" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="271-p1-Gwv">
+                        <rect key="frame" x="24" y="75" width="279" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عرض كل الاعلانات المميزة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-le-RVF">
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="50"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22352941176470587" green="0.80392156862745101" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CHs-le-RVF" firstAttribute="top" secondItem="271-p1-Gwv" secondAttribute="top" id="LIM-pg-v9o"/>
+                            <constraint firstItem="CHs-le-RVF" firstAttribute="leading" secondItem="271-p1-Gwv" secondAttribute="leading" id="Tl4-rr-xyY"/>
+                            <constraint firstAttribute="bottom" secondItem="CHs-le-RVF" secondAttribute="bottom" id="U5H-Sq-Nds"/>
+                            <constraint firstAttribute="height" constant="50" id="gNR-at-6BP"/>
+                            <constraint firstAttribute="trailing" secondItem="CHs-le-RVF" secondAttribute="trailing" id="mtY-4j-J2s"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ret-0y-JUv"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="271-p1-Gwv" secondAttribute="trailing" constant="24" id="2Yb-ru-kiV"/>
+                <constraint firstItem="uhB-eW-JzK" firstAttribute="top" secondItem="b1i-UE-k7s" secondAttribute="top" id="BBb-tF-dxG"/>
+                <constraint firstItem="271-p1-Gwv" firstAttribute="leading" secondItem="b1i-UE-k7s" secondAttribute="leading" constant="24" id="BC0-lr-crq"/>
+                <constraint firstItem="271-p1-Gwv" firstAttribute="centerY" secondItem="b1i-UE-k7s" secondAttribute="centerY" id="BeW-OU-k8j"/>
+                <constraint firstAttribute="trailing" secondItem="uhB-eW-JzK" secondAttribute="trailing" id="Fys-Lz-3zL"/>
+                <constraint firstAttribute="bottom" secondItem="mSc-Ka-7jH" secondAttribute="bottom" id="V1G-6p-rm8"/>
+                <constraint firstItem="mSc-Ka-7jH" firstAttribute="leading" secondItem="b1i-UE-k7s" secondAttribute="leading" id="WKu-ft-uQW"/>
+                <constraint firstAttribute="bottom" secondItem="uhB-eW-JzK" secondAttribute="bottom" id="b0D-WP-jqN"/>
+                <constraint firstItem="271-p1-Gwv" firstAttribute="centerX" secondItem="b1i-UE-k7s" secondAttribute="centerX" id="cjd-Dr-ySO"/>
+                <constraint firstItem="uhB-eW-JzK" firstAttribute="leading" secondItem="b1i-UE-k7s" secondAttribute="leading" id="kn1-Ez-6zm"/>
+                <constraint firstItem="mSc-Ka-7jH" firstAttribute="top" secondItem="b1i-UE-k7s" secondAttribute="top" id="nWg-aK-mdn"/>
+                <constraint firstAttribute="trailing" secondItem="mSc-Ka-7jH" secondAttribute="trailing" id="tcF-SV-NUF"/>
+            </constraints>
+            <size key="customSize" width="360" height="179"/>
+            <connections>
+                <outlet property="bgView" destination="mSc-Ka-7jH" id="gO8-Ze-p5M"/>
+            </connections>
+            <point key="canvasLocation" x="206.52173913043481" y="104.46428571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="starAdsImage" width="327" height="200"/>
+    </resources>
+</document>

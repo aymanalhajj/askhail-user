@@ -1,0 +1,84 @@
+
+/* Class = "UILabel"; text = "تعديل طرق التواصل"; ObjectID = "1EC-LX-vQe"; */
+"1EC-LX-vQe.text" = "Modify contact way";
+
+/* Class = "UILabel"; text = "تعديل أقسام الطلب"; ObjectID = "2WW-fM-B3u"; */
+"2WW-fM-B3u.text" = "Modify order sections";
+
+/* Class = "UIButton"; normalTitle = "تأكيد المواصفات"; ObjectID = "2oN-sN-jxc"; */
+"2oN-sN-jxc.normalTitle" = "Specification Confirmation";
+
+/* Class = "UIButton"; normalTitle = "+ رقم آخر "; ObjectID = "5W3-J5-ImI"; */
+"5W3-J5-ImI.normalTitle" = "+ Another number";
+
+/* Class = "UILabel"; text = "طرق التواصل"; ObjectID = "6jn-mw-rLY"; */
+"6jn-mw-rLY.text" = "Methods of communication";
+
+/* Class = "UITextField"; placeholder = "الجهة"; ObjectID = "87m-4y-pvX"; */
+"87m-4y-pvX.placeholder" = "Side";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9Nm-DV-dZc"; */
+"9Nm-DV-dZc.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "AuE-U1-52r"; */
+"AuE-U1-52r.normalTitle" = "Save modifications";
+
+/* Class = "UILabel"; text = "التواصل داخل التطبيق إجباري"; ObjectID = "BZJ-9x-Gwn"; */
+"BZJ-9x-Gwn.text" = "Communication within the application is mandatory";
+
+/* Class = "UITextField"; placeholder = "الحي"; ObjectID = "EH8-iZ-agQ"; */
+"EH8-iZ-agQ.placeholder" = "region";
+
+/* Class = "UITextField"; placeholder = "عنوان الاعلان"; ObjectID = "EiR-FE-aiP"; */
+"EiR-FE-aiP.placeholder" = "Ad title";
+
+/* Class = "UILabel"; text = "الأقسم"; ObjectID = "NA0-sY-4Dx"; */
+"NA0-sY-4Dx.text" = "sections";
+
+/* Class = "UILabel"; text = "+966123456789"; ObjectID = "QBN-tb-f3T"; */
+"QBN-tb-f3T.text" = "+966123456789";
+
+/* Class = "UILabel"; text = "تعديل تفاصيل الطلب"; ObjectID = "RBS-oB-TVm"; */
+"RBS-oB-TVm.text" = "Modify order details";
+
+/* Class = "UILabel"; text = "حذف كل الإشعارات"; ObjectID = "SIw-mu-XZG"; */
+"SIw-mu-XZG.text" = "Delete all notifications";
+
+/* Class = "UILabel"; text = "عدّل طرق التواصل المتاحة"; ObjectID = "SYd-Ne-YSJ"; */
+"SYd-Ne-YSJ.text" = "Modify available contact way";
+
+/* Class = "UILabel"; text = "أدخل تفاصيل العقار"; ObjectID = "Suf-7i-o2i"; */
+"Suf-7i-o2i.text" = "Enter property details";
+
+/* Class = "UILabel"; text = "التواصل عبر المحادثات (شات)"; ObjectID = "UYF-Ur-WYQ"; */
+"UYF-Ur-WYQ.text" = "Communicate via chatting";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "V3g-RK-gUJ"; */
+"V3g-RK-gUJ.normalTitle" = "Save modifications";
+
+/* Class = "UILabel"; text = "عدّل نوع العقار المطلوب"; ObjectID = "WfP-5z-sns"; */
+"WfP-5z-sns.text" = "Modify order property type";
+
+/* Class = "UILabel"; text = "+966123456789"; ObjectID = "ZQb-J9-j3R"; */
+"ZQb-J9-j3R.text" = "+966123456789";
+
+/* Class = "UILabel"; text = "التواصل عبر مكالمة هاتفية"; ObjectID = "a1N-JE-SJg"; */
+"a1N-JE-SJg.text" = "Communicate via a phone call";
+
+/* Class = "UIButton"; normalTitle = "+ رقم آخر "; ObjectID = "a7r-mM-H3P"; */
+"a7r-mM-H3P.normalTitle" = "+ Another number";
+
+/* Class = "UILabel"; text = "التواصل عبر واتساب"; ObjectID = "eNE-SC-Wzx"; */
+"eNE-SC-Wzx.text" = "Communication via WhatsApp";
+
+/* Class = "UILabel"; text = "المواصفات"; ObjectID = "nCc-nd-O3S"; */
+"nCc-nd-O3S.text" = "Specifications";
+
+/* Class = "UITextField"; placeholder = "القسم"; ObjectID = "oqE-q3-2yj"; */
+"oqE-q3-2yj.placeholder" = "Section";
+
+/* Class = "UITextField"; placeholder = "القسم الفرعي"; ObjectID = "sFL-t7-dTv"; */
+"sFL-t7-dTv.placeholder" = "Subsection";
+
+/* Class = "UITextField"; placeholder = "السعر"; ObjectID = "xCX-uY-5IO"; */
+"xCX-uY-5IO.placeholder" = "Price";

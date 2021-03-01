@@ -1,0 +1,198 @@
+
+/* Class = "UILabel"; text = "1"; ObjectID = "03e-6S-YdI"; */
+"03e-6S-YdI.text" = "1";
+
+/* Class = "UILabel"; text = "مؤسسة الوكيل للإستثمارات العقارية"; ObjectID = "44a-Ua-26M"; */
+"44a-Ua-26M.text" = "Al-Wakeel Corporation for Real Estate Investments";
+
+/* Class = "UILabel"; text = "مميز"; ObjectID = "4cN-d0-yaw"; */
+"4cN-d0-yaw.text" = "Featured";
+
+/* Class = "UILabel"; text = "الطوابق"; ObjectID = "5eV-mQ-kGo"; */
+"5eV-mQ-kGo.text" = "Floors";
+
+/* Class = "UIButton"; normalTitle = "عرض المزيد"; ObjectID = "5tp-vb-Bv4"; */
+"5tp-vb-Bv4.normalTitle" = "Show more";
+
+/* Class = "UILabel"; text = "4.5"; ObjectID = "6IA-pM-iBo"; */
+"6IA-pM-iBo.text" = "4.5";
+
+/* Class = "UILabel"; text = "م2"; ObjectID = "6jG-lK-3wh"; */
+"6jG-lK-3wh.text" = "M2";
+
+/* Class = "UILabel"; text = "إعلانات"; ObjectID = "73o-68-lW0"; */
+"73o-68-lW0.text" = "Ads";
+
+/* Class = "UILabel"; text = "اسم الحي: التميمي المساحة: 503 متر2 عدد الشوارع: 2 جنوبي غربي عرض الشارع: 15م السعر: لا يوجد سوم رقم العرض: 126161"; ObjectID = "7yt-IF-wuj"; */
+"7yt-IF-wuj.text" = "Neighborhood name: Al Tamimi Area: 503 square meters Number of streets: 2 Southwest Street width: 15 m Price: No sum Display number: 126161";
+
+/* Class = "UILabel"; text = "واتساب"; ObjectID = "8HM-fz-cd5"; */
+"8HM-fz-cd5.text" = "What's App";
+
+/* Class = "UILabel"; text = "م2"; ObjectID = "93d-ae-UQ5"; */
+"93d-ae-UQ5.text" = "M2";
+
+/* Class = "UILabel"; text = "@AskHail6"; ObjectID = "9KI-I9-8S5"; */
+"9KI-I9-8S5.text" = "@AskHail6";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BBI-K4-Uaz"; */
+"BBI-K4-Uaz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "شاليه بحائل حي الشفاء"; ObjectID = "CZi-HT-B0T"; */
+"CZi-HT-B0T.text" = "Chalet in Hail Al-Shifa";
+
+/* Class = "UILabel"; text = "3,589"; ObjectID = "D0k-5c-hZq"; */
+"D0k-5c-hZq.text" = "3,589";
+
+/* Class = "UILabel"; text = "@AskHail"; ObjectID = "DCo-wa-UlW"; */
+"DCo-wa-UlW.text" = "@AskHail";
+
+/* Class = "UILabel"; text = "كم"; ObjectID = "EBE-IE-LNu"; */
+"EBE-IE-LNu.text" = "Km";
+
+/* Class = "UILabel"; text = "Ask Hail.com"; ObjectID = "GIc-fz-0xO"; */
+"GIc-fz-0xO.text" = "Ask Hail.com";
+
+/* Class = "UIButton"; normalTitle = "صورة ترويجية"; ObjectID = "H6v-IG-bO1"; */
+"H6v-IG-bO1.normalTitle" = "Promotional Image";
+
+/* Class = "UILabel"; text = "يوجد"; ObjectID = "Jlk-Sv-pqH"; */
+"Jlk-Sv-pqH.text" = "available";
+
+/* Class = "UILabel"; text = "وسائل التواصل"; ObjectID = "KDl-kU-3cD"; */
+"KDl-kU-3cD.text" = "Contact Ways";
+
+/* Class = "UILabel"; text = "تم النشر الخميس 24 سبتمبر 2020 • أخر تحديث الجمعة 25 سبتمبر 2020"; ObjectID = "KUG-MT-iFL"; */
+"KUG-MT-iFL.text" = "Posted Thursday 24 September 2020 • Last update Friday 25 September 2020";
+
+/* Class = "UILabel"; text = "مؤسسة الوكيل للإستثمارات العقارية"; ObjectID = "LFW-Ql-IuM"; */
+"LFW-Ql-IuM.text" = "Al-Wakeel Corporation for Real Estate Investments";
+
+/* Class = "UILabel"; text = "@AskHail2020"; ObjectID = "MAD-0O-roY"; */
+"MAD-0O-roY.text" = "@AskHail2020";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Mfl-Fa-TNT"; */
+"Mfl-Fa-TNT.text" = "3";
+
+/* Class = "UILabel"; text = "كراج"; ObjectID = "OEg-Wr-VQN"; */
+"OEg-Wr-VQN.text" = "garage";
+
+/* Class = "UILabel"; text = "250"; ObjectID = "P17-kx-6iR"; */
+"P17-kx-6iR.text" = "250";
+
+/* Class = "UILabel"; text = "المسطح"; ObjectID = "Pr7-OI-E8O"; */
+"Pr7-OI-E8O.text" = "Flat";
+
+/* Class = "UILabel"; text = "جنوبي غربي"; ObjectID = "QiI-KJ-2cm"; */
+"QiI-KJ-2cm.text" = "Southwestern";
+
+/* Class = "UIButton"; normalTitle = "إضافة تقييم"; ObjectID = "SJJ-nm-Npw"; */
+"SJJ-nm-Npw.normalTitle" = "Add a rating";
+
+/* Class = "UILabel"; text = "الجهة"; ObjectID = "SOL-Lc-Kqq"; */
+"SOL-Lc-Kqq.text" = "direction";
+
+/* Class = "UILabel"; text = "الوصف"; ObjectID = "TrL-WA-QtB"; */
+"TrL-WA-QtB.text" = "Description";
+
+/* Class = "UILabel"; text = "متوفر"; ObjectID = "U77-rM-H5H"; */
+"U77-rM-H5H.text" = "available";
+
+/* Class = "UILabel"; text = "مستودع"; ObjectID = "WEM-Ar-z68"; */
+"WEM-Ar-z68.text" = "warehouse";
+
+/* Class = "UILabel"; text = "المساحة"; ObjectID = "WH3-DJ-dWf"; */
+"WH3-DJ-dWf.text" = "Space";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WOZ-fm-KOk"; */
+"WOZ-fm-KOk.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "250"; ObjectID = "XJ5-U2-oE2"; */
+"XJ5-U2-oE2.text" = "250";
+
+/* Class = "UILabel"; text = "الغرف"; ObjectID = "XhS-CW-vGh"; */
+"XhS-CW-vGh.text" = "Rooms";
+
+/* Class = "UILabel"; text = "الشارع الجانبي المتفرع من الشارع الرئيسي - اسم الحي والمنطقة - علامة مميزة بالقرب"; ObjectID = "Y6d-xO-woA"; */
+"Y6d-xO-woA.text" = "The side street branching off the main street - the name of the neighborhood and the region - a landmark near";
+
+/* Class = "UILabel"; text = "48"; ObjectID = "Ykj-q1-1HV"; */
+"Ykj-q1-1HV.text" = "48";
+
+/* Class = "UILabel"; text = "المعلن"; ObjectID = "Zgt-xe-2e2"; */
+"Zgt-xe-2e2.text" = "Advertiser";
+
+/* Class = "UILabel"; text = "يوجد"; ObjectID = "bXH-YH-lt4"; */
+"bXH-YH-lt4.text" = "available";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "dn9-dR-NwK"; */
+"dn9-dR-NwK.text" = "3";
+
+/* Class = "UILabel"; text = " (26)"; ObjectID = "e5m-IN-J17"; */
+"e5m-IN-J17.text" = " (26)";
+
+/* Class = "UIButton"; normalTitle = "إضافة تقييم"; ObjectID = "eFf-6z-s1e"; */
+"eFf-6z-s1e.normalTitle" = "Add a rating";
+
+/* Class = "UILabel"; text = "الإعلانات على الخريطة"; ObjectID = "eIT-yk-H83"; */
+"eIT-yk-H83.text" = "Ads on map";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "ehc-8d-fzR"; */
+"ehc-8d-fzR.text" = "SAR";
+
+/* Class = "UILabel"; text = "إعلانات"; ObjectID = "fzd-cQ-BlR"; */
+"fzd-cQ-BlR.text" = "Ads";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "hHy-v4-kv2"; */
+"hHy-v4-kv2.text" = "1";
+
+/* Class = "UILabel"; text = "العنوان"; ObjectID = "i22-LL-fkQ"; */
+"i22-LL-fkQ.text" = "address";
+
+/* Class = "UILabel"; text = "مكالمة"; ObjectID = "lCH-cg-R0E"; */
+"lCH-cg-R0E.text" = "a call";
+
+/* Class = "UILabel"; text = "التقييمات"; ObjectID = "lg9-o4-0ns"; */
+"lg9-o4-0ns.text" = "Ratings";
+
+/* Class = "UILabel"; text = "واتساب"; ObjectID = "mv8-xd-zgc"; */
+"mv8-xd-zgc.text" = "What's App";
+
+/* Class = "UIButton"; normalTitle = "!انطلق الآن"; ObjectID = "p7e-zH-5Lu"; */
+"p7e-zH-5Lu.normalTitle" = "Go Now!";
+
+/* Class = "UIButton"; normalTitle = "صفحة المعلن"; ObjectID = "qaq-3h-r8s"; */
+"qaq-3h-r8s.normalTitle" = "Advertiser Page";
+
+/* Class = "UILabel"; text = "الحمامات"; ObjectID = "raI-I7-e9i"; */
+"raI-I7-e9i.text" = "Baths";
+
+/* Class = "UILabel"; text = "شاليهات ومنتجعات واستراحات"; ObjectID = "tCB-s4-JpD"; */
+"tCB-s4-JpD.text" = "Chalets, resorts and restrooms";
+
+/* Class = "UILabel"; text = "مكالمة"; ObjectID = "tM1-3L-yO6"; */
+"tM1-3L-yO6.text" = "a call";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "tgY-Oc-2Wf"; */
+"tgY-Oc-2Wf.text" = "1";
+
+/* Class = "UILabel"; text = "مواصفات العقار"; ObjectID = "utV-oY-Gug"; */
+"utV-oY-Gug.text" = "Property specifications";
+
+/* Class = "UILabel"; text = "32,658"; ObjectID = "uzr-GU-c9i"; */
+"uzr-GU-c9i.text" = "32,658";
+
+/* Class = "UILabel"; text = "@AskHail20"; ObjectID = "vYp-xL-0gK"; */
+"vYp-xL-0gK.text" = "@AskHail20";
+
+/* Class = "UILabel"; text = "شاليهات ومنتجعات واستراحات"; ObjectID = "wgW-LN-RgD"; */
+"wgW-LN-RgD.text" = "Chalets, resorts and restrooms";
+
+/* Class = "UILabel"; text = "4.5"; ObjectID = "xOV-Y3-7Rl"; */
+"xOV-Y3-7Rl.text" = "4.5";
+
+/* Class = "UILabel"; text = "بدء محادثة"; ObjectID = "y1R-pO-JAm"; */
+"y1R-pO-JAm.text" = "Start a Chat";
+
+/* Class = "UILabel"; text = "اعلان رقم ١٢٨١٨٥١٦ "; ObjectID = "zvH-9y-76p"; */
+"zvH-9y-76p.text" = "Ad No. 12818516";

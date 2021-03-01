@@ -1,0 +1,210 @@
+
+/* Class = "UILabel"; text = " اللغة العربية"; ObjectID = "00J-C7-N6e"; */
+"00J-C7-N6e.text" = " اللغة العربية";
+
+/* Class = "UITextField"; placeholder = "حالة العقار (بيع/إيجار)"; ObjectID = "1Bs-Bj-bk1"; */
+"1Bs-Bj-bk1.placeholder" = "Real estate condition (sale / rent)";
+
+/* Class = "UILabel"; text = "نقوم بتصوير العقار من اجله نشره"; ObjectID = "1TY-xD-mCf"; */
+"1TY-xD-mCf.text" = "We are photographing the property for publication.";
+
+/* Class = "UIButton"; normalTitle = "ارسال"; ObjectID = "1ic-hm-oMT"; */
+"1ic-hm-oMT.normalTitle" = "send";
+
+/* Class = "UILabel"; text = "تواصل معنا"; ObjectID = "27l-4x-1Ii"; */
+"27l-4x-1Ii.text" = "Connect with us";
+
+/* Class = "UIButton"; normalTitle = "تسجيل"; ObjectID = "4Fp-xU-Mld"; */
+"4Fp-xU-Mld.normalTitle" = "Sign Up";
+
+/* Class = "UITextField"; placeholder = "الاسم بالكامل"; ObjectID = "5QH-qp-Nh4"; */
+"5QH-qp-Nh4.placeholder" = "full name";
+
+/* Class = "UILabel"; text = "مشاركة التطبيق"; ObjectID = "5Xw-b9-r1J"; */
+"5Xw-b9-r1J.text" = "Share the app";
+
+/* Class = "UITextField"; placeholder = "البريد الإلكتروني"; ObjectID = "6Bz-mR-tCy"; */
+"6Bz-mR-tCy.placeholder" = "E-mail";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "8o3-Io-A7a"; */
+"8o3-Io-A7a.text" = "+966";
+
+/* Class = "UILabel"; text = "الإعدادات"; ObjectID = "9i9-St-K6l"; */
+"9i9-St-K6l.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Switch Language to English"; ObjectID = "BUZ-nr-s13"; */
+"BUZ-nr-s13.normalTitle" = "Switch Language to English";
+
+/* Class = "UIButton"; normalTitle = "ارسال"; ObjectID = "CdW-eb-9ch"; */
+"CdW-eb-9ch.normalTitle" = "send";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "Ce4-ew-aDi"; */
+"Ce4-ew-aDi.text" = "+966";
+
+/* Class = "UILabel"; text = "انضم الى فريق العمل"; ObjectID = "Dt5-aK-29U"; */
+"Dt5-aK-29U.text" = "Join Ower team";
+
+/* Class = "UILabel"; text = "طلب تصوير عقار"; ObjectID = "FED-Oq-txL"; */
+"FED-Oq-txL.text" = "Request for real estate photography";
+
+/* Class = "UILabel"; text = "البيانات المطلوبة"; ObjectID = "Ftc-pW-o3q"; */
+"Ftc-pW-o3q.text" = "The required data";
+
+/* Class = "UILabel"; text = "الوظائف المتاحة"; ObjectID = "GLd-mp-baP"; */
+"GLd-mp-baP.text" = "Available Jobs";
+
+/* Class = "UILabel"; text = "البيانات المطلوبة"; ObjectID = "IMv-h9-EHa"; */
+"IMv-h9-EHa.text" = "The required data";
+
+/* Class = "UILabel"; text = "وصف نصّي قصير عن الوظيفة ومهامها"; ObjectID = "JQ6-xv-wO7"; */
+"JQ6-xv-wO7.text" = "A short textual description of the job and its tasks";
+
+/* Class = "UIButton"; normalTitle = "عقود الإيجار"; ObjectID = "K7t-aw-v8X"; */
+"K7t-aw-v8X.normalTitle" = "public";
+
+/* Class = "UILabel"; text = "اعمل معنا وزود دخلك"; ObjectID = "KLH-ZN-k2w"; */
+"KLH-ZN-k2w.text" = "Work with us";
+
+/* Class = "UILabel"; text = "الخدمات"; ObjectID = "L1x-X8-2Vp"; */
+"L1x-X8-2Vp.text" = "Services";
+
+/* Class = "UILabel"; text = "عن التطبيق"; ObjectID = "Lwv-pq-b4v"; */
+"Lwv-pq-b4v.text" = "About Application";
+
+/* Class = "UILabel"; text = "تواصل معنا"; ObjectID = "ODB-va-qKi"; */
+"ODB-va-qKi.text" = "Connect with us";
+
+/* Class = "UILabel"; text = "نسعد باستفساراتكم واسئلتكم"; ObjectID = "RTj-fP-Ihv"; */
+"RTj-fP-Ihv.text" = "We are happy with your inquiries and questions.";
+
+/* Class = "UILabel"; text = "تم الإرسال بنجاح"; ObjectID = "ReA-td-bR1"; */
+"ReA-td-bR1.text" = "sent succesfully";
+
+/* Class = "UILabel"; text = "جاري مراجعة طلبك من قبل الإدارة وسيتم التواصل معك في أقرب فرصة"; ObjectID = "SAg-aq-YVG"; */
+"SAg-aq-YVG.text" = "Your request is being reviewed by the administration and will contact you as soon as possible.";
+
+/* Class = "UILabel"; text = "سياسة الدفع عند بيع العقار أو تأجيره"; ObjectID = "TnK-Dc-mQh"; */
+"TnK-Dc-mQh.text" = "Payment policy when selling or renting the property";
+
+/* Class = "UITextField"; placeholder = "الاسم بالكامل"; ObjectID = "UfI-4t-HIF"; */
+"UfI-4t-HIF.placeholder" = "full name";
+
+/* Class = "UILabel"; text = "أرسل رسالة"; ObjectID = "Ug8-Yc-vYK"; */
+"Ug8-Yc-vYK.text" = "send a message";
+
+/* Class = "UIButton"; normalTitle = "عودة للرئيسية"; ObjectID = "Ule-xP-Iou"; */
+"Ule-xP-Iou.normalTitle" = "Back to Home";
+
+/* Class = "UILabel"; text = "نبحث دائماً عن أعضاء جدد للإنضمام لفريق عمل اسأل حائل، سجّل بياناتك الآن"; ObjectID = "V54-XT-naX"; */
+"V54-XT-naX.text" = "We are always looking for new members to join the Ask Hail team. Register your information now.";
+
+/* Class = "UILabel"; text = "كل الإشعارات"; ObjectID = "VzG-Oa-Fdm"; */
+"VzG-Oa-Fdm.text" = "All notifications";
+
+/* Class = "UILabel"; text = "اتصل بنا"; ObjectID = "W0Z-Am-G4y"; */
+"W0Z-Am-G4y.text" = "call us";
+
+/* Class = "UILabel"; text = "ردود الأسئلة"; ObjectID = "WT5-mJ-0bE"; */
+"WT5-mJ-0bE.text" = "Question Responses";
+
+/* Class = "UILabel"; text = "قائمة الممنوعات"; ObjectID = "WTa-jy-d4X"; */
+"WTa-jy-d4X.text" = "List of prohibited items";
+
+/* Class = "UILabel"; text = "تسجيل عضوية مؤسسة /منشأه"; ObjectID = "Xic-HL-Ztz"; */
+"Xic-HL-Ztz.text" = "Registration of membership for an institution / establishment";
+
+/* Class = "UILabel"; text = "شروط الإستخدام"; ObjectID = "XjV-fH-iW7"; */
+"XjV-fH-iW7.text" = "Terms of use";
+
+/* Class = "UILabel"; text = "عنوان الوظيفة"; ObjectID = "Ydv-5E-N10"; */
+"Ydv-5E-N10.text" = "Job title";
+
+/* Class = "UIButton"; normalTitle = "ارسال"; ObjectID = "aQb-2q-4m3"; */
+"aQb-2q-4m3.normalTitle" = "send";
+
+/* Class = "UILabel"; text = "التعليقات الجديدة"; ObjectID = "b4Z-NO-ORd"; */
+"b4Z-NO-ORd.text" = "New comments";
+
+/* Class = "UITextField"; placeholder = "رقم الجوال"; ObjectID = "c5q-g2-jEy"; */
+"c5q-g2-jEy.placeholder" = "Mobile number";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "clm-PO-bUO"; */
+"clm-PO-bUO.text" = "+966";
+
+/* Class = "UILabel"; text = "قائمة الممنوعات"; ObjectID = "cnX-eG-ipn"; */
+"cnX-eG-ipn.text" = "List of prohibited items";
+
+/* Class = "UITextField"; placeholder = "وقت الزيارة"; ObjectID = "d3n-Vf-kAt"; */
+"d3n-Vf-kAt.placeholder" = "visit time";
+
+/* Class = "UILabel"; text = "اللغة"; ObjectID = "dhI-6D-pBN"; */
+"dhI-6D-pBN.text" = "The language";
+
+/* Class = "UILabel"; text = "لغة التطبيق الحالية هي"; ObjectID = "eEe-mJ-emE"; */
+"eEe-mJ-emE.text" = "The current application language is";
+
+/* Class = "UILabel"; text = "حسابات التواصل الإجتماعي"; ObjectID = "g2M-sf-StN"; */
+"g2M-sf-StN.text" = "Social Media Accounts";
+
+/* Class = "UILabel"; text = "سياسة الدفع"; ObjectID = "igd-FO-dW6"; */
+"igd-FO-dW6.text" = "Payment Policy";
+
+/* Class = "UILabel"; text = "حسابي"; ObjectID = "jKI-ut-b4J"; */
+"jKI-ut-b4J.text" = "My Account";
+
+/* Class = "UILabel"; text = "اعمل معنا وزود دخلك"; ObjectID = "jKo-T8-XEv"; */
+"jKo-T8-XEv.text" = "Work with us and increase your income";
+
+/* Class = "UILabel"; text = "اعمل معنا وزود دخلك"; ObjectID = "l4m-uf-pWy"; */
+"l4m-uf-pWy.text" = "Work with us";
+
+/* Class = "UILabel"; text = "حفظ مستخدم لإعلانك"; ObjectID = "nSi-VP-Jc2"; */
+"nSi-VP-Jc2.text" = "User saved your ad";
+
+/* Class = "UITextField"; placeholder = "يوم الزيارة"; ObjectID = "olu-HQ-dQh"; */
+"olu-HQ-dQh.placeholder" = "Visit day";
+
+/* Class = "UITextField"; placeholder = "رقم الجوال"; ObjectID = "pYb-Jc-Y1A"; */
+"pYb-Jc-Y1A.placeholder" = "Mobile number";
+
+/* Class = "UILabel"; text = "الإعدادات"; ObjectID = "r63-W1-xSX"; */
+"r63-W1-xSX.text" = "Settings";
+
+/* Class = "UILabel"; text = "طلب تصوير عقار"; ObjectID = "rP6-R6-1lZ"; */
+"rP6-R6-1lZ.text" = "Request for real estate photography";
+
+/* Class = "UILabel"; text = "تسجيل عضوية مؤسسة"; ObjectID = "rpH-g9-4MA"; */
+"rpH-g9-4MA.text" = "Register an institution membership";
+
+/* Class = "UILabel"; text = "مميزات التسجيل معنا"; ObjectID = "sjW-fw-M1i"; */
+"sjW-fw-M1i.text" = "Advantages of registering with us";
+
+/* Class = "UILabel"; text = "الخدمات"; ObjectID = "tNp-vX-9uv"; */
+"tNp-vX-9uv.text" = "Services";
+
+/* Class = "UILabel"; text = "شروط الإستخدام"; ObjectID = "tb5-hf-F1Z"; */
+"tb5-hf-F1Z.text" = "Terms of use";
+
+/* Class = "UIButton"; normalTitle = "أخرى"; ObjectID = "u35-Hq-qy5"; */
+"u35-Hq-qy5.normalTitle" = "students";
+
+/* Class = "UILabel"; text = "الإشعارات"; ObjectID = "uaS-6I-fCN"; */
+"uaS-6I-fCN.text" = "Notification";
+
+/* Class = "UILabel"; text = "الرسائل الخاصة"; ObjectID = "vmd-Q6-blH"; */
+"vmd-Q6-blH.text" = "Private messages";
+
+/* Class = "UITextField"; placeholder = "رقم الجوال"; ObjectID = "w39-Y0-5UB"; */
+"w39-Y0-5UB.placeholder" = "Mobile number";
+
+/* Class = "UITextField"; placeholder = "الاسم بالكامل"; ObjectID = "w8H-Di-TGQ"; */
+"w8H-Di-TGQ.placeholder" = "full name";
+
+/* Class = "UIButton"; normalTitle = "العقود"; ObjectID = "xaJ-Qp-j9e"; */
+"xaJ-Qp-j9e.normalTitle" = "Contracts";
+
+/* Class = "UILabel"; text = "سيتم ارسال مصور من طرفنا لتصوير العقار بالكامل بطريقة احترافية لنشره على التطبيق بشكل راقي وجذاب"; ObjectID = "yCW-Fv-erY"; */
+"yCW-Fv-erY.text" = "A photographer will be sent by us to photograph the entire property in a professional manner, to publish it on the application in a sophisticated and attractive manner.";
+
+/* Class = "UITextField"; placeholder = "البريد الإلكتروني"; ObjectID = "zMI-Wl-n4m"; */
+"zMI-Wl-n4m.placeholder" = "E-mail";

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "تم حذف التقيم الخاص بك من هذا الإعلان"; ObjectID = "B31-tx-vAP"; */
+"B31-tx-vAP.text" = "تم حذف التقيم الخاص بك من هذا الإعلان";
+
+/* Class = "UILabel"; text = "منذ يومين"; ObjectID = "JFm-ve-b5u"; */
+"JFm-ve-b5u.text" = "منذ يومين";
+
+/* Class = "UIButton"; normalTitle = "حذف التعليق"; ObjectID = "M1y-00-sd7"; */
+"M1y-00-sd7.normalTitle" = "Delete comment";
+
+/* Class = "UILabel"; text = "...علي قيّم"; ObjectID = "fdP-JV-ofa"; */
+"fdP-JV-ofa.text" = "...علي قيّم";

@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "حذف"; ObjectID = "4A1-2k-97u"; */
+"4A1-2k-97u.text" = "حذف";
+
+/* Class = "UILabel"; text = "تراجع"; ObjectID = "RHO-3J-eyS"; */
+"RHO-3J-eyS.text" = "تراجع";
+
+/* Class = "UILabel"; text = "حذف"; ObjectID = "TNb-TC-jis"; */
+"TNb-TC-jis.text" = "حذف";
+
+/* Class = "UILabel"; text = "الاشعارات"; ObjectID = "XPN-Uq-4Y7"; */
+"XPN-Uq-4Y7.text" = "الاشعارات";
+
+/* Class = "UIButton"; normalTitle = "حذف الكل"; ObjectID = "Xad-Uk-2Pa"; */
+"Xad-Uk-2Pa.normalTitle" = "حذف الكل";
+
+/* Class = "UILabel"; text = "لا توجد إشعارات في الوقت الحالي"; ObjectID = "byT-o5-dQu"; */
+"byT-o5-dQu.text" = "لا توجد إشعارات في الوقت الحالي";
+
+/* Class = "UILabel"; text = "حذف الاشعار "; ObjectID = "eXX-bn-qKE"; */
+"eXX-bn-qKE.text" = "حذف الاشعار ";
+
+/* Class = "UILabel"; text = "حذف كل الإشعارات"; ObjectID = "lCh-lU-tUE"; */
+"lCh-lU-tUE.text" = "حذف كل الإشعارات";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oLa-JX-5Cl"; */
+"oLa-JX-5Cl.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rig-MY-cSS"; */
+"rig-MY-cSS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "تراجع"; ObjectID = "sKn-Lj-B2j"; */
+"sKn-Lj-B2j.text" = "تراجع";

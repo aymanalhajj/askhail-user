@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "60"; ObjectID = "5hZ-Yg-Hv9"; */
+"5hZ-Yg-Hv9.text" = "60";
+
+/* Class = "UILabel"; text = "الفترة"; ObjectID = "Vbe-zW-UCc"; */
+"Vbe-zW-UCc.text" = "duration";
+
+/* Class = "UILabel"; text = "يوم"; ObjectID = "XdC-PD-Jwv"; */
+"XdC-PD-Jwv.text" = "Day";
+
+/* Class = "UILabel"; text = "ر.س"; ObjectID = "c7s-At-eHS"; */
+"c7s-At-eHS.text" = "SAR";
+
+/* Class = "UILabel"; text = "الباقة المتكاملة"; ObjectID = "ewg-5j-6sc"; */
+"ewg-5j-6sc.text" = "Integrated Package";
+
+/* Class = "UILabel"; text = "لمكاتب التسويق والإستثمارات العقارية"; ObjectID = "iFs-gr-S0s"; */
+"iFs-gr-S0s.text" = "Marketing and real estate investment offices";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "kKJ-VB-bCw"; */
+"kKJ-VB-bCw.text" = "500";
+
+/* Class = "UILabel"; text = "السعر"; ObjectID = "yHA-1n-ne2"; */
+"yHA-1n-ne2.text" = "price";

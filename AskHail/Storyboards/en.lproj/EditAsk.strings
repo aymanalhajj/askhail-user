@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "تعديل بيانات السؤال"; ObjectID = "0Pq-fU-FHl"; */
+"0Pq-fU-FHl.text" = "Modify the question data";
+
+/* Class = "UILabel"; text = "التفاصيل"; ObjectID = "3pO-lf-YkW"; */
+"3pO-lf-YkW.text" = "the details";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "8hy-nA-sYj"; */
+"8hy-nA-sYj.normalTitle" = "Save modifications";
+
+/* Class = "UILabel"; text = "إظهار اسمك كناشر السؤال"; ObjectID = "DkQ-oq-rNz"; */
+"DkQ-oq-rNz.text" = "Show your name as the publisher of the question";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GAt-5B-2oQ"; */
+"GAt-5B-2oQ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "تعديل تفاصيل السؤال"; ObjectID = "NAS-X9-LgD"; */
+"NAS-X9-LgD.text" = "Edit question details";
+
+/* Class = "UILabel"; text = "أدخل تفاصيل السؤال"; ObjectID = "OoL-rb-FSF"; */
+"OoL-rb-FSF.text" = "Enter the question details";
+
+/* Class = "UILabel"; text = "تعديل تفاصيل السؤال"; ObjectID = "Y6w-rb-3yT"; */
+"Y6w-rb-3yT.text" = "Edit question details";
+
+/* Class = "UILabel"; text = "الصورة"; ObjectID = "afB-5B-U8K"; */
+"afB-5B-U8K.text" = "Picture";
+
+/* Class = "UILabel"; text = "حذف"; ObjectID = "bzj-xv-wef"; */
+"bzj-xv-wef.text" = "delete";
+
+/* Class = "UILabel"; text = "تراجع"; ObjectID = "c4x-hj-QSQ"; */
+"c4x-hj-QSQ.text" = "Cancel";
+
+/* Class = "UILabel"; text = "أدخل تفاصيل السؤال"; ObjectID = "d53-Ki-zAg"; */
+"d53-Ki-zAg.text" = "Enter the question details";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gBN-rm-v3M"; */
+"gBN-rm-v3M.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "حفظ التعديلات"; ObjectID = "gbW-LT-L9f"; */
+"gbW-LT-L9f.normalTitle" = "Save modifications";
+
+/* Class = "UILabel"; text = "حذف السؤال"; ObjectID = "l57-uO-flZ"; */
+"l57-uO-flZ.text" = "Delete question";
+
+/* Class = "UITextField"; placeholder = "أدخل تفاصيل السؤال"; ObjectID = "mtq-9u-B3M"; */
+"mtq-9u-B3M.placeholder" = "أدخل تفاصيل السؤال";
+
+/* Class = "UILabel"; text = "عدّل تفاصيل العقار"; ObjectID = "nzg-5U-d2B"; */
+"nzg-5U-d2B.text" = "Enter the question details";
+
+/* Class = "UILabel"; text = "+سيتم إظهار اسمك في تفاصيل السؤال"; ObjectID = "pds-UF-uy6"; */
+"pds-UF-uy6.text" = "+ Your name will be shown in the question details";
