@@ -55,6 +55,8 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     
     var isHome = 0
     
+    var is_success = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -130,7 +132,7 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     
     @IBAction func BackAcrion(_ sender: Any) {
         
-        if isHome == 0 {
+        if isHome == 0  {
             navigationController?.popViewController(animated: true)
         }
         else{

@@ -45,8 +45,9 @@ class SuccessAddedVC: UIViewController {
 
     @IBAction func ConfirmAction(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: MyProfile , bundle: nil)
+        let storyboard = UIStoryboard(name: Home , bundle: nil)
         let vc  = storyboard.instantiateViewController(withIdentifier: "OrderVC") as! OrderVC
+        vc.is_Success = true
         vc.Order_id = Order_id
         navigationController?.pushViewController(vc, animated: true)
     }

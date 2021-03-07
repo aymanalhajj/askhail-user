@@ -63,6 +63,9 @@ class OrderVC: UIViewController {
     @IBOutlet weak var AdviserNomLbl: UILabel!
     @IBOutlet weak var deleteLbl: UILabel!
     @IBOutlet weak var editLbl: UILabel!
+    
+    
+    var is_Success = false
 
     private func createSpinnerFooter() -> UIView {
         let FooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
@@ -226,7 +229,7 @@ class OrderVC: UIViewController {
     
     @IBAction func BackAction(_ sender: Any) {
         
-        if DynamicLinkModel.isDynamic {
+        if DynamicLinkModel.isDynamic || is_Success {
             DynamicLinkModel.isDynamic = false
             guard let window = UIApplication.shared.keyWindow else{return}
             let sb = UIStoryboard(name: Home, bundle: nil)

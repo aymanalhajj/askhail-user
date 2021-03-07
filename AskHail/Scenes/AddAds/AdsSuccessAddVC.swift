@@ -37,8 +37,10 @@ class AdsSuccessAddVC: UIViewController {
 
     @IBAction func BackToMyAdsAction(_ sender: Any) {
         
+        
         let storyboard = UIStoryboard(name: Home, bundle: nil)
         let vc  = storyboard.instantiateViewController(withIdentifier: "AdsVC") as! AdsVC
+        vc.is_Success = true
         vc.AdId = Ad_Id
         navigationController?.pushViewController(vc, animated: true)
 

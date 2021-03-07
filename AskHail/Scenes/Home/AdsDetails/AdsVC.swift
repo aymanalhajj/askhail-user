@@ -72,7 +72,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var EditView: UIView!
     @IBOutlet weak var starImage: UIImageView!
     
-    
+
     @IBOutlet weak var adNomberLbl: UILabel!
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var featureLbl: UILabel!
@@ -87,6 +87,10 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var disableLbl: UILabel!
     @IBOutlet weak var editLbl: UILabel!
     @IBOutlet weak var specialLbl: UILabel!
+    
+
+    
+    var is_Success = true
     
     private func createSpinnerFooter() -> UIView {
         let FooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
@@ -345,7 +349,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func BackAction(_ sender: Any) {
         
-        if DynamicLinkModel.isDynamic {
+        if DynamicLinkModel.isDynamic || is_Success {
             DynamicLinkModel.isDynamic = false
             guard let window = UIApplication.shared.keyWindow else{return}
             let sb = UIStoryboard(name: Home, bundle: nil)
