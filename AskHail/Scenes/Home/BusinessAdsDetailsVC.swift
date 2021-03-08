@@ -574,6 +574,8 @@ extension BusinessAdsDetailsVC : UITableViewDataSource , UITableViewDelegate {
 }
 
 
+
+
 //MARK:-API
 extension BusinessAdsDetailsVC {
     
@@ -608,7 +610,15 @@ extension BusinessAdsDetailsVC {
                     self.AdvPrice.text = data.data?.advertisement_details?.adv_price ?? ""
                 }
                 
-                self.AdsDisnatce.text = data.data?.advertisement_details?.adv_distance ?? ""
+                let style = NSMutableParagraphStyle()
+                style.lineSpacing = 10
+                let attributes = [NSAttributedString.Key.paragraphStyle : style]
+                self.AdsDisnatce.attributedText = NSAttributedString(string: data.data?.advertisement_details?.adv_distance ?? "", attributes:attributes)
+                self.AdsDisnatce.textAlignment = .natural
+                self.AdsDisnatce.textColor = Colors.DarkBlue
+                self.AdsDisnatce.font = UIFont(name: "Tajawal-Regular", size: 16)
+                
+                
                 self.ViewsNumber.text = data.data?.advertisement_details?.adv_views ?? ""
                 
                 self.AdsDate.text = "published ".localized + "\(data.data?.advertisement_details?.adv_custom_published_date ?? "") | " + "Modified ".localized + "\( data.data?.advertisement_details?.adv_custom_last_update_date ?? "")"
