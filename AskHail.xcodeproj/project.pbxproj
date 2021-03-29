@@ -667,8 +667,8 @@
 		CCF21C8725D1197900BB671B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StarAds.strings; sourceTree = "<group>"; };
 		CCF21C8A25D11F0100BB671B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/More.strings; sourceTree = "<group>"; };
 		CCF21C8D25D12BB700BB671B /* MyPackageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPackageVC.swift; sourceTree = "<group>"; };
-		CCF3F73A25CB6FAF00575C2D /* PrayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayCell.swift; sourceTree = SOURCE_ROOT; };
-		CCF3F73B25CB6FB000575C2D /* PrayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayCell.xib; sourceTree = SOURCE_ROOT; };
+		CCF3F73A25CB6FAF00575C2D /* PrayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrayCell.swift; path = AskHail/Cells/WeatherCell/PrayCell.swift; sourceTree = SOURCE_ROOT; };
+		CCF3F73B25CB6FB000575C2D /* PrayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PrayCell.xib; path = AskHail/Cells/WeatherCell/PrayCell.xib; sourceTree = SOURCE_ROOT; };
 		CCF4B8DA25DB35EC001F2853 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SubAdsCell.strings; sourceTree = "<group>"; };
 		CCF55D9425D1D82F00E9C486 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		CCF55D9525D1D82F00E9C486 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
@@ -863,10 +863,10 @@
 		4D656860253E3F310067D35A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4D80D7BC25F6ED280072270A /* WeatherCell */,
 				CCD8A96725DDD0CB00D5FFCA /* OrderCell */,
 				CCF55D9325D1D7FB00E9C486 /* FavoriteCell */,
 				CCF73E9325CE0A890089588E /* AdsOnMapCells */,
-				CCF3F73925CB6F7F00575C2D /* WeatherCell */,
 				CCA689A225BE1C56008F99AF /* SpecialDetailsCell */,
 				CC025D2525B26F4F00FD5B08 /* DetailsCell */,
 				CC10E3D925B201F600ED7515 /* RateView */,
@@ -905,6 +905,15 @@
 				4D7FE450255A144A00FE87CE /* AskHailWithPhotoCell.xib */,
 			);
 			path = AskHailCells;
+			sourceTree = "<group>";
+		};
+		4D80D7BC25F6ED280072270A /* WeatherCell */ = {
+			isa = PBXGroup;
+			children = (
+				CCF3F73A25CB6FAF00575C2D /* PrayCell.swift */,
+				CCF3F73B25CB6FB000575C2D /* PrayCell.xib */,
+			);
+			path = WeatherCell;
 			sourceTree = "<group>";
 		};
 		4D9CC51C2549AFBA004526DA /* Home */ = {
@@ -1678,15 +1687,6 @@
 				CCD8A96925DDD0E600D5FFCA /* OrderCell.xib */,
 			);
 			path = OrderCell;
-			sourceTree = "<group>";
-		};
-		CCF3F73925CB6F7F00575C2D /* WeatherCell */ = {
-			isa = PBXGroup;
-			children = (
-				CCF3F73A25CB6FAF00575C2D /* PrayCell.swift */,
-				CCF3F73B25CB6FB000575C2D /* PrayCell.xib */,
-			);
-			path = WeatherCell;
 			sourceTree = "<group>";
 		};
 		CCF55D9325D1D7FB00E9C486 /* FavoriteCell */ = {
@@ -2524,7 +2524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.1;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesal.askHail;
 				PRODUCT_NAME = AskHail;
@@ -2549,7 +2549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.1;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesal.askHail;
 				PRODUCT_NAME = AskHail;

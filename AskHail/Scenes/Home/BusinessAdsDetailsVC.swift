@@ -613,10 +613,10 @@ extension BusinessAdsDetailsVC {
                 let style = NSMutableParagraphStyle()
                 style.lineSpacing = 10
                 let attributes = [NSAttributedString.Key.paragraphStyle : style]
-                self.AdsDisnatce.attributedText = NSAttributedString(string: data.data?.advertisement_details?.adv_distance ?? "", attributes:attributes)
-                self.AdsDisnatce.textAlignment = .natural
-                self.AdsDisnatce.textColor = Colors.DarkBlue
-                self.AdsDisnatce.font = UIFont(name: "Tajawal-Regular", size: 16)
+                self.AdsDescribtion.attributedText = NSAttributedString(string: data.data?.advertisement_details?.adv_distance ?? "", attributes:attributes)
+                self.AdsDescribtion.textAlignment = .natural
+                self.AdsDescribtion.textColor = Colors.DarkBlue
+                self.AdsDescribtion.font = UIFont(name: "Tajawal-Regular", size: 16)
                 
                 
                 self.ViewsNumber.text = data.data?.advertisement_details?.adv_views ?? ""

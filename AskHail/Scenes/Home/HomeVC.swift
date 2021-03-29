@@ -4,7 +4,7 @@
 //
 //  Created by Abdullah Tarek on 10/28/20.
 //  Copyright © 2020 MOHAB. All rights reserved.
-//
+//ccccc
 
 import UIKit
 
@@ -216,7 +216,12 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
                 cell.title.text = Model.adv_title
                 cell.distance.text = Model.adv_distance
                 
-                print(Model.adv_distance)
+                if Model.adv_price ?? "" == "0" {
+                    cell.SARLbl.isHidden = true
+                    cell.Price.isHidden = true
+                }else{
+                    cell.Price.text = Model.adv_price
+                }
                 
 
                 cell.SpecialView.isHidden = true

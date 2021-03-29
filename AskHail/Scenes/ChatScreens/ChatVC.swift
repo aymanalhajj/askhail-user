@@ -98,8 +98,7 @@ class chatVC: UIViewController , UITextFieldDelegate{
         tabBarController?.tabBar.isHidden = true
         
         setShadow(view: messageView, width: 2, height: 2, shadowRadius: 5, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.7002318268, green: 0.7002318268, blue: 0.7002318268, alpha: 1))
-        
-///        setShadow(view: ShowAdvView, width: 5, height: 5, shadowRadius: 5, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.7002318268, green: 0.7002318268, blue: 0.7002318268, alpha: 1))
+        setShadow(view: ShowAdvView, width: 5, height: 5, shadowRadius: 5, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.7002318268, green: 0.7002318268, blue: 0.7002318268, alpha: 1))
         
         messageTF.delegate = self
         tableView.allowsSelection = false
@@ -108,7 +107,7 @@ class chatVC: UIViewController , UITextFieldDelegate{
         tableView.RegisterNib(cell: SenderCell.self)
         tableView.RegisterNib(cell: ReceverCell.self)
         
-       // loaderView.backgroundColor = Colors.ViewBackGroundColoer
+//        loaderView.backgroundColor = Colors.ViewBackGroundColoer
         
         unLockScreen()
     }
@@ -117,7 +116,7 @@ class chatVC: UIViewController , UITextFieldDelegate{
         IQKeyboardManager.shared().isEnabled = true
     }
     override func viewWillAppear(_ animated: Bool) {
-       // ShowAdvContanier.isHidden = true
+       ShowAdvContanier.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(unLockScreen), name: Notification.Name(Notification_Unlock_Screen), object: nil)
@@ -295,17 +294,17 @@ class chatVC: UIViewController , UITextFieldDelegate{
         print(ChatType)
     }
     
-//    @IBAction func ShowAdvAction(_ sender: Any) {
-//
-//        ShowAdvContanier.isHidden = false
-//
-//    }
-//
-//    @IBAction func CancelAction(_ sender: Any) {
-//
-//        ShowAdvContanier.isHidden = true
-//
-//    }
+    @IBAction func ShowAdvAction(_ sender: Any) {
+
+        ShowAdvContanier.isHidden = false
+
+    }
+
+    @IBAction func CancelAction(_ sender: Any) {
+
+        ShowAdvContanier.isHidden = true
+
+    }
     
 }
 

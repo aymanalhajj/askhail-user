@@ -2585,7 +2585,7 @@
                                             <constraint firstAttribute="height" constant="26" id="iaM-dw-0Y4"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لمكاتب التسويق والإستثمارات العقارية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trk-Q5-Bl1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لمكاتب التسويق والإستثمارات العقارية" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trk-Q5-Bl1">
                                         <rect key="frame" x="24" y="54" width="318" height="14"/>
                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                         <color key="textColor" red="0.0092072682459999992" green="0.29380530119999998" blue="0.53738009929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2691,9 +2691,9 @@
                                     <constraint firstItem="KHZ-XQ-Jhx" firstAttribute="leading" secondItem="uRa-uF-f55" secondAttribute="leading" constant="32" id="gAX-m5-Ld6"/>
                                     <constraint firstItem="trk-Q5-Bl1" firstAttribute="top" secondItem="KHZ-XQ-Jhx" secondAttribute="bottom" constant="4" id="gG0-bs-zcz"/>
                                     <constraint firstAttribute="trailing" secondItem="LN3-4d-Lz4" secondAttribute="trailing" constant="24" id="lNC-Zv-6gI"/>
-                                    <constraint firstAttribute="height" constant="180" id="qiH-fi-Cld"/>
                                     <constraint firstItem="LN3-4d-Lz4" firstAttribute="top" secondItem="trk-Q5-Bl1" secondAttribute="bottom" constant="24" id="sfP-3q-dbe"/>
                                     <constraint firstAttribute="trailing" secondItem="KHZ-XQ-Jhx" secondAttribute="trailing" constant="32" id="t0w-xU-jDd"/>
+                                    <constraint firstAttribute="bottom" secondItem="LN3-4d-Lz4" secondAttribute="bottom" constant="24" id="w17-8Y-loZ"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdg-lz-al7">
