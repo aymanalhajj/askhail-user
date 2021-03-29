@@ -96,6 +96,7 @@ extension RealtySaleVC : UICollectionViewDataSource , UICollectionViewDelegate ,
             let storyboard = UIStoryboard(name: Home, bundle: nil)
             let vc  = storyboard.instantiateViewController(withIdentifier: "SubAdsVC") as! SubAdsVC
             vc.Id = "\(MainSectionArray[indexPath.row].section_id ?? 0)"
+           
             vc.subSectionTitle = "\(MainSectionArray[indexPath.row].section_name ?? "")"
             navigationController?.pushViewController(vc, animated: true)
             

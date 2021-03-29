@@ -50,7 +50,7 @@ class SubAdsVC: UIViewController ,UITextFieldDelegate       {
     
     @IBOutlet weak var LoadingView: UIView!
     
-    
+    var isbackToAds = false
     
     var order_by = ""
     var side = ""
@@ -424,6 +424,7 @@ extension SubAdsVC : UITableViewDataSource ,UITableViewDelegate {
                     
                         let storyboard = UIStoryboard(name: Home, bundle: nil)
                         let vc  = storyboard.instantiateViewController(withIdentifier: "AdsVC") as! AdsVC
+                    vc.is_Success = false
                         vc.user_id = "\(self.SpecialAdsArray[indexPath.row].adv_advertiser_id ?? 0)"
                         vc.AdId = "\(self.SpecialAdsArray[indexPath.row].adv_id ?? 0)"
                         self.navigationController?.pushViewController(vc, animated: true)
@@ -490,6 +491,7 @@ extension SubAdsVC : UITableViewDataSource ,UITableViewDelegate {
             let vc  = storyboard.instantiateViewController(withIdentifier: "AdsVC") as! AdsVC
             vc.user_id = "\(self.SpecialAdsArray[indexPath.row].adv_advertiser_id ?? 0)"
             vc.AdId = "\(self.SpecialAdsArray[indexPath.row].adv_id ?? 0)"
+            vc.is_Success = false
             self.navigationController?.pushViewController(vc, animated: true)
             
         } else {

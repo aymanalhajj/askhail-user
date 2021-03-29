@@ -349,6 +349,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func BackAction(_ sender: Any) {
         
+        print(DynamicLinkModel.isDynamic , is_Success )
         if DynamicLinkModel.isDynamic || is_Success {
             DynamicLinkModel.isDynamic = false
             guard let window = UIApplication.shared.keyWindow else{return}
