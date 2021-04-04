@@ -620,7 +620,7 @@ extension BusinessAdsDetailsVC {
                 
                 
                 self.ViewsNumber.text = data.data?.advertisement_details?.adv_views ?? ""
-                
+                self.AdsDisnatce.text = data.data?.advertisement_details?.adv_distance ?? ""
                 self.AdsDate.text = "published ".localized + "\(data.data?.advertisement_details?.adv_custom_published_date ?? "") | " + "Modified ".localized + "\( data.data?.advertisement_details?.adv_custom_last_update_date ?? "")"
                 
                 self.AdsDescribtion.font = UIFont(name: "Tajawal-Regular", size: 16)

@@ -713,7 +713,7 @@ extension AdsVC {
                 self.AdvNumber.text = "  \(data.data?.advertisement_details?.adv_id ?? 0)".localized
                 self.AdvTitle.text = data.data?.advertisement_details?.adv_title ?? ""
                 self.AdvPrice.text = data.data?.advertisement_details?.adv_price ?? ""
-                self.AdvDistance.text = data.data?.advertisement_details?.adv_distance ?? ""
+                 self.AdvDistance.text = data.data?.advertisement_details?.adv_distance ?? ""
                 print(data.data?.advertisement_details?.adv_distance ?? "")
                 self.AdvViewer.text = data.data?.advertisement_details?.adv_views ?? ""
                
