@@ -144,6 +144,10 @@ class SubAdsVC: UIViewController ,UITextFieldDelegate       {
     override func viewWillAppear(_ animated: Bool) {
         
         self.LoadingView.isHidden = false
+       // CurrentPage = 1
+        
+        print(CurrentPage , lastPage)
+        
         
         if CurrentPg == "advertisements" {
             reloadToAdv()

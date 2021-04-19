@@ -19,7 +19,7 @@
         <!--Ask Success AddVC-->
         <scene sceneID="F13-QM-0eC">
             <objects>
-                <viewController storyboardIdentifier="AskSuccessAddVC" id="FCy-vl-t4a" customClass="AskSuccessAddVC" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskSuccessAddVC" id="FCy-vl-t4a" customClass="AskSuccessAddVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OnW-kR-8qX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,19 +28,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سيتم مراجعة سؤالك من قبل الإدارة قبل نشره، بإمكانك متابعة التحديثات من ردود ومحادثات في صفحة اسئلتي" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z36-nY-KaV">
-                                <rect key="frame" x="48" y="492" width="318" height="48"/>
+                                <rect key="frame" x="48" y="496" width="318" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم إرسال سؤالك للإدارة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-SW-VKv">
-                                <rect key="frame" x="48" y="444" width="318" height="24"/>
+                                <rect key="frame" x="48" y="444" width="318" height="28"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38a-dc-Nwx">
-                                <rect key="frame" x="123" y="604" width="168" height="28"/>
+                                <rect key="frame" x="140.5" y="597.5" width="133" height="31"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="16"/>
                                 <state key="normal" title="عودة لصفحة اسأل حائل">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,7 +88,7 @@
         <!--Ask TermsVC-->
         <scene sceneID="sP0-ap-bul">
             <objects>
-                <viewController storyboardIdentifier="AskTermsVC" id="Le8-ud-I9v" customClass="AskTermsVC" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskTermsVC" id="Le8-ud-I9v" customClass="AskTermsVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fhY-wH-Lzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxh-PK-RYM">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-h2-ajb" customClass="WiteBackButton" customModule="Markati" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-h2-ajb" customClass="WiteBackButton" customModule="AskHail" customModuleProvider="target">
                                         <rect key="frame" x="362" y="4" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="V1C-aU-Qq4"/>
@@ -228,7 +228,7 @@
         <!--Ask DetailsVC-->
         <scene sceneID="8EE-aU-zsy">
             <objects>
-                <viewController storyboardIdentifier="AskDetailsVC" id="uQd-wL-9qc" customClass="AskDetailsVC" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskDetailsVC" id="uQd-wL-9qc" customClass="AskDetailsVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cca-qK-TJ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2f-jK-QtN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-hP-iw2" customClass="WiteBackButton" customModule="Markati" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-hP-iw2" customClass="WiteBackButton" customModule="AskHail" customModuleProvider="target">
                                         <rect key="frame" x="362" y="4" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="2k9-xA-Cvn"/>
@@ -459,7 +459,7 @@
         <!--Ask Add PhotoVC-->
         <scene sceneID="Mid-CT-j7Z">
             <objects>
-                <viewController storyboardIdentifier="AskAddPhotoVC" id="IzC-LS-iYH" customClass="AskAddPhotoVC" customModule="Markati" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskAddPhotoVC" id="IzC-LS-iYH" customClass="AskAddPhotoVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNz-UX-fgh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,7 +470,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dba-ha-orY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWh-wO-xAq" customClass="WiteBackButton" customModule="Markati" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWh-wO-xAq" customClass="WiteBackButton" customModule="AskHail" customModuleProvider="target">
                                         <rect key="frame" x="362" y="4" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="2Ls-DG-KrX"/>

@@ -522,7 +522,7 @@ extension BusinessAdsDetailsVC : UICollectionViewDataSource , UICollectionViewDe
             let Model = FeatureArray[indexPath.row]
             
             cell.CellTitle.text = Model.specification_section_feature?.feature_name ?? ""
-            
+            cell.CellAnswer.text = Model.specification_answer
             
         }
         

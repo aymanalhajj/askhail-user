@@ -5148,7 +5148,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-GB-uj6">
-                                        <rect key="frame" x="16" y="135" width="60" height="21"/>
+                                        <rect key="frame" x="16" y="135" width="79" height="21"/>
                                         <color key="backgroundColor" red="0.88156706090000003" green="0.97256463770000001" blue="0.99014574290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="yS2-ak-ied"/>
@@ -6535,14 +6535,6 @@
             <point key="canvasLocation" x="2457.971014492754" y="1529.4642857142856"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="NB0-yO-rX2">
-            <size key="intrinsicContentSize" width="245" height="45"/>
-        </designable>
-        <designable name="OdC-Yx-q9p">
-            <size key="intrinsicContentSize" width="-1" height="83"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Polygon 1" width="57" height="66"/>
         <image name="ads-image" width="386" height="499"/>

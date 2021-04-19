@@ -8,6 +8,9 @@
 
 import UIKit
 import Lottie
+import CoreLocation
+import GoogleMaps
+import GooglePlaces
 
 class SplashVC: UIViewController {
     let animationView = AnimationView()
@@ -59,6 +62,13 @@ class SplashVC: UIViewController {
       
     }
     
+    var lat : Double?
+       var lon : Double?
+       var locationManager = CLLocationManager()
+       var currentLocation: CLLocation?
+    var placesClient: GMSPlacesClient!
+       var zoomLevel: Float = 15.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -82,25 +92,31 @@ class SplashVC: UIViewController {
         animationView.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
         
         
-//        let animation1 = Animation.named("askhailsocial", subdirectory: "TestAnimations")
-//
-//           animationView1.animation = animation1
-//           animationView1.contentMode = .scaleAspectFit
-//
-//           imageview1.addSubview(animationView1)
-//        imageview1.translatesAutoresizingMaskIntoConstraints = false
-//
-//        animationView1.backgroundBehavior = .pauseAndRestore
-//        animationView1.translatesAutoresizingMaskIntoConstraints = false
-//        animationView1.topAnchor.constraint(equalTo: imageview1.layoutMarginsGuide.topAnchor).isActive = true
-//        animationView1.leadingAnchor.constraint(equalTo: imageview1.leadingAnchor).isActive = true
-//
-//        animationView1.bottomAnchor.constraint(equalTo: imageview1.bottomAnchor, constant: 0).isActive = true
-//        animationView1.trailingAnchor.constraint(equalTo: imageview1.trailingAnchor).isActive = true
-//        animationView1.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
-//
-//
-      
+        locationManager = CLLocationManager()
+          locationManager.desiredAccuracy = kCLLocationAccuracyBest
+          locationManager.requestAlwaysAuthorization()
+          locationManager.distanceFilter = 50
+          locationManager.startUpdatingLocation()
+          locationManager.delegate = self
+        
+    
+        
+        if let coor = locationManager.location?.coordinate{
+            
+            
+            let camera = GMSCameraPosition.camera(withLatitude: coor.latitude,
+                                                  longitude: coor.longitude,
+                                                  zoom: zoomLevel)
+            
+            self.lat = coor.latitude
+            self.lon = coor.longitude
+            
+            Helper.SaveUser_lat(phone: "\(self.lat ?? 0)")
+
+            Helper.SaveUser_Lng(phone: "\(self.lon ?? 0)")
+            
+            
+        }
        
         
      
@@ -110,3 +126,49 @@ class SplashVC: UIViewController {
     
 
 }
+extension SplashVC : CLLocationManagerDelegate {
+
+      // Handle incoming location events.
+      func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        print("Location: \(location)")
+
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                              longitude: location.coordinate.longitude,
+                                              zoom: zoomLevel)
+   
+        
+        
+       
+        
+      }
+
+      // Handle authorization for the location manager.
+      func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+          print("Location access was restricted.")
+        case .denied:
+          print("User denied access to location.")
+          // Display the map using the default location.
+         
+        case .notDetermined:
+          print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+          print("Location status is OK.")
+        }
+      }
+
+      // Handle location manager errors.
+      func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("Error: \(error)")
+      }
+        
+      
+        
+
+    }
+
+

@@ -76,8 +76,8 @@ class BusinessAdvVC: UIViewController {
     var lastPage = 1
     
     override func viewWillAppear(_ animated: Bool) {
-        var CurrentPage = 1
-        var lastPage = 1
+       CurrentPage = 1
+        lastPage = 1
         BusinessArray.removeAll()   
         getAdsData()
     }
