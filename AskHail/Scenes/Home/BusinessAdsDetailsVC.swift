@@ -504,6 +504,13 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
     @IBAction func ShawMoreRateAction(_ sender: Any) {
         
         
+        
+        if lastPage > CurrentPage {
+            CurrentPage = CurrentPage + 1
+            ShowRate()
+        }
+      
+        
     }
     
 }
@@ -835,7 +842,11 @@ extension BusinessAdsDetailsVC {
     
     func ShowRate() {
         
+        self.view.lock()
+        
         ApiServices.instance.getPosts(methodType: .get, parameters: nil , url: "\(hostName)show-advertisement-rates/\(AdId)?page=\(CurrentPage)") { (data : ShowRateModel?, String) in
+            
+            self.view.unlock()
             
             if String != nil {
                 
@@ -846,7 +857,7 @@ extension BusinessAdsDetailsVC {
                 guard let data = data else {
                     return
                 }
-                
+                print(self.CurrentPage)
               
                 self.CurrentPage = data.data?.pagination?.current_page ?? 1
                 self.lastPage = data.data?.pagination?.last_page ?? 1
@@ -866,8 +877,10 @@ extension BusinessAdsDetailsVC {
                 }else{
                     self.NoCommentLable.isHidden = true
                 }
+                self.AddNewRateBtn.isHidden = false
+                self.CommentsTableView.reloadData()
                 
-                for item in data.data?.data ?? [] {
+                for item in self.RateArray {
                     if "\(item.rate_voter_id ?? 0)" == Helper.getaUser_id() {
                         self.AddNewRateBtn.isHidden = true
                         return
@@ -876,7 +889,7 @@ extension BusinessAdsDetailsVC {
                     }
                 }
                 
-                self.CommentsTableView.reloadData()
+               
                 self.isActive = true
                 
                 print(data)

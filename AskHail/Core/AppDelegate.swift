@@ -199,7 +199,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
                 guard let window = UIApplication.shared.keyWindow else{return}
                 let sb = UIStoryboard(name: Home, bundle: nil)
                 var vc : UIViewController
-                vc = sb.instantiateViewController(withIdentifier: "AdsVC")
+                vc = sb.instantiateViewController(withIdentifier: "AdsV")
                 window.rootViewController = vc
                 UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
                 
@@ -459,7 +459,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                 guard let window = UIApplication.shared.keyWindow else{return}
                 let sb = UIStoryboard(name: Home, bundle: nil)
                 var vc : UIViewController
-                vc = sb.instantiateViewController(withIdentifier: "AdsVC")
+                vc = sb.instantiateViewController(withIdentifier: "AdsV")
                 window.rootViewController = vc
                 UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
                 
@@ -524,7 +524,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                 guard let window = UIApplication.shared.keyWindow else{return}
                 let sb = UIStoryboard(name: Home, bundle: nil)
                 var vc : UIViewController
-                vc = sb.instantiateViewController(withIdentifier: "AdsVC")
+                vc = sb.instantiateViewController(withIdentifier: "AdsV")
                 window.rootViewController = vc
                 UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
                 

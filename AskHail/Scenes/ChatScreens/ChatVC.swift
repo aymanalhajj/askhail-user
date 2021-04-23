@@ -52,7 +52,7 @@ class chatVC: UIViewController , UITextFieldDelegate{
     var s: SocketIOClient!
     var manager:SocketManager!
     
-    let SocketUrl = "https://chats.fixup-sa.com"
+    let SocketUrl = "https://chat.askhail.com"
     
     var chat_type_id = ""
     var chat_type = ""
@@ -61,6 +61,8 @@ class chatVC: UIViewController , UITextFieldDelegate{
     
     
     var localMessage = [LocalMessage]()
+    
+    var FromDetails = false
     
     private func createSpinnerFooter() -> UIView {
         let FooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
@@ -87,12 +89,16 @@ class chatVC: UIViewController , UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if DynamicLinkModel.isDynamic {
-            
-            self.chat_type_id = DynamicLinkModel.Product_id
-            self.isMessages = 1
-            
+        if FromDetails {
+           
+        }else {
+            if DynamicLinkModel.isDynamic {
+                self.chat_type_id = DynamicLinkModel.Product_id
+                self.isMessages = 1
+            }
         }
+        
+      
         
         
         tabBarController?.tabBar.isHidden = true

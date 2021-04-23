@@ -496,6 +496,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         let storyboard = UIStoryboard(name: Chat, bundle: nil)
         let vc  = storyboard.instantiateViewController(withIdentifier: "chatVC") as! chatVC
         
+        vc.FromDetails = true
         vc.chat_type_id = self.AdId
         vc.chat_type = "advertisement"
         vc.isSubView = 1

@@ -3456,7 +3456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mu-zC-SZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6951" y="387"/>
+            <point key="canvasLocation" x="7860.8695652173919" y="386.38392857142856"/>
         </scene>
         <!--Adv On MapVC-->
         <scene sceneID="6GZ-5u-hVD">
@@ -5039,6 +5039,7 @@
                             <constraint firstItem="cwN-bb-rgF" firstAttribute="leading" secondItem="S2X-Jx-ABN" secondAttribute="leading" id="zn7-o1-VuU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="acW-68-PQX"/>
                     <size key="freeformSize" width="414" height="2300"/>
                     <connections>
                         <outlet property="AdvAddress" destination="Gdv-eN-HmH" id="anS-HC-JLA"/>
@@ -5104,7 +5105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppe-Xh-1cY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5569.5652173913049" y="389.73214285714283"/>
+            <point key="canvasLocation" x="6294" y="577"/>
         </scene>
         <!--Comment PopupVC-->
         <scene sceneID="5tO-ep-IrE">
@@ -5989,7 +5990,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1D-R0-FaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6255" y="390"/>
+            <point key="canvasLocation" x="7163.7681159420299" y="389.73214285714283"/>
         </scene>
         <!--CommentVC-->
         <scene sceneID="Zpr-Pu-pLx">
@@ -6534,7 +6535,29 @@
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="1529.4642857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iEm-bi-iaT">
+            <objects>
+                <navigationController storyboardIdentifier="AdsV" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fhZ-xN-xhW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HSy-cK-dfH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qea-5G-1Ph" kind="relationship" relationship="rootViewController" id="I63-gS-fpC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRq-Kt-0ns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5643" y="113"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="OdC-Yx-q9p">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Polygon 1" width="57" height="66"/>
         <image name="ads-image" width="386" height="499"/>
