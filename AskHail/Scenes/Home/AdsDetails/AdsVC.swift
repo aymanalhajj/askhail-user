@@ -264,7 +264,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         
         if Helper.getapitoken() == nil {
             
-            VisitorView.isHidden = false
+         VisitorView.isHidden = false
             
             let attrs1 = [NSAttributedString.Key.font : UIFont(name: "Tajawal-Bold", size: 16), NSAttributedString.Key.foregroundColor : Colors.DarkBlue]
             
@@ -493,6 +493,11 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func ChatAction(_ sender: Any) {
         
+        guard Helper.getapitoken() != nil else {
+            alertSkipLogin()
+            return
+        }
+        
         let storyboard = UIStoryboard(name: Chat, bundle: nil)
         let vc  = storyboard.instantiateViewController(withIdentifier: "chatVC") as! chatVC
         
@@ -695,7 +700,7 @@ extension AdsVC {
                     guard let window = UIApplication.shared.keyWindow else{return}
                     let sb = UIStoryboard(name: Home, bundle: nil)
                     var vc : UIViewController
-                    vc = sb.instantiateViewController(withIdentifier: "BusinessAdsDetailsVC")
+                    vc = sb.instantiateViewController(withIdentifier: "BusinessAdsDetailsV")
                     window.rootViewController = vc
                     UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
                     

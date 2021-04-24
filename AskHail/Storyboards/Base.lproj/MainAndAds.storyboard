@@ -3402,6 +3402,7 @@
                             <constraint firstItem="DzX-R2-fhs" firstAttribute="leading" secondItem="ouF-l0-JFC" secondAttribute="leading" id="swe-gb-auu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gP6-yI-1Xp"/>
                     <size key="freeformSize" width="414" height="2300"/>
                     <connections>
                         <outlet property="AddNewRateBtn" destination="Pei-GO-VQZ" id="ijy-aN-cCQ"/>
@@ -3456,7 +3457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mu-zC-SZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7860.8695652173919" y="386.38392857142856"/>
+            <point key="canvasLocation" x="8771.0144927536239" y="386.38392857142856"/>
         </scene>
         <!--Adv On MapVC-->
         <scene sceneID="6GZ-5u-hVD">
@@ -4596,7 +4597,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="twO-9D-IC5" firstAttribute="leading" secondItem="QrF-6N-mWf" secondAttribute="leading" constant="8" id="7lj-b5-gIP"/>
                                                                     <constraint firstAttribute="trailing" secondItem="DEs-Bk-68e" secondAttribute="trailing" constant="24" id="EKg-aB-LvP"/>
@@ -6551,6 +6552,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRq-Kt-0ns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5643" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q2e-Of-5MA">
+            <objects>
+                <navigationController storyboardIdentifier="BusinessAdsDetailsV" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8bS-Xj-vpE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BNB-6g-ArB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qa2-cv-2sE" kind="relationship" relationship="rootViewController" id="KBh-Qe-FvD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVG-j5-J4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7860.8695652173919" y="386.38392857142856"/>
         </scene>
     </scenes>
     <designables>
