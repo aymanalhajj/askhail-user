@@ -15,7 +15,7 @@ import Toast_Swift
 
 class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UITextViewDelegate {
     
-//MARK:Outlets
+    //MARK:Outlets
     
     @IBOutlet weak var ScrollBackGround: UIView!
     @IBOutlet var MainBackRound: UIView!
@@ -52,7 +52,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var AdvAddress: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var MapIcon: UIImageView!
-
+    
     @IBOutlet weak var OwnerView: UIView!
     @IBOutlet weak var OwnerName: UILabel!
     @IBOutlet weak var OwnerAdsCount: UILabel!
@@ -72,7 +72,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var EditView: UIView!
     @IBOutlet weak var starImage: UIImageView!
     
-
+    
     @IBOutlet weak var adNomberLbl: UILabel!
     @IBOutlet weak var detailsLbl: UILabel!
     @IBOutlet weak var featureLbl: UILabel!
@@ -88,7 +88,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var editLbl: UILabel!
     @IBOutlet weak var specialLbl: UILabel!
     
-
+    
     
     var is_Success = true
     
@@ -109,27 +109,27 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     }
     
     private func styleGoogleMaps(){
+        
+        do {
             
-            do {
-             
-                if let StyleUrl = Bundle.main.url(forResource: "style", withExtension: "json")
-                {
-                    mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: StyleUrl)
-                    
-                }else {
-                    
-                    print("(unable to find sryle file")
-                    
-                }
+            if let StyleUrl = Bundle.main.url(forResource: "style", withExtension: "json")
+            {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: StyleUrl)
                 
-            }catch {
+            }else {
                 
+                print("(unable to find sryle file")
                 
-                print("failed to load json")
             }
             
+        }catch {
             
+            
+            print("failed to load json")
         }
+        
+        
+    }
     
     //pram
     
@@ -149,7 +149,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     var FeatureArray : [Adv_specifications] = []
     var FeatureData = false
     var checkBox = false
-  
+    
     
     var lang = ""
     var lat = ""
@@ -200,7 +200,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         AdviserNomLbl.text = "ads".localized
         
         styleGoogleMaps()
-
+        
         setShadow(view: DetailsView, width: Int(0.1), height: Int(0.1), shadowRadius: 1, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
         setShadow(view: FeatureView, width: Int(0.1), height: Int(0.1), shadowRadius: 1, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
         setShadow(view: LocationView, width: Int(0.1), height: Int(0.1), shadowRadius: 1, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
@@ -211,14 +211,11 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         
         lang = AdData?.advertisement_details?.adv_latitude ?? ""
         lat = AdData?.advertisement_details?.adv_latitude ?? ""
-        
         ScrollBackGround.backgroundColor = UIColor(hexString: "E5F2F7")
         MainBackRound.backgroundColor = UIColor(hexString: "E5F2F7")
         
         NoCommentLable.text = "No Commentns".localized
-        
         MainView.isHidden = true
-        
         PagerView.addSubview(imgVedio)
         
         if DynamicLinkModel.isDynamic {
@@ -231,17 +228,9 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         
         CommentsTableView.delegate = self
         CommentsTableView.dataSource = self
-        
         CommentsTableView.RegisterNib(cell: CommentWithReplayCell.self)
-        
         CommentsTableView.RegisterNib(cell: CommentCellTableViewCell.self)
-        
         CommentsTableView.RegisterNib(cell: ReplayCommentCell.self)
-        
-        
-       
-    
-        
         DetailsCollectionView.dataSource = self
         DetailsCollectionView.delegate = self
         DetailsCollectionView.RegisterNib(cell: ShowDetailsCell.self)
@@ -264,7 +253,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         
         if Helper.getapitoken() == nil {
             
-         VisitorView.isHidden = false
+            VisitorView.isHidden = false
             
             let attrs1 = [NSAttributedString.Key.font : UIFont(name: "Tajawal-Bold", size: 16), NSAttributedString.Key.foregroundColor : Colors.DarkBlue]
             
@@ -294,16 +283,16 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
             
         }
     }
-
+    
     func CreateMarker(Lat : Double , lng : Double){
-
+        
         let cameraPosition = GMSCameraPosition.camera(withLatitude: Lat, longitude: lng, zoom: 15.0)
         mapView.animate(to: cameraPosition)
         view.unlock()
         
     }
     
-//MARK: - PagerView Controller
+    //MARK: - PagerView Controller
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return media.count
     }
@@ -370,7 +359,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     }
     
     @IBAction func AddComment(_ sender: Any) {
-
+        
         guard Helper.getapitoken() != nil else {
             alertSkipLogin()
             return
@@ -435,8 +424,8 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         print(longDynamicLink)
         
         DynamicLinkComponents.shortenURL(longDynamicLink, options: nil) { url, warnings, error in
-          guard let url = url, error == nil else { return }
-          print("The short URL is: \(url)")
+            guard let url = url, error == nil else { return }
+            print("The short URL is: \(url)")
             
             let shareText = "\(self.AdvTitle.text ?? "")" + "\n" + "\(url)"
             
@@ -587,7 +576,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
                 navigationController?.pushViewController(vc, animated: true)
                 
             }
-      
+            
         }
     }
     
@@ -644,10 +633,10 @@ extension AdsVC : UICollectionViewDataSource , UICollectionViewDelegate , UIColl
         
         if FeatureData {
             let Model = FeatureArray[indexPath.row]
-
+            
             cell.CellTitle.text = Model.specification_section_feature?.feature_name ?? ""
             cell.CellAnswer.text = Model.specification_answer
-
+            
         }
         
         cell.flipX()
@@ -655,8 +644,8 @@ extension AdsVC : UICollectionViewDataSource , UICollectionViewDelegate , UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = (collectionView.frame.width - 16)/3
-            return CGSize.init(width: width , height:46)
+        let width = (collectionView.frame.width - 16)/3
+        return CGSize.init(width: width , height:46)
     }
     
 }
@@ -719,10 +708,10 @@ extension AdsVC {
                 self.AdvNumber.text = "  \(data.data?.advertisement_details?.adv_id ?? 0)".localized
                 self.AdvTitle.text = data.data?.advertisement_details?.adv_title ?? ""
                 self.AdvPrice.text = data.data?.advertisement_details?.adv_price ?? ""
-                 self.AdvDistance.text = data.data?.advertisement_details?.adv_distance ?? ""
+                self.AdvDistance.text = data.data?.advertisement_details?.adv_distance ?? ""
                 print(data.data?.advertisement_details?.adv_distance ?? "")
                 self.AdvViewer.text = data.data?.advertisement_details?.adv_views ?? ""
-               
+                
                 self.AdvDate.text = "published ".localized + "\(data.data?.advertisement_details?.adv_custom_published_date ?? "") | " + "Modified ".localized + "\( data.data?.advertisement_details?.adv_custom_last_update_date ?? "")"
                 
                 self.AdvDescription.font = UIFont(name: "Tajawal-Regular", size: 16)
@@ -740,7 +729,7 @@ extension AdsVC {
                 self.whatsState = data.data?.advertisement_details?.adv_whatsapp_number_status ?? ""
                 
                 self.FeatureArray = data.data?.advertisement_details?.adv_specifications ?? []
-                    
+                
                 
                 if data.data?.advertisement_details?.adv_specifications?.count ?? 0 == 0 {
                     self.FueatureTitle.isHidden = true
@@ -765,7 +754,7 @@ extension AdsVC {
                     
                 }
                 
-
+                
                 if data.data?.advertisement_details?.adv_whatsapp_number_status == "active" {
                     self.WatsAppView.isHidden = false
                     
@@ -805,9 +794,9 @@ extension AdsVC {
                     self.PromotionalPhotoHight.constant = 40
                 }
                 
-               
                 
-               
+                
+                
                 self.isActive = true
                 
                 self.pageControl.numberOfPages = self.media.count
@@ -828,7 +817,7 @@ extension AdsVC {
                     self.CommentsTableView.reloadData()
                     self.NoCommentLable.isHidden = false
                     self.tableviewhight.constant = 50
-                   
+                    
                 }
                 
                 DispatchQueue.main.async {
@@ -843,7 +832,7 @@ extension AdsVC {
                     self.CommentsTableView.reloadData()
                     self.MainView.layoutIfNeeded()
                 }
-              
+                
                 self.DetailsCollectionView.reloadData()
                 self.CommentsTableView.reloadData()
                 self.MainView.layoutIfNeeded()
@@ -872,7 +861,7 @@ extension AdsVC {
                     return
                 }
                 
-              
+                
                 self.CurrentPage = data.data?.pagination?.current_page ?? 1
                 self.lastPage = data.data?.pagination?.last_page ?? 1
                 
@@ -896,10 +885,10 @@ extension AdsVC {
                     self.CommentsTableView.isHidden = true
                     self.NoCommentLable.isHidden = false
                     self.tableviewhight.constant = 50
-                   
+                    
                 }
                 
-               
+                
                 DispatchQueue.main.async {
                     self.CommentsTableView.reloadData()
                     self.collectionViewHight.constant = self.DetailsCollectionView.contentSize.height
@@ -908,7 +897,7 @@ extension AdsVC {
                     self.CommentsTableView.reloadData()
                     self.MainView.layoutIfNeeded()
                 }
-
+                
                 self.DetailsCollectionView.reloadData()
                 self.CommentsTableView.reloadData()
                 self.MainView.layoutIfNeeded()
@@ -932,14 +921,14 @@ extension AdsVC {
             
             if String != nil {
                 
-//                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+                //                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
                 
             } else {
                 
                 guard let data = data else {
                     return
                 }
-
+                
                 print(data)
                 
                 self.CommentCount += 1
@@ -970,7 +959,7 @@ extension AdsVC {
             self.view.unlock()
             
             if String != nil {
-
+                
                 
             }else {
                 
@@ -978,7 +967,7 @@ extension AdsVC {
                     return
                 }
                 
-
+                
                 self.CommentCount -= 1
                 self.AdvCommentCount.text = "( \(self.CommentCount) )"
                 
@@ -1023,7 +1012,7 @@ extension AdsVC {
                 self.CommentArray.removeAll()
                 
                 self.ShowComment()
-
+                
                 print(data)
             }
         }
