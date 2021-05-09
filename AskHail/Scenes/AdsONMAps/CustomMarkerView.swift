@@ -52,3 +52,46 @@ class CustomMarkerView: UIView {
 
 
 
+import Foundation
+import Foundation
+import Foundation
+import UIKit
+
+class CustomMarkerView2: UIView {
+    var img: UIImage!
+    var borderColor_Map: UIColor!
+    
+    init(frame: CGRect, image: UIImage?, borderColor: UIColor, tag: Int) {
+        super.init(frame: frame)
+        self.img = #imageLiteral(resourceName: "neighbourhood")
+     
+        setupViews()
+    }
+    
+    func setupViews() {
+        let imgView = UIImageView(image: img)
+        imgView.frame=CGRect(x: 0, y: 0, width: 36, height: 36)
+       
+        imgView.clipsToBounds=false
+       
+        
+        
+        
+        self.addSubview(imgView)
+       
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+
+
+
+
+
+
+

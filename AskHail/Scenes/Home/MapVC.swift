@@ -108,18 +108,29 @@ extension MapVC: CLLocationManagerDelegate {
         
         
         // CreateMarker(lat ?? 0.0, lon ?? 0.0)
-        getLocation(lat ?? 0.0, lon ?? 0.0)
+       // getLocation(lat ?? 0.0, lon ?? 0.0)
         
         
     }
     
+    func CreateMarker(Lat : Double , lng : Double){
+        let marker = GMSMarker()
+        mapView.clear()
+        marker.iconView = CustomMarkerView2(frame: CGRect(x: 0, y: 0, width: 36, height: 48), image: #imageLiteral(resourceName: "locationInAds"), borderColor: UIColor.darkGray, tag: 0)
+        marker.position = CLLocationCoordinate2D(latitude: Lat, longitude: lng)
+        let cameraPosition = GMSCameraPosition.camera(withLatitude: Lat, longitude: lng, zoom: 15.0)
+        marker.map = mapView
+        mapView.animate(to: cameraPosition)
+        
+        
+    }
     
 }
 
 extension MapVC  {
     
     func getLocation(_ latitude: Double,_ longitude : Double) {
-        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(GoogleKey)&language=\("")"
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(GoogleKey)&language=\(lang)"
         
         print(url)
         Alamofire.request(url).validate().responseJSON { response in
@@ -440,6 +451,9 @@ extension MapVC {
         
         let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude,longitude: coordinate.longitude,zoom: zoomLevel)
         
+        self.lat = coordinate.latitude
+        self.lon = coordinate.longitude
+        
         if mapView.isHidden {
             
             mapView.isHidden = false
@@ -447,7 +461,10 @@ extension MapVC {
         } else {
             
             mapView.animate(to: camera)
+         //   CreateMarker(Lat: lat ?? 0.0, lng: lon ?? 0.0)
+            getLocation(self.lat ?? 0.0, self.lon ?? 0.0)
             getAllAdvOnmao()
+            
         }
     }
 

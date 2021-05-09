@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         }
         UIApplication.shared.statusBarStyle = .lightContent
         
-        GMSServices.provideAPIKey("AIzaSyCY3cts8jDZWLELoHvwxbGhrXLAKK291d0")
-        GMSPlacesClient.provideAPIKey("AIzaSyCY3cts8jDZWLELoHvwxbGhrXLAKK291d0")
+        GMSServices.provideAPIKey(GoogleKey)
+        GMSPlacesClient.provideAPIKey(GoogleKey)
         
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
