@@ -309,8 +309,8 @@ extension ForgetPasswordVC_2 {
     func ForgetPassword_2() {
         self.view.lock()
         let Parameters = [
-            "advertiser_id" : Helper.getaUser_id() ?? "",
-            "forget_code" : "\(TF1.text ?? "")\(TF2.text ?? "")\(TF3.text ?? "")\(TF4.text ?? "")"  ?? ""
+            "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)",
+            "forget_code" : "\(TF1.text ?? "")\(TF2.text ?? "")\(TF3.text ?? "")\(TF4.text ?? "")"
         ]
         
         print(Parameters)
@@ -347,7 +347,7 @@ extension ForgetPasswordVC_2 {
 func ResendConfirmCode() {
     
     let Parameters = [
-        "advertiser_id" : Helper.getaUser_id() ?? ""
+        "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)"
     ]
     
     print(Parameters)

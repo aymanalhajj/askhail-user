@@ -162,7 +162,7 @@ class uOrderDetailsVC: UIViewController, UITextViewDelegate {
         
         AddCommentTV.textColor = #colorLiteral(red: 0.01176470588, green: 0.2941176471, blue: 0.537254902, alpha: 0.5)
         
-        if Helper.getapitoken() == nil {
+        if AuthService.userData?.advertiser_api_token == nil {
             
             VisitorView.isHidden = false
             
@@ -343,7 +343,7 @@ class uOrderDetailsVC: UIViewController, UITextViewDelegate {
     
     @IBAction func LoginAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -353,7 +353,7 @@ class uOrderDetailsVC: UIViewController, UITextViewDelegate {
     
     @IBAction func AddComment(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -473,7 +473,7 @@ extension uOrderDetailsVC : UITableViewDataSource , UITableViewDelegate {
             cell.CommentReplayTime.text = Model.comment_advertiser_reply_custom_date ?? ""
             
             cell.DeleteHight.constant = 0
-            if Model.comment_voter_name == Helper.getaUser_name() {
+            if Model.comment_voter_name == AuthService.userData?.advertiser_name {
                 cell.Deletbtn.isHidden = false
                 cell.DeleteHight.constant = 24
             }
@@ -497,7 +497,7 @@ extension uOrderDetailsVC : UITableViewDataSource , UITableViewDelegate {
             cell.DeleteBtnHight.constant = 0
             cell.Deletbtn.isHidden = true
             
-            if Model.comment_voter_name == Helper.getaUser_name() {
+            if Model.comment_voter_name == AuthService.userData?.advertiser_name {
                 cell.Deletbtn.isHidden = false
                 cell.DeleteBtnHight.constant = 24
             }
@@ -579,7 +579,7 @@ extension uOrderDetailsVC {
                 }
                 
                 self.ChatView.isHidden = true
-                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != Helper.getaUser_id()  {
+                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != "\(AuthService.userData?.advertiser_id ?? 0)"  {
                     self.ChatView.isHidden = false
                 }
                 
@@ -595,7 +595,7 @@ extension uOrderDetailsVC {
                 
                 
                 self.addCommentBtn.isHidden = true
-                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != Helper.getaUser_id() {
+                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != "\(AuthService.userData?.advertiser_id ?? 0)" {
                     
                     self.addCommentBtn.isHidden = false
                     

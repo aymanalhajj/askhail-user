@@ -60,7 +60,7 @@ class MoreVC: BottomPopupViewController {
     
     @IBAction func MyAccountAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }
@@ -83,7 +83,7 @@ class MoreVC: BottomPopupViewController {
     
     @IBAction func ServicesAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }
@@ -97,7 +97,7 @@ class MoreVC: BottomPopupViewController {
     
     @IBAction func SettingAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }

@@ -29,19 +29,25 @@ struct BlocksModel : Codable {
 }
 
 struct BlocksData : Codable {
-    let block_id : Int?
+    let block_id : String?
+    let block_city : Block_city?
     let block_name : String?
+    let admin_block_name : String?
 
     enum CodingKeys: String, CodingKey {
 
         case block_id = "block_id"
+        case block_city = "block_city"
         case block_name = "block_name"
+        case admin_block_name = "admin_block_name"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        block_id = try values.decodeIfPresent(Int.self, forKey: .block_id)
+        block_id = try values.decodeIfPresent(String.self, forKey: .block_id)
+        block_city = try values.decodeIfPresent(Block_city.self, forKey: .block_city)
         block_name = try values.decodeIfPresent(String.self, forKey: .block_name)
+        admin_block_name = try values.decodeIfPresent(String.self, forKey: .admin_block_name)
     }
 
 }

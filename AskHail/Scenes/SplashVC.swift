@@ -35,7 +35,7 @@ class SplashVC: UIViewController {
                                 
                                 
                                 guard let window = UIApplication.shared.keyWindow else{return}
-                                if Helper.getapitoken() != nil {
+                                if AuthService.userData?.advertiser_api_token != nil {
                                     
                                     
                                     

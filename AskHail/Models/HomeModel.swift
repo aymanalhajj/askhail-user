@@ -33,6 +33,7 @@ struct HomeData : Codable {
     let special_advertisements : [Special_advertisements]?
     let real_estate : [Real_estate]?
     let business : [Business]?
+    let famous : [Famous]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -40,6 +41,7 @@ struct HomeData : Codable {
         case special_advertisements = "special_advertisements"
         case real_estate = "real_estate"
         case business = "business"
+        case famous = "famous"
     }
 
     init(from decoder: Decoder) throws {
@@ -48,9 +50,11 @@ struct HomeData : Codable {
         special_advertisements = try values.decodeIfPresent([Special_advertisements].self, forKey: .special_advertisements)
         real_estate = try values.decodeIfPresent([Real_estate].self, forKey: .real_estate)
         business = try values.decodeIfPresent([Business].self, forKey: .business)
+        famous = try values.decodeIfPresent([Famous].self, forKey: .famous)
     }
 
 }
+
 
 struct Special_advertisements : Codable {
     let adv_id : Int?
@@ -99,12 +103,16 @@ struct Real_estate : Codable {
     let section_id : Int?
     let section_name : String?
     let section_image : String?
+    let section_type : String?
+    let section_business_type : String?
 
     enum CodingKeys: String, CodingKey {
 
         case section_id = "section_id"
         case section_name = "section_name"
         case section_image = "section_image"
+        case section_type = "section_type"
+        case section_business_type = "section_business_type"
     }
 
     init(from decoder: Decoder) throws {
@@ -112,6 +120,8 @@ struct Real_estate : Codable {
         section_id = try values.decodeIfPresent(Int.self, forKey: .section_id)
         section_name = try values.decodeIfPresent(String.self, forKey: .section_name)
         section_image = try values.decodeIfPresent(String.self, forKey: .section_image)
+        section_type = try values.decodeIfPresent(String.self, forKey: .section_type)
+        section_business_type = try values.decodeIfPresent(String.self, forKey: .section_business_type)
     }
 
 }
@@ -120,12 +130,16 @@ struct Business : Codable {
     let section_id : Int?
     let section_name : String?
     let section_image : String?
+    let section_type : String?
+    let section_business_type : String?
 
     enum CodingKeys: String, CodingKey {
 
         case section_id = "section_id"
         case section_name = "section_name"
         case section_image = "section_image"
+        case section_type = "section_type"
+        case section_business_type = "section_business_type"
     }
 
     init(from decoder: Decoder) throws {
@@ -133,9 +147,39 @@ struct Business : Codable {
         section_id = try values.decodeIfPresent(Int.self, forKey: .section_id)
         section_name = try values.decodeIfPresent(String.self, forKey: .section_name)
         section_image = try values.decodeIfPresent(String.self, forKey: .section_image)
+        section_type = try values.decodeIfPresent(String.self, forKey: .section_type)
+        section_business_type = try values.decodeIfPresent(String.self, forKey: .section_business_type)
     }
 
 }
 
+
+
+struct Famous : Codable {
+    let section_id : Int?
+    let section_name : String?
+    let section_image : String?
+    let section_type : String?
+    let section_business_type : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case section_id = "section_id"
+        case section_name = "section_name"
+        case section_image = "section_image"
+        case section_type = "section_type"
+        case section_business_type = "section_business_type"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        section_id = try values.decodeIfPresent(Int.self, forKey: .section_id)
+        section_name = try values.decodeIfPresent(String.self, forKey: .section_name)
+        section_image = try values.decodeIfPresent(String.self, forKey: .section_image)
+        section_type = try values.decodeIfPresent(String.self, forKey: .section_type)
+        section_business_type = try values.decodeIfPresent(String.self, forKey: .section_business_type)
+    }
+
+}
 
 

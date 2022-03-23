@@ -20,7 +20,7 @@ extension OrderVC : UITableViewDataSource , UITableViewDelegate {
         let Model = CommentArray[indexPath.row]
         
         
-        if "\(Order?.order_details?.order_advertiser_id ?? 0)" == Helper.getaUser_id() {
+        if "\(Order?.order_details?.order_advertiser_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
             //if My Adv
             
             if Model.comment_if_advertiser_reply_yet == false {
@@ -31,7 +31,7 @@ extension OrderVC : UITableViewDataSource , UITableViewDelegate {
                 cell.CommentText.text = Model.comment_text ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == "\(AuthService.userData?.advertiser_name ?? "")" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{
@@ -72,7 +72,7 @@ extension OrderVC : UITableViewDataSource , UITableViewDelegate {
                 cell.CommentReplayTime.text = Model.comment_advertiser_reply_custom_date ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == "\(AuthService.userData?.advertiser_name ?? "")" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{
@@ -100,7 +100,7 @@ extension OrderVC : UITableViewDataSource , UITableViewDelegate {
                 cell.CommentTime.text = Model.comment_text_custom_date ?? ""
                 cell.CommentText.text = Model.comment_text ?? ""
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == "\(AuthService.userData?.advertiser_name ?? "")" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteBtnHight.constant = 24
                 }else{
@@ -127,7 +127,7 @@ extension OrderVC : UITableViewDataSource , UITableViewDelegate {
                 cell.CommentReplayTime.text = Model.comment_advertiser_reply_custom_date ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == "\(AuthService.userData?.advertiser_name ?? "")" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{

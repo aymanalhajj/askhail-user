@@ -26,12 +26,12 @@ class ApiServices : UIViewController {
         var urlString: String = ""
         var headers: HTTPHeaders? = nil
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil {
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(Helper.getapitoken()!)" ,
-                "lat" : Helper.getUser_lat() ?? "" ,
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")" ,
+                "lat" : AuthService.userData?.advertiser_api_token ?? "" ,
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
@@ -155,10 +155,10 @@ class ApiServices : UIViewController {
         var urlString: String = ""
         var headers: HTTPHeaders? = nil
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil {
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(Helper.getapitoken()!)" ,
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")" ,
                 "lat" : Helper.getUser_lat() ?? "" ,
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
@@ -167,6 +167,8 @@ class ApiServices : UIViewController {
                 "Accept-Language": self.lang
             ]
         }
+        
+        print(headers)
         
         let URL = try! URLRequest(url: url, method: .post, headers: headers)
         
@@ -286,7 +288,7 @@ class ApiServices : UIViewController {
     func getPostsOayer<T : Decodable>(methodType: HTTPMethod = .post , parameters: [String: AnyObject]? = nil , url : String , Completion : @escaping (T? ,String?)->Void){
         
         
-        print(Helper.getapitoken() ?? "" )
+        print(AuthService.userData?.advertiser_api_token ?? "" )
         
         if L102Language.currentAppleLanguage() == arabicLang {
             self.lang = "ar"
@@ -297,11 +299,11 @@ class ApiServices : UIViewController {
         var urlString: String = ""
         var headers: HTTPHeaders? = nil
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil {
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                 //                \(Helper.getapitoken()!)
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(Helper.getapitoken()!)" ,
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")" ,
                 "lat" : Helper.getUser_lat() ?? "" ,
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
@@ -414,10 +416,10 @@ class ApiServices : UIViewController {
         var urlString: String = ""
         var headers: HTTPHeaders? = nil
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil {
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(Helper.getapitoken()!)" ,
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")" ,
                 "lat" : Helper.getUser_lat() ?? "" ,
                 "lng" : Helper.getUser_Lng() ?? ""
             ]

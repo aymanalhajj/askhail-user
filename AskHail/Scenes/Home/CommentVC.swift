@@ -113,7 +113,7 @@ extension CommentVC : UITableViewDelegate , UITableViewDataSource {
         let Model = CommentArray[indexPath.row]
         
         
-        if user_id == Helper.getaUser_id() {
+        if user_id == "\(AuthService.userData?.advertiser_id ?? 0)" {
             //if My Adv
             
             if Model.comment_if_advertiser_reply_yet == false {
@@ -124,7 +124,7 @@ extension CommentVC : UITableViewDelegate , UITableViewDataSource {
                 cell.CommentText.text = Model.comment_text ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == AuthService.userData?.advertiser_name ?? "" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{
@@ -163,7 +163,7 @@ extension CommentVC : UITableViewDelegate , UITableViewDataSource {
                 cell.CommentReplayTime.text = Model.comment_advertiser_reply_custom_date ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == AuthService.userData?.advertiser_name ?? "" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{
@@ -191,7 +191,7 @@ extension CommentVC : UITableViewDelegate , UITableViewDataSource {
                 cell.CommentTime.text = Model.comment_text_custom_date ?? ""
                 cell.CommentText.text = Model.comment_text ?? ""
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == AuthService.userData?.advertiser_name ?? "" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteBtnHight.constant = 24
                 }else{
@@ -218,7 +218,7 @@ extension CommentVC : UITableViewDelegate , UITableViewDataSource {
                 cell.CommentReplayTime.text = Model.comment_advertiser_reply_custom_date ?? ""
                 
                 
-                if Model.comment_voter_name == Helper.getaUser_name() {
+                if Model.comment_voter_name == AuthService.userData?.advertiser_name ?? "" {
                     cell.Deletbtn.isHidden = false
                     cell.DeleteHight.constant = 24
                 }else{

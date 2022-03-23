@@ -13,8 +13,11 @@ import Alamofire
 private func checkConnection() -> Bool {
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
     return (reachabilityManager?.isReachable)!
+    
 }
-let hostName = "https://askhail.com/api/v1/"
+
+//https://askhail.com/api/v1/
+let hostName = "https://www.test.askhail.com/api/v1/"
 
 
 
@@ -72,10 +75,10 @@ class Manager  : UIViewController {
         print("ServiceName:\(serviceName)  parameters: \(String(describing: parameters))")
         
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil {
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(Helper.getapitoken()!)"
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")"
             ]
         }else{
             headers = [
@@ -140,10 +143,10 @@ class Manager  : UIViewController {
         
         var headers: HTTPHeaders? = nil
         
-        if Helper.getapitoken() != "" && Helper.getapitoken() != nil{
+        if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil{
             headers = [
                 "Accept-Language": "en",
-                "Authorization": "bearer \(Helper.getapitoken()!)"
+                "Authorization": "bearer \(AuthService.userData?.advertiser_api_token ?? "")"
             ]
         }else{
             headers = [

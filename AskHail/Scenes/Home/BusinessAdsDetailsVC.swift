@@ -315,7 +315,7 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
     }
     
     @IBAction func SaveAvtion(_ sender: Any) {
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -564,7 +564,7 @@ extension BusinessAdsDetailsVC : UITableViewDataSource , UITableViewDelegate {
             cell.CellRate.rating = Model.rate ?? 0.0
             
             cell.DeleteBtn.isHidden = true
-            if "\(Model.rate_voter_id ?? 0)" == Helper.getaUser_id() {
+            if "\(Model.rate_voter_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                 cell.DeleteBtn.isHidden = false
             }
             
@@ -713,7 +713,7 @@ extension BusinessAdsDetailsVC {
                 self.PhoneView.isHidden = true
                 self.WatsAppView.isHidden = true
                 
-                if "\(data.data?.advertisement_details?.adv_advertiser_id ?? 0)" != Helper.getaUser_id()  {
+                if "\(data.data?.advertisement_details?.adv_advertiser_id ?? 0)" != "\(AuthService.userData?.advertiser_id ?? 0)"  {
                     self.ChatView.isHidden = false
                 }
                 
@@ -882,7 +882,7 @@ extension BusinessAdsDetailsVC {
                 self.CommentsTableView.reloadData()
                 
                 for item in self.RateArray {
-                    if "\(item.rate_voter_id ?? 0)" == Helper.getaUser_id() {
+                    if "\(item.rate_voter_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                         self.AddNewRateBtn.isHidden = true
                         return
                     }else{

@@ -230,7 +230,7 @@ class chatVC: UIViewController , UITextFieldDelegate{
         self.tableView.reloadData()
         self.scrollToBottom()
         
-        let jsonDic = ["lang":L102Language.currentAppleLanguage() , "message":messageTF.text ?? "" , "api_token":Helper.getapitoken() ?? "" , "chat_id" : self.chat_id] as [String : Any]
+        let jsonDic = ["lang":L102Language.currentAppleLanguage() , "message":messageTF.text ?? "" , "api_token":AuthService.userData?.advertiser_api_token ?? "" , "chat_id" : self.chat_id] as [String : Any]
         self.s.emit("send-message", jsonDic)
         
         messageTF.text = ""
@@ -356,7 +356,7 @@ extension chatVC : UITableViewDataSource , UITableViewDelegate {
         if indexPath.row < self.ChatArray.count {
             let Model = ChatArray[indexPath.row]
             
-            if "\(Model.message_sender_id ?? 0)" == Helper.getaUser_id() {
+            if "\(Model.message_sender_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                 
                 
                 
@@ -428,7 +428,7 @@ extension chatVC : UITableViewDataSource , UITableViewDelegate {
 extension chatVC {
     
     @objc func LockScreen(){
-        let jsonDic = ["chat_id": chat_type_id, "api_token" : Helper.getapitoken() ?? ""] as [String : Any]
+        let jsonDic = ["chat_id": chat_type_id, "api_token" : AuthService.userData?.advertiser_api_token ?? ""] as [String : Any]
         
         print(jsonDic)
         self.s.emit("close-chat", jsonDic)
@@ -449,12 +449,12 @@ extension chatVC {
             
             
             if self.isMessages == 1{
-                let jsonDic = ["chat_id":self.chat_type_id , "api_token":Helper.getapitoken() ?? ""] as [String : Any]
+                let jsonDic = ["chat_id":self.chat_type_id , "api_token": AuthService.userData?.advertiser_api_token ?? ""] as [String : Any]
                 self.s.emit("open-chat-way-1", jsonDic)
                 
                
             }else {
-                let jsonDic = ["chat_type":self.chat_type , "chat_type_id":self.chat_type_id , "api_token":Helper.getapitoken() ?? ""] as [String : Any]
+                let jsonDic = ["chat_type":self.chat_type , "chat_type_id":self.chat_type_id , "api_token":AuthService.userData?.advertiser_api_token ?? ""] as [String : Any]
                 self.s.emit("open-chat-way-2", jsonDic)
             }
             

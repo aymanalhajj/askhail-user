@@ -14,12 +14,7 @@ extension UIViewController {
     
     func LogOut() {
         
-        Helper.Saveuser_id(user_id: nil)
-        Helper.Saveuser_namen(name: nil)
-        Helper.Saveuser_Email(email: nil)
-        Helper.Saveuser_phone(phone: nil)
-        Helper.SaveApitoken(token: nil)
-        Helper.SavePackage_Id(PackageId: nil)
+        AuthService.userData = nil
         Helper.SaveChatType(ChatState: "")
         
         guard let window = UIApplication.shared.keyWindow else{return}

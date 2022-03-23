@@ -39,7 +39,7 @@ class AdsContactNumberVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PhoneNumber.text = Helper.getauser_Phone() ?? ""
+        PhoneNumber.text = AuthService.userData?.advertiser_mobile
 
         
         WhatsState = "block"
@@ -50,8 +50,8 @@ class AdsContactNumberVC: UIViewController {
         ConfirmBtn.setGradientTopToButtom(ColorTop: Colors.TopGradBtnColoer , ColorButtom: Colors.ButtomGradBtnColoer)
        
         
-        PhoneNumber.text = Helper.getauser_Phone()
-        WhatsAppNymber.text = Helper.getauser_Phone()
+        PhoneNumber.text = AuthService.userData?.advertiser_mobile
+        WhatsAppNymber.text = AuthService.userData?.advertiser_mobile
         
         
     }

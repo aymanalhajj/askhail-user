@@ -37,6 +37,10 @@ struct AboutUsDataData : Codable {
     let app_snapchat : String?
     let app_instagram : String?
     let app_whatsapp : String?
+    let app_e_payment_activation : Bool?
+    let app_banner : String?
+    let app_banner_url : String?
+    let app_real_estate_license : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -48,6 +52,10 @@ struct AboutUsDataData : Codable {
         case app_snapchat = "app_snapchat"
         case app_instagram = "app_instagram"
         case app_whatsapp = "app_whatsapp"
+        case app_e_payment_activation = "app_e_payment_activation"
+        case app_banner = "app_banner"
+        case app_banner_url = "app_banner_url"
+        case app_real_estate_license = "app_real_estate_license"
     }
 
     init(from decoder: Decoder) throws {
@@ -60,6 +68,10 @@ struct AboutUsDataData : Codable {
         app_snapchat = try values.decodeIfPresent(String.self, forKey: .app_snapchat)
         app_instagram = try values.decodeIfPresent(String.self, forKey: .app_instagram)
         app_whatsapp = try values.decodeIfPresent(String.self, forKey: .app_whatsapp)
+        app_e_payment_activation = try values.decodeIfPresent(Bool.self, forKey: .app_e_payment_activation)
+        app_banner = try values.decodeIfPresent(String.self, forKey: .app_banner)
+        app_banner_url = try values.decodeIfPresent(String.self, forKey: .app_banner_url)
+        app_real_estate_license = try values.decodeIfPresent(String.self, forKey: .app_real_estate_license)
     }
 
 }

@@ -114,12 +114,14 @@ extension CreateAccount_1 {
                     return
                 }
                 
+                print(data.data?.advertiser_id)
+                AuthService.userData?.advertiser_id = data.data?.advertiser_id ?? 0
                 
-                Helper.Saveuser_id(user_id: "\(data.data?.advertiser_id ?? 0)")
-                
+                print(AuthService.userData?.advertiser_id)
                 
                 let storyboard = UIStoryboard(name: Authontication, bundle: nil)
                 let vc  = storyboard.instantiateViewController(withIdentifier: "CreateAccount_2") as! CreateAccount_2
+                vc.user_id = "\(data.data?.advertiser_id ?? 0)"
                 self.navigationController?.pushViewController(vc, animated: true)
                 self.view.unlock()
                 

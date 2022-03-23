@@ -171,7 +171,7 @@ extension MyFavoriteAdsVC : UITableViewDelegate , UITableViewDataSource {
                     cell.pageControl.isHidden = true
                 }
                 
-                if "\(Model.adv_advertiser_id ?? 0)" == Helper.getaUser_id() {
+                if "\(Model.adv_advertiser_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                     cell.SaveBtn.isHidden = true
                 }else{
                     cell.SaveBtn.isHidden = false

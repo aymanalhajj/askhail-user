@@ -17,7 +17,7 @@ class MyProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Helper.getapitoken() == nil {
+        if AuthService.userData?.advertiser_api_token == nil {
             
             self.LogOutBtn.setTitle("Log In".localized, for: .normal)
             
@@ -101,14 +101,9 @@ class MyProfileVC: UIViewController {
     
     
     @IBAction func LogOuteAction(_ sender: Any) {
-        if Helper.getapitoken() == nil {
+        if AuthService.userData?.advertiser_api_token == nil {
             
-            Helper.Saveuser_id(user_id: nil)
-            Helper.Saveuser_namen(name: nil)
-            Helper.Saveuser_Email(email: nil)
-            Helper.Saveuser_phone(phone: nil)
-            Helper.SaveApitoken(token: nil)
-            Helper.SavePackage_Id(PackageId: nil)
+            AuthService.userData = nil
             
             guard let window = UIApplication.shared.keyWindow else{return}
             

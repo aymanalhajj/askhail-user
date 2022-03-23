@@ -43,8 +43,8 @@ class OrderContactNumberVC: UIViewController {
         PhoneState = "block"
         lable = 0
         
-        PhoneNumber.text = Helper.getauser_Phone()
-        WhatsAppNymber.text = Helper.getauser_Phone()
+        PhoneNumber.text = AuthService.userData?.advertiser_mobile
+        WhatsAppNymber.text = AuthService.userData?.advertiser_mobile
         
         setShadowButton(view: ConfirmBtn, width: 0, height: 5, shadowRadius: 5, shadowOpacity: 0.5, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
         ConfirmBtn.setGradientTopToButtom(ColorTop: Colors.TopGradBtnColoer , ColorButtom: Colors.ButtomGradBtnColoer)

@@ -115,7 +115,7 @@ extension ForgetPasswordVC_3 {
         
         
         let Parameters = [
-            "advertiser_id" : Helper.getaUser_id() ?? "" ,
+            "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)" ,
             "password" : PasswordTf1.text ?? "",
             "password_confirmation" : PasswordTf2.text ?? ""
         ]

@@ -34,9 +34,9 @@ class MyInfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        UserName.text = Helper.getaUser_name()
-        Email.text = Helper.getauser_Email()
-        phoneNumber.text = Helper.getauser_Phone()
+        UserName.text = AuthService.userData?.advertiser_name
+        Email.text = AuthService.userData?.advertiser_email
+        phoneNumber.text = AuthService.userData?.advertiser_mobile
         
     }
     

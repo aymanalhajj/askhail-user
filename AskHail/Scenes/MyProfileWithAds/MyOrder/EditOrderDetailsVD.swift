@@ -316,7 +316,7 @@ extension EditOrderDetailsVD : UIPickerViewDelegate, UIPickerViewDataSource  {
             if RegionArray.count != 0 {
                 
                 print(row)
-                Region_id = "\(RegionArray[row].block_id ?? 0)"
+                Region_id = "\(RegionArray[row].block_id ?? "")"
                 return RegionArray[row].block_name
                 
             }
@@ -337,7 +337,7 @@ extension EditOrderDetailsVD : UIPickerViewDelegate, UIPickerViewDataSource  {
             
             if RegionArray.count != 0 {
                 RegionTf.text = RegionArray[row].block_name
-                Region_id = "\(RegionArray[row].block_id ?? 0)"
+                Region_id = "\(RegionArray[row].block_id ?? "")"
                 
             }
         }

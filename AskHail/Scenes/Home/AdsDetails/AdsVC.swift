@@ -251,7 +251,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
         
         VisitorView.isHidden = true
         
-        if Helper.getapitoken() == nil {
+        if AuthService.userData?.advertiser_api_token == nil {
             
             VisitorView.isHidden = false
             
@@ -360,7 +360,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func AddComment(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }
@@ -382,7 +382,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func SaveAvtion(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -482,7 +482,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func ChatAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }
@@ -534,7 +534,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     @IBAction func LoginAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -745,7 +745,7 @@ extension AdsVC {
                 self.WatsAppView.isHidden = true
                 self.ChatView.isHidden = true
                 
-                if "\(data.data?.advertisement_details?.adv_advertiser_id ?? 0)" != Helper.getaUser_id()  {
+                if "\(data.data?.advertisement_details?.adv_advertiser_id ?? 0)" != "\(AuthService.userData?.advertiser_id ?? 0)"  {
                     self.ChatView.isHidden = false
                 }
                 

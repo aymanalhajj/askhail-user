@@ -13,7 +13,7 @@ extension OrderVC {
     
     func CheckIfMyAds() {
         
-        if Helper.getaUser_id() == "\(self.Order?.order_details?.order_advertiser_id ?? 0)" {
+        if "\(AuthService.userData?.advertiser_id ?? 0)" == "\(self.Order?.order_details?.order_advertiser_id ?? 0)" {
             self.buttomView.backgroundColor = UIColor(hexString: "ffffff")
             self.EditView.isHidden = false
             self.OwnerView.isHidden = true

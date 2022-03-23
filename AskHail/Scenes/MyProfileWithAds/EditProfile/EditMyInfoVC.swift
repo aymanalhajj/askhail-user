@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Toast_Swift
+
 
 class EditMyInfoVC: UIViewController, UITextFieldDelegate {
     
@@ -35,9 +35,9 @@ class EditMyInfoVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FullNameTf.text = Helper.getaUser_name()
-        MailTf.text = Helper.getauser_Email()
-        PhoneTf.text = Helper.getauser_Phone()
+        FullNameTf.text = AuthService.userData?.advertiser_name
+        MailTf.text = AuthService.userData?.advertiser_email
+        PhoneTf.text = AuthService.userData?.advertiser_mobile
         
         if L102Language.currentAppleLanguage() == englishLang {
             
@@ -172,9 +172,11 @@ extension EditMyInfoVC {
                     return
                 }
                 
-                Helper.Saveuser_namen(name: self.FullNameTf.text ?? "")
-                Helper.Saveuser_Email(email: self.MailTf.text ?? "")
-                Helper.Saveuser_phone(phone: self.PhoneTf.text ?? "")
+                AuthService.userData?.advertiser_name = self.FullNameTf.text ?? ""
+                AuthService.userData?.advertiser_email = self.MailTf.text ?? ""
+                AuthService.userData?.advertiser_mobile = self.PhoneTf.text ?? ""
+                
+              
                 
                 self.navigationController?.popToViewController(ofClass: MyInfoVC.self, animated: true)
                 self.navigationController?.view.makeToast("\(data.data?.message ?? "")")

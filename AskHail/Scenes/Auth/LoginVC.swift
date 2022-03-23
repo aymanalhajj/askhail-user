@@ -172,12 +172,9 @@
                      return
                  }
                 
-                Helper.Saveuser_id(user_id: "\(data.data?.advertiser_id ?? 0)")
-                Helper.Saveuser_namen(name: data.data?.advertiser_name ?? "" )
-                Helper.Saveuser_phone(phone: data.data?.advertiser_mobile ?? "")
-                Helper.Saveuser_Email(email: data.data?.advertiser_email ?? "")
-                Helper.SaveApitoken(token: data.data?.advertiser_api_token ?? "")
-                Helper.SavePackage_Id(PackageId: data.data?.advertiser_package_id ?? "")
+                AuthService.userData = data.data
+                
+               
                 Helper.SaveChatType(ChatState: "true")
 
                 

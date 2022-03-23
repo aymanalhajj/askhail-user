@@ -10,6 +10,7 @@ import UIKit
 
 class ContactUsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
+    @IBOutlet weak var RealEstateNumberLabel: UILabel!
     
     @IBOutlet weak var TopBar: UIView!
     @IBOutlet var BackGround: UIView!
@@ -305,7 +306,7 @@ extension ContactUsVC {
                 self.snapchatLink = "https://www.snapchat.com/\(data.data?.app_snapchat ?? "")"
                 self.instgramLink = "https://www.instagram.com/\(data.data?.app_instagram ?? "")"
                 
-                
+                self.RealEstateNumberLabel.text = data.data?.app_real_estate_license ?? ""
                 print(data)
 
             }

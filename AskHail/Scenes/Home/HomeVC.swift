@@ -15,6 +15,9 @@ class HomeVC: BaseViewController {
     @IBOutlet weak var TopBar: UIView!
     @IBOutlet weak var StarAdsCollection: UICollectionView!
     @IBOutlet weak var BusinessSectorCollection: UICollectionView!
+    @IBOutlet weak var MediaCollectionview: UICollectionView!
+    
+    @IBOutlet weak var RealEstateHeightCollectionView: NSLayoutConstraint!
     @IBOutlet weak var realtyCollection: UICollectionView!
     
     var SpecialAdsArray : [Special_advertisements] = []
@@ -26,6 +29,9 @@ class HomeVC: BaseViewController {
     var BusinessArray : [Business] = []
     var BusinessData = false
     
+    var FamousArray = [Famous]()
+    var FamousData = false
+    
     var isSaved = false
 
     var x = 0.0
@@ -36,7 +42,11 @@ class HomeVC: BaseViewController {
     var newOffsetX: CGFloat = 0.0
     
     
-    @IBOutlet weak var ScrollHeight: NSLayoutConstraint!
+   // @IBOutlet weak var ScrollHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var BusnissHeightCollectionView: NSLayoutConstraint!
+    
+    @IBOutlet weak var MediaHeightCollectionView: NSLayoutConstraint!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +57,8 @@ class HomeVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        App_Info()
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Tajawal-Regular", size: 12)!], for: .normal)
         
@@ -64,10 +76,15 @@ class HomeVC: BaseViewController {
         StarAdsCollection.flipX()
         BusinessSectorCollection.flipX()
         realtyCollection.flipX()
+        MediaCollectionview.flipX()
         
         BusinessSectorCollection.delegate = self
         BusinessSectorCollection.dataSource = self
         BusinessSectorCollection.RegisterNib(cell: BusinessSectorCell.self)
+        
+        MediaCollectionview.delegate = self
+        MediaCollectionview.dataSource = self
+        MediaCollectionview.RegisterNib(cell: BusinessSectorCell.self)
         
         realtyCollection.delegate = self
         realtyCollection.dataSource = self
@@ -89,7 +106,10 @@ class HomeVC: BaseViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         BusinessSectorCollection.layer.removeAllAnimations()
-        ScrollHeight.constant = BusinessSectorCollection.contentSize.height + 550
+        BusnissHeightCollectionView.constant = BusinessSectorCollection.contentSize.height
+        MediaHeightCollectionView.constant = MediaCollectionview.contentSize.height
+        
+     //   ScrollHeight.constant = BusinessSectorCollection.contentSize.height + 550
         UIView.animate(withDuration: 0.5) {
             self.updateViewConstraints()
             self.loadViewIfNeeded()
@@ -107,7 +127,7 @@ class HomeVC: BaseViewController {
     
     @IBAction func NotificationAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -122,7 +142,7 @@ class HomeVC: BaseViewController {
     
     @IBAction func PrayTimeAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -168,7 +188,7 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
                 return RealEstateArray.count
             }
             
-        } else {
+        } else if collectionView == BusinessSectorCollection {
             
             if !BusinessData {
                 return 12
@@ -176,6 +196,12 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
                 return BusinessArray.count
             }
             
+        }else {
+            if !FamousData {
+                return 12
+            }else{
+                return FamousArray.count
+            }
         }
         
     }
@@ -205,7 +231,7 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
                 
                 var Model = SpecialAdsArray[indexPath.row]
                 
-                if "\(Model.adv_advertiser_id ?? 0)" == Helper.getaUser_id() {
+                if "\(Model.adv_advertiser_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                     cell.SaveBtn.isHidden = true
                 }else{
                     cell.SaveBtn.isHidden = false
@@ -274,12 +300,27 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             cell.flipX()
             return cell
             
-        } else {
+        } else if collectionView == BusinessSectorCollection {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BusinessSectorCell", for: indexPath) as! BusinessSectorCell
             
             if self.BusinessData {
                 var Model = BusinessArray[indexPath.row]
+                
+                cell.BackGroundImage.loadImage(URL(string: Model.section_image ?? ""))
+                cell.title.text = Model.section_name
+                
+            }
+            
+            cell.flipX()
+            return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BusinessSectorCell", for: indexPath) as! BusinessSectorCell
+            
+            if self.FamousData {
+                var Model = FamousArray[indexPath.row]
+                    
+                
                 
                 cell.BackGroundImage.loadImage(URL(string: Model.section_image ?? ""))
                 cell.title.text = Model.section_name
@@ -306,7 +347,7 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             
             if SpecialAdsArray[indexPath.row].adv_type ?? "" == "real_estate" {
                 
-                if "\(SpecialAdsArray[indexPath.row].adv_advertiser_id ?? 0)" == Helper.getaUser_id(){
+                if "\(SpecialAdsArray[indexPath.row].adv_advertiser_id ?? 0)" == "\(AuthService.userData?.advertiser_id ?? 0)" {
                     
                     let storyboard = UIStoryboard(name: Home, bundle: nil)
                     let vc  = storyboard.instantiateViewController(withIdentifier: "AdsVC") as! AdsVC
@@ -336,17 +377,29 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             
         } else if collectionView == realtyCollection {
             
-            let storyboard = UIStoryboard(name: Home, bundle: nil)
-            let vc  = storyboard.instantiateViewController(withIdentifier: "RealtySaleVC") as! RealtySaleVC
-            vc.id = "\(RealEstateArray[indexPath.row].section_id ?? 0)"
-            vc.Title = RealEstateArray[indexPath.row].section_name ?? ""
-            vc.state = 1
-            navigationController?.pushViewController(vc, animated: true)
+            if RealEstateArray[indexPath.row].section_type == "business" {
+                let storyboard = UIStoryboard(name: Home, bundle: nil)
+                let vc  = storyboard.instantiateViewController(withIdentifier: "RealtySaleVC") as! RealtySaleVC
+                vc.id = "\(RealEstateArray[indexPath.row].section_id ?? 0)"
+                vc.Title = RealEstateArray[indexPath.row].section_name ?? ""
+                vc.state = 2
+                navigationController?.pushViewController(vc, animated: true)
+                return collectionView.deselectItem(at: indexPath, animated: true)
+            }else {
+                let storyboard = UIStoryboard(name: Home, bundle: nil)
+                let vc  = storyboard.instantiateViewController(withIdentifier: "RealtySaleVC") as! RealtySaleVC
+                vc.id = "\(RealEstateArray[indexPath.row].section_id ?? 0)"
+                vc.Title = RealEstateArray[indexPath.row].section_name ?? ""
+                vc.state = 1
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            
+           
             
             return collectionView.deselectItem(at: indexPath, animated: true)
             
             
-        } else {
+        } else if collectionView == BusinessSectorCollection  {
             
             let storyboard = UIStoryboard(name: Home, bundle: nil)
             let vc  = storyboard.instantiateViewController(withIdentifier: "RealtySaleVC") as! RealtySaleVC
@@ -356,6 +409,13 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             navigationController?.pushViewController(vc, animated: true)
             return collectionView.deselectItem(at: indexPath, animated: true)
             
+        }else {
+            let storyboard = UIStoryboard(name: Home, bundle: nil)
+            let vc  = storyboard.instantiateViewController(withIdentifier: "RealtySaleVC") as! RealtySaleVC
+            vc.id = "\(FamousArray[indexPath.row].section_id ?? 0)"
+            vc.Title = FamousArray[indexPath.row].section_name ?? ""
+            vc.state = 2
+            navigationController?.pushViewController(vc, animated: true)
         }
         
         return collectionView.deselectItem(at: indexPath, animated: true)
@@ -370,7 +430,13 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
         
         if collectionView == realtyCollection {
             let width = (collectionView.frame.width - 64)/3
-            let height = collectionView.frame.height
+            var height = (collectionView.frame.height-10)/2
+            if RealEstateHeightCollectionView.constant == 104 {
+                height = collectionView.frame.height
+            }else {
+                height = (collectionView.frame.height-10)/2
+            }
+           
             
             return CGSize.init(width: width , height:height)
             
@@ -385,7 +451,18 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
             }
             
             return CGSize.init(width: width , height:120)
-        } else {
+        } else if collectionView == MediaCollectionview {
+            
+            var width = (collectionView.frame.width - 8)/2
+            
+            if indexPath.row == 0 {
+                
+                width = (collectionView.frame.width)
+                
+            }
+            
+            return CGSize.init(width: width , height:120)
+        }else {
             
             var width = collectionView.frame.width - 48
             
@@ -446,6 +523,7 @@ extension HomeVC {
             self.BusinessSectorCollection.showLoader()
             self.StarAdsCollection.showLoader()
             self.realtyCollection.showLoader()
+            self.MediaCollectionview.showLoader()
         }
     
         ApiServices.instance.getPosts(methodType: .get, parameters: nil , url: "\(hostName)main-page") { (data : HomeModel?, String) in
@@ -465,19 +543,68 @@ extension HomeVC {
                 self.RealEstateArray = data.data?.real_estate ?? []
                 self.RealEstateData = true
                 
+                if self.RealEstateArray.count <= 3 {
+                    self.RealEstateHeightCollectionView.constant = 104
+                }
+                
                 self.BusinessSectorCollection.hideLoader()
                 self.BusinessArray = data.data?.business ?? []
                 self.BusinessData = true
+                
+                self.MediaCollectionview.hideLoader()
+                self.FamousArray = data.data?.famous ?? []
+                self.FamousData = true
                 
                 print(self.BusinessArray.count)
                 
                 self.StarAdsCollection.reloadData()
                 self.realtyCollection.reloadData()
                 self.BusinessSectorCollection.reloadData()
+                self.MediaCollectionview.reloadData()
                 
                 print(data)
                 
                 
+            }
+        }
+    }
+    
+
+    
+    func App_Info() {
+        
+        
+        
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil , url: "\(hostName)app-info") { (data : AboutUsModel?, String) in
+            
+          
+            
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+                
+                let storyboard = UIStoryboard(name: Home, bundle: nil)
+                let vc  = storyboard.instantiateViewController(withIdentifier: "AdsBannerVC") as! AdsBannerVC
+                
+                vc.Banner_url = data.data?.app_banner_url ?? ""
+                vc.imageUrl = data.data?.app_banner ?? ""
+                
+                vc.modalPresentationStyle = .fullScreen
+                self.addChild(vc)
+                vc.view.frame = self.view.frame
+                
+                self.view.addSubview(vc.view)
+                vc.didMove(toParent: self)
+                
+                
+                print(data)
+
             }
         }
     }

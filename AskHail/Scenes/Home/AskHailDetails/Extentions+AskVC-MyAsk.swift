@@ -13,7 +13,7 @@ extension AskHailDetailsVC {
     
     func CheckIfMyAsk() {
         
-        if Helper.getaUser_id() == "\(self.AskData?.question_advertiser_id ?? 0)" {
+        if "\(AuthService.userData?.advertiser_id ?? 0)" == "\(self.AskData?.question_advertiser_id ?? 0)" {
             self.buttomView.backgroundColor = UIColor(hexString: "ffffff")
             self.EditView.backgroundColor = UIColor(hexString: "ffffff")
             self.EditView.isHidden = false

@@ -84,6 +84,10 @@ struct Advertisement_details : Codable {
     let adv_advertiser_id : Int?
     let specification_answer_Id : Int?
     let adv_type : String?
+    let adv_region : Adv_region?
+    let adv_city : Adv_city?
+    let adv_block : Adv_block?
+    let adv_side : Adv_side?
 
     enum CodingKeys: String, CodingKey {
 
@@ -117,6 +121,10 @@ struct Advertisement_details : Codable {
         case adv_advertiser_id = "adv_advertiser_id"
         case specification_answer_Id = "specification_answer_Id"
         case adv_type = "adv_type"
+        case adv_region = "adv_region"
+        case adv_city = "adv_city"
+        case adv_block = "adv_block"
+        case adv_side = "adv_side"
         
     }
 
@@ -152,9 +160,99 @@ struct Advertisement_details : Codable {
         adv_advertiser_id = try values.decodeIfPresent(Int.self, forKey: .adv_advertiser_id)
         specification_answer_Id = try values.decodeIfPresent(Int.self, forKey: .adv_advertiser_id)
         adv_type = try values.decodeIfPresent(String.self, forKey: .adv_type)
+        adv_region = try values.decodeIfPresent(Adv_region.self, forKey: .adv_region)
+        adv_city = try values.decodeIfPresent(Adv_city.self, forKey: .adv_city)
+        adv_block = try values.decodeIfPresent(Adv_block.self, forKey: .adv_block)
+        adv_side = try values.decodeIfPresent(Adv_side.self, forKey: .adv_side)
     }
 
 }
+
+struct Adv_city : Codable {
+    let city_id : Int?
+    let city_region : City_region?
+    let city_name : String?
+    let admin_city_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case city_id = "city_id"
+        case city_region = "city_region"
+        case city_name = "city_name"
+        case admin_city_name = "admin_city_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        city_id = try values.decodeIfPresent(Int.self, forKey: .city_id)
+        city_region = try values.decodeIfPresent(City_region.self, forKey: .city_region)
+        city_name = try values.decodeIfPresent(String.self, forKey: .city_name)
+        admin_city_name = try values.decodeIfPresent(String.self, forKey: .admin_city_name)
+    }
+
+}
+
+
+struct Adv_region : Codable {
+    let region_id : Int?
+    let region_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case region_id = "region_id"
+        case region_name = "region_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        region_id = try values.decodeIfPresent(Int.self, forKey: .region_id)
+        region_name = try values.decodeIfPresent(String.self, forKey: .region_name)
+    }
+
+}
+struct Adv_side : Codable {
+    let side_id : Int?
+    let side_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case side_id = "side_id"
+        case side_name = "side_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        side_id = try values.decodeIfPresent(Int.self, forKey: .side_id)
+        side_name = try values.decodeIfPresent(String.self, forKey: .side_name)
+    }
+
+}
+
+
+struct Adv_block : Codable {
+    let block_id : String?
+    let block_city : Block_city?
+    let block_name : String?
+    let admin_block_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case block_id = "block_id"
+        case block_city = "block_city"
+        case block_name = "block_name"
+        case admin_block_name = "admin_block_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        block_id = try values.decodeIfPresent(String.self, forKey: .block_id)
+        block_city = try values.decodeIfPresent(Block_city.self, forKey: .block_city)
+        block_name = try values.decodeIfPresent(String.self, forKey: .block_name)
+        admin_block_name = try values.decodeIfPresent(String.self, forKey: .admin_block_name)
+    }
+
+}
+
 
 struct Adv_specifications : Codable {
     let specification_id : Int?

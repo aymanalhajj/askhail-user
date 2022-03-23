@@ -111,7 +111,7 @@ class MessagesVC: BaseViewController {
         LoginView.isHidden = true
         RegisterView.isHidden = true
         MyAdvSwitchView .isHidden = false
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             MyAdvSwitchView .isHidden = true
             LoginView.isHidden = false
             RegisterView.isHidden = false
@@ -158,7 +158,7 @@ class MessagesVC: BaseViewController {
     
     @IBAction func NotificationAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -197,7 +197,7 @@ class MessagesVC: BaseViewController {
     @IBAction func PrayTimeAction(_ sender: Any) {
         
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return

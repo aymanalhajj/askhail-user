@@ -11,6 +11,9 @@
         <array key="Tajawal-Bold.ttf">
             <string>Tajawal-Bold</string>
         </array>
+        <array key="Tajawal-Medium.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
         <array key="Tajawal-Regular.ttf">
             <string>Tajawal-Regular</string>
         </array>
@@ -2535,7 +2538,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9p4-fV-KNF">
-                                                <rect key="frame" x="24" y="16" width="366" height="230"/>
+                                                <rect key="frame" x="24" y="16" width="366" height="238"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اتصل بنا" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0Z-Am-G4y">
                                                         <rect key="frame" x="16" y="16" width="334" height="14"/>
@@ -2569,13 +2572,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vdA-G3-Y6V">
-                                                        <rect key="frame" x="16" y="106" width="334" height="108"/>
+                                                        <rect key="frame" x="16" y="106" width="334" height="72"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6z-VK-D8e">
-                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="32"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJl-Nu-Lm5">
-                                                                        <rect key="frame" x="0.0" y="9" width="167" height="32"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_full" translatesAutoresizingMaskIntoConstraints="NO" id="btD-vU-gsE">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -2611,23 +2614,23 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VvC-2i-Ucw">
-                                                                        <rect key="frame" x="167" y="0.0" width="167" height="50"/>
+                                                                        <rect key="frame" x="167" y="0.0" width="167" height="32"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snap_full" translatesAutoresizingMaskIntoConstraints="NO" id="ZgI-dv-I4k">
-                                                                                <rect key="frame" x="0.0" y="9" width="32" height="32"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="32" id="c6u-jn-I3G"/>
                                                                                     <constraint firstAttribute="width" constant="32" id="xIg-A0-kgB"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-Jh-tav">
-                                                                                <rect key="frame" x="40" y="25" width="0.0" height="0.0"/>
+                                                                                <rect key="frame" x="40" y="16" width="0.0" height="0.0"/>
                                                                                 <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                                                                                 <color key="textColor" red="0.0092072682459999992" green="0.29380530119999998" blue="0.53738009929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UV-C9-FeU">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
                                                                                 <connections>
                                                                                     <action selector="snapchatBtnWithSender:" destination="HM3-tC-uN2" eventType="touchUpInside" id="pJL-zY-Uc9"/>
                                                                                 </connections>
@@ -2648,10 +2651,10 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-40-jg5">
-                                                                <rect key="frame" x="0.0" y="58" width="334" height="50"/>
+                                                                <rect key="frame" x="0.0" y="40" width="334" height="32"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyi-ah-DTU">
-                                                                        <rect key="frame" x="0.0" y="9" width="167" height="32"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insta_full" translatesAutoresizingMaskIntoConstraints="NO" id="dPu-Xe-ZNA">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -2687,23 +2690,23 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-hi-4hG">
-                                                                        <rect key="frame" x="167" y="0.0" width="167" height="50"/>
+                                                                        <rect key="frame" x="167" y="0.0" width="167" height="32"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp-1" translatesAutoresizingMaskIntoConstraints="NO" id="iml-Lh-gCM">
-                                                                                <rect key="frame" x="0.0" y="9" width="32" height="32"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="32" id="E3p-4Y-2sA"/>
                                                                                     <constraint firstAttribute="width" constant="32" id="Yl3-3M-eo3"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWF-8o-443">
-                                                                                <rect key="frame" x="40" y="25" width="0.0" height="0.0"/>
+                                                                                <rect key="frame" x="40" y="16" width="0.0" height="0.0"/>
                                                                                 <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                                                                                 <color key="textColor" red="0.0092072682459999992" green="0.29380530119999998" blue="0.53738009929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-1Y-xAe">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="32"/>
                                                                                 <connections>
                                                                                     <action selector="WhatsAppAction:" destination="HM3-tC-uN2" eventType="touchUpInside" id="rJk-or-Ozm"/>
                                                                                 </connections>
@@ -2725,27 +2728,51 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real estate license number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-KI-eaT">
+                                                        <rect key="frame" x="16" y="194" width="334" height="14"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="14"/>
+                                                        <color key="textColor" red="0.0078431372550000003" green="0.2901960784" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Real estate license number"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5123123123123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-wO-hoj">
+                                                        <rect key="frame" x="16" y="218" width="334" height="14"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="14"/>
+                                                        <color key="textColor" red="0.0078431372550000003" green="0.2901960784" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="vdA-G3-Y6V" firstAttribute="leading" secondItem="9p4-fV-KNF" secondAttribute="leading" constant="16" id="0hF-QA-upx"/>
                                                     <constraint firstItem="COx-zW-sdV" firstAttribute="leading" secondItem="9p4-fV-KNF" secondAttribute="leading" constant="16" id="3Hu-TI-6Wx"/>
                                                     <constraint firstItem="ts7-je-aTb" firstAttribute="top" secondItem="W0Z-Am-G4y" secondAttribute="bottom" constant="16" id="4uX-Av-K7c"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vdA-G3-Y6V" secondAttribute="bottom" constant="16" id="5sv-qw-T3o"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vdA-G3-Y6V" secondAttribute="bottom" constant="60" id="5sv-qw-T3o"/>
                                                     <constraint firstItem="W0Z-Am-G4y" firstAttribute="top" secondItem="9p4-fV-KNF" secondAttribute="top" constant="16" id="6Us-bX-lTy"/>
                                                     <constraint firstItem="W0Z-Am-G4y" firstAttribute="leading" secondItem="9p4-fV-KNF" secondAttribute="leading" constant="16" id="CYF-2i-uyZ"/>
+                                                    <constraint firstItem="fe7-KI-eaT" firstAttribute="top" secondItem="vdA-G3-Y6V" secondAttribute="bottom" constant="16" id="Dl8-rM-KOS"/>
                                                     <constraint firstItem="g2M-sf-StN" firstAttribute="top" secondItem="COx-zW-sdV" secondAttribute="bottom" constant="24" id="LHv-lO-ST7"/>
                                                     <constraint firstAttribute="trailing" secondItem="ts7-je-aTb" secondAttribute="trailing" constant="16" id="Oha-vr-26a"/>
+                                                    <constraint firstItem="fe7-KI-eaT" firstAttribute="trailing" secondItem="g2M-sf-StN" secondAttribute="trailing" id="TTz-43-8nX"/>
                                                     <constraint firstAttribute="trailing" secondItem="W0Z-Am-G4y" secondAttribute="trailing" constant="16" id="V18-v0-3Am"/>
                                                     <constraint firstItem="COx-zW-sdV" firstAttribute="centerY" secondItem="ts7-je-aTb" secondAttribute="centerY" id="VXQ-xl-aJL"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="230" id="Z6H-w4-RtV"/>
+                                                    <constraint firstItem="YB4-wO-hoj" firstAttribute="leading" secondItem="fe7-KI-eaT" secondAttribute="leading" id="WeX-Np-cEO"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="300" id="Z6H-w4-RtV"/>
                                                     <constraint firstAttribute="trailing" secondItem="g2M-sf-StN" secondAttribute="trailing" constant="16" id="dad-G8-VdT"/>
+                                                    <constraint firstItem="YB4-wO-hoj" firstAttribute="top" secondItem="fe7-KI-eaT" secondAttribute="bottom" constant="10" id="eZN-aX-aBc"/>
+                                                    <constraint firstItem="fe7-KI-eaT" firstAttribute="leading" secondItem="g2M-sf-StN" secondAttribute="leading" id="lLf-10-OIy"/>
+                                                    <constraint firstItem="YB4-wO-hoj" firstAttribute="trailing" secondItem="fe7-KI-eaT" secondAttribute="trailing" id="lWN-hn-UnN"/>
+                                                    <constraint firstItem="vdA-G3-Y6V" firstAttribute="top" secondItem="g2M-sf-StN" secondAttribute="bottom" constant="10" id="m1W-GN-df5"/>
                                                     <constraint firstItem="g2M-sf-StN" firstAttribute="leading" secondItem="9p4-fV-KNF" secondAttribute="leading" constant="16" id="r8J-C1-7id"/>
                                                     <constraint firstAttribute="trailing" secondItem="vdA-G3-Y6V" secondAttribute="trailing" constant="16" id="yHR-cD-bei"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أرسل رسالة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug8-Yc-vYK">
-                                                <rect key="frame" x="40" y="270" width="334" height="14"/>
+                                                <rect key="frame" x="40" y="278" width="334" height="6"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="14"/>
                                                 <color key="textColor" red="0.0078431372550000003" green="0.2901960784" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3007,6 +3034,7 @@
                         <outlet property="PhoneLineView" destination="rvp-7m-6mz" id="Azg-sD-hY4"/>
                         <outlet property="PhoneTf" destination="w39-Y0-5UB" id="QLO-lZ-kzj"/>
                         <outlet property="PhoneView" destination="s3A-GG-1Ne" id="XYs-v2-Gab"/>
+                        <outlet property="RealEstateNumberLabel" destination="YB4-wO-hoj" id="o1R-hn-qOe"/>
                         <outlet property="TopBar" destination="wf9-x9-0P6" id="iGQ-7Y-FXH"/>
                         <outlet property="desLineView" destination="kQQ-ur-oP4" id="ETZ-Z0-Lsa"/>
                         <outlet property="desTxt" destination="mu1-uI-aki" id="d5l-Vu-20O"/>

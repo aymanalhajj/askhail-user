@@ -192,7 +192,7 @@ class OrderVC: UIViewController {
         
         VisitorView.isHidden = true
         
-        if Helper.getapitoken() == nil {
+        if AuthService.userData?.advertiser_api_token == nil {
             
             VisitorView.isHidden = false
             
@@ -336,7 +336,7 @@ class OrderVC: UIViewController {
     
     @IBAction func LoginAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -346,7 +346,7 @@ class OrderVC: UIViewController {
     
     @IBAction func AddComment(_ sender: Any) {
 
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             alertSkipLogin()
             return
         }
@@ -496,7 +496,7 @@ extension OrderVC {
                 }
                 
                 self.ChatView.isHidden = true
-                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != Helper.getaUser_id()  {
+                if "\(data.data?.order_details?.order_advertiser_id ?? 0)" != "\(AuthService.userData?.advertiser_id ?? 0)" {
                     self.ChatView.isHidden = false
                 }
                 

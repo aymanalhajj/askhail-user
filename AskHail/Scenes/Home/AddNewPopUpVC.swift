@@ -38,7 +38,7 @@ class AddNewPopUpVC: UIViewController {
     
     @IBAction func AddNewAdsAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -49,7 +49,7 @@ class AddNewPopUpVC: UIViewController {
     }
     
     @IBAction func NewRequestAction(_ sender: Any) {
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return
@@ -63,7 +63,7 @@ class AddNewPopUpVC: UIViewController {
     
     @IBAction func NewQuestion(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return

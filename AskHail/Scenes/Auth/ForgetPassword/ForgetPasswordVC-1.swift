@@ -120,7 +120,7 @@ extension ForgetPasswordVC_1 {
                 }
                 
                 
-                Helper.Saveuser_id(user_id: "\(data.data?.advertiser_id ?? 0)")
+                AuthService.userData?.advertiser_id = data.data?.advertiser_id 
                 
                 self.view.unlock()
                 

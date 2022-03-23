@@ -76,7 +76,7 @@ class AskHailVC: BaseViewController {
     
     @IBAction func NotificationAction(_ sender: Any) {
         
-        guard let token = Helper.getapitoken() else {
+        guard let token = AuthService.userData?.advertiser_api_token else {
             
             alertSkipLogin()
             return
@@ -91,7 +91,7 @@ class AskHailVC: BaseViewController {
     
     @IBAction func PrayTimeAction(_ sender: Any) {
         
-        guard Helper.getapitoken() != nil else {
+        guard AuthService.userData?.advertiser_api_token != nil else {
             
             alertSkipLogin()
             return

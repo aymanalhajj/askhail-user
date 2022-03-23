@@ -33,6 +33,8 @@ class CreateAccount_2: UIViewController, UITextFieldDelegate {
     
     var runCount = 60
     
+    var user_id = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -315,8 +317,8 @@ extension CreateAccount_2 {
         view.lock()
         
         let Parameters = [
-            "advertiser_id" : Helper.getaUser_id() ?? "",
-            "active_code" : "\(TF1.text ?? "")\(TF2.text ?? "")\(TF3.text ?? "")\(TF4.text ?? "")"  ?? ""
+            "advertiser_id" : "\(user_id)",
+            "active_code" : "\(TF1.text ?? "")\(TF2.text ?? "")\(TF3.text ?? "")\(TF4.text ?? "")"
         ]
         
         print(Parameters)
@@ -339,6 +341,7 @@ extension CreateAccount_2 {
                 
                 let storyboard = UIStoryboard(name: Authontication, bundle: nil)
                 let vc  = storyboard.instantiateViewController(withIdentifier: "CreateAccount_3") as! CreateAccount_3
+                vc.user_id = self.user_id
                 self.navigationController?.pushViewController(vc, animated: true)
                 
                 self.view.unlock()
@@ -354,7 +357,7 @@ extension CreateAccount_2 {
     func ResendConfirmCode() {
         
         let Parameters = [
-            "advertiser_id" : Helper.getaUser_id() ?? ""
+            "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)"
         ]
         
         print(Parameters)

@@ -12,7 +12,7 @@ extension AdsVC {
     
     func CheckIfMyAds() {
         
-        if Helper.getaUser_id() == "\(self.AdData?.advertisement_details?.adv_advertiser_id ?? 0)" {
+        if "\(AuthService.userData?.advertiser_id ?? 0)" == "\(self.AdData?.advertisement_details?.adv_advertiser_id ?? 0)" {
             self.buttomView.backgroundColor = UIColor(hexString: "ffffff")
             self.EditView.isHidden = false
             self.OwnerView.isHidden = true
