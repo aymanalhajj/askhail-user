@@ -78,32 +78,83 @@ struct OrderEditDetailsModel : Codable {
 struct OrderEditDetailsData : Codable {
     let order_id : Int?
     let order_title : String?
-    let order_description : String?
     let order_price : String?
-    let order_block_id : Int?
-    let order_side_id : Int?
+    let order_custom_published_date : String?
+    let order_custom_last_update_date : String?
+    let order_description : String?
     let order_specifications : [Order_specifications]?
+    let order_region : Order_region?
+    let order_city : Order_city?
+    let order_block : Order_block?
+    let order_side : Order_side?
+    let order_main_section : Order_main_section?
+    let order_sub_section : Order_sub_section?
+    let order_advertiser_id : Int?
+    let order_advertiser_name : String?
+    let order_advertiser_advs_count : String?
+    let order_if_any_contact_available : Bool?
+    let order_call_number_status : String?
+    let order_call_number : String?
+    let order_whatsapp_number_status : String?
+    let order_whatsapp_number : String?
+    let order_last_update : String?
+    let order_created_at : String?
+    let order_updated_at : String?
 
     enum CodingKeys: String, CodingKey {
 
         case order_id = "order_id"
         case order_title = "order_title"
-        case order_description = "order_description"
         case order_price = "order_price"
-        case order_block_id = "order_block_id"
-        case order_side_id = "order_side_id"
+        case order_custom_published_date = "order_custom_published_date"
+        case order_custom_last_update_date = "order_custom_last_update_date"
+        case order_description = "order_description"
         case order_specifications = "order_specifications"
+        case order_region = "order_region"
+        case order_city = "order_city"
+        case order_block = "order_block"
+        case order_side = "order_side"
+        case order_main_section = "order_main_section"
+        case order_sub_section = "order_sub_section"
+        case order_advertiser_id = "order_advertiser_id"
+        case order_advertiser_name = "order_advertiser_name"
+        case order_advertiser_advs_count = "order_advertiser_advs_count"
+        case order_if_any_contact_available = "order_if_any_contact_available"
+        case order_call_number_status = "order_call_number_status"
+        case order_call_number = "order_call_number"
+        case order_whatsapp_number_status = "order_whatsapp_number_status"
+        case order_whatsapp_number = "order_whatsapp_number"
+        case order_last_update = "order_last_update"
+        case order_created_at = "order_created_at"
+        case order_updated_at = "order_updated_at"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         order_id = try values.decodeIfPresent(Int.self, forKey: .order_id)
         order_title = try values.decodeIfPresent(String.self, forKey: .order_title)
-        order_description = try values.decodeIfPresent(String.self, forKey: .order_description)
         order_price = try values.decodeIfPresent(String.self, forKey: .order_price)
-        order_block_id = try values.decodeIfPresent(Int.self, forKey: .order_block_id)
-        order_side_id = try values.decodeIfPresent(Int.self, forKey: .order_side_id)
+        order_custom_published_date = try values.decodeIfPresent(String.self, forKey: .order_custom_published_date)
+        order_custom_last_update_date = try values.decodeIfPresent(String.self, forKey: .order_custom_last_update_date)
+        order_description = try values.decodeIfPresent(String.self, forKey: .order_description)
         order_specifications = try values.decodeIfPresent([Order_specifications].self, forKey: .order_specifications)
+        order_region = try values.decodeIfPresent(Order_region.self, forKey: .order_region)
+        order_city = try values.decodeIfPresent(Order_city.self, forKey: .order_city)
+        order_block = try values.decodeIfPresent(Order_block.self, forKey: .order_block)
+        order_side = try values.decodeIfPresent(Order_side.self, forKey: .order_side)
+        order_main_section = try values.decodeIfPresent(Order_main_section.self, forKey: .order_main_section)
+        order_sub_section = try values.decodeIfPresent(Order_sub_section.self, forKey: .order_sub_section)
+        order_advertiser_id = try values.decodeIfPresent(Int.self, forKey: .order_advertiser_id)
+        order_advertiser_name = try values.decodeIfPresent(String.self, forKey: .order_advertiser_name)
+        order_advertiser_advs_count = try values.decodeIfPresent(String.self, forKey: .order_advertiser_advs_count)
+        order_if_any_contact_available = try values.decodeIfPresent(Bool.self, forKey: .order_if_any_contact_available)
+        order_call_number_status = try values.decodeIfPresent(String.self, forKey: .order_call_number_status)
+        order_call_number = try values.decodeIfPresent(String.self, forKey: .order_call_number)
+        order_whatsapp_number_status = try values.decodeIfPresent(String.self, forKey: .order_whatsapp_number_status)
+        order_whatsapp_number = try values.decodeIfPresent(String.self, forKey: .order_whatsapp_number)
+        order_last_update = try values.decodeIfPresent(String.self, forKey: .order_last_update)
+        order_created_at = try values.decodeIfPresent(String.self, forKey: .order_created_at)
+        order_updated_at = try values.decodeIfPresent(String.self, forKey: .order_updated_at)
     }
 
 }

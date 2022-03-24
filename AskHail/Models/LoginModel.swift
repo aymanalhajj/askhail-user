@@ -37,6 +37,12 @@ struct LoginData : Codable {
     let advertiser_api_token : String?
     let advertiser_firebase_token : String?
     let advertiser_package_id : String?
+    let advertiser_side : String?
+    let advertiser_capacity : String?
+    let advertiser_delegation_number : String?
+    let advertiser_licence_number : String?
+    let advertiser_type_id : Int?
+    let advertiser_id_number : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -48,6 +54,12 @@ struct LoginData : Codable {
         case advertiser_api_token = "advertiser_api_token"
         case advertiser_firebase_token = "advertiser_firebase_token"
         case advertiser_package_id = "advertiser_package_id"
+        case advertiser_side = "advertiser_side"
+        case advertiser_capacity = "advertiser_capacity"
+        case advertiser_delegation_number = "advertiser_delegation_number"
+        case advertiser_licence_number = "advertiser_licence_number"
+        case advertiser_type_id = "advertiser_type_id"
+        case advertiser_id_number = "advertiser_id_number"
     }
 
     init(from decoder: Decoder) throws {
@@ -60,6 +72,12 @@ struct LoginData : Codable {
         advertiser_api_token = try values.decodeIfPresent(String.self, forKey: .advertiser_api_token)
         advertiser_firebase_token = try values.decodeIfPresent(String.self, forKey: .advertiser_firebase_token)
         advertiser_package_id = try values.decodeIfPresent(String.self, forKey: .advertiser_package_id)
+        advertiser_side = try values.decodeIfPresent(String.self, forKey: .advertiser_side)
+        advertiser_capacity = try values.decodeIfPresent(String.self, forKey: .advertiser_capacity)
+        advertiser_delegation_number = try values.decodeIfPresent(String.self, forKey: .advertiser_delegation_number)
+        advertiser_licence_number = try values.decodeIfPresent(String.self, forKey: .advertiser_licence_number)
+        advertiser_type_id = try values.decodeIfPresent(Int.self, forKey: .advertiser_type_id)
+        advertiser_id_number = try values.decodeIfPresent(String.self, forKey: .advertiser_id_number)
     }
 
 }

@@ -34,6 +34,10 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
     @IBOutlet weak var directionView: UIView!
     
     @IBOutlet weak var RegionTf: UITextField!
+    @IBOutlet weak var CityTf: UITextField!
+    @IBOutlet weak var BlockTf: UITextField!
+    
+    
     @IBOutlet weak var RegionImage: UIImageView!
     @IBOutlet weak var RegionLineView: UIView!
     @IBOutlet weak var RegionView: UIView!
@@ -42,13 +46,23 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     @IBOutlet weak var ScrollHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var CityView: UIView!
+    
+    @IBOutlet weak var StateView: UIView!
+   
+    
+    
     @IBOutlet weak var ConfirmBtn: UIButton!
     
     var DirectionPicker = UIPickerView()
     var RegionPicker = UIPickerView()
+    var CityPicker = UIPickerView()
+    var BlocksPicker = UIPickerView()
     
     var DirectionArray : [SidesData] = []
-    var RegionArray : [BlocksData] = []
+    var RegionArray : [RegionData] = []
+    var CitArray : [CitiesData] = []
+    var BlocksArray : [BlocksData] = []
     
     var FeatureArray : [FeaturesData] = []
     var SelectedFeature = [Int : Feature_data]()
@@ -65,6 +79,8 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     var Direction_id = ""
     var Region_id = ""
+    var City_id = ""
+    var Block_id = ""
     
     var Order_id = ""
     
@@ -87,19 +103,26 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
         PriceTf.placeHolderColor = Colors.PlaceHolderColoer
         directionTf.placeHolderColor = Colors.PlaceHolderColoer
         RegionTf.placeHolderColor = Colors.PlaceHolderColoer
+        CityTf.placeHolderColor = Colors.PlaceHolderColoer
+        BlockTf.placeHolderColor = Colors.PlaceHolderColoer
 
         OrderTitleTf.delegate = self
         PriceTf.delegate = self
         directionTf.delegate = self
-
+        
         RegionTf.delegate = self
+        CityTf.delegate = self
+        BlockTf.delegate = self
         desTxt.delegate = self
         
         
         OrderTitleTf.setPadding(left: 16, right: 16)
         PriceTf.setPadding(left: 16, right: 16)
+        
         directionTf.setPadding(left: 16, right: 16)
         RegionTf.setPadding(left: 16, right: 16)
+        CityTf.setPadding(left: 16, right: 16)
+        BlockTf.setPadding(left: 16, right: 16)
 
         DetailsCollectionView.delegate = self
         DetailsCollectionView.dataSource = self
@@ -112,9 +135,18 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
         setShadow(view: PriceView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
         setShadow(view: RegionView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
         setShadow(view: RegionView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
+        setShadow(view: RegionView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
+        
+        setShadow(view: CityView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
+        setShadow(view: StateView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
+        setShadow(view: directionView , width: 0, height: 2, shadowRadius: 3, shadowOpacity: 0.3, shadowColor: #colorLiteral(red: 0.7725490196, green: 0.8235294118, blue: 0.8862745098, alpha: 1))
+        
+        
         
         self.directionTf.inputView = DirectionPicker
         self.RegionTf.inputView = RegionPicker
+        self.CityTf.inputView = CityPicker
+        self.BlockTf.inputView = BlocksPicker
         
         self.initPickers(picker: self.DirectionPicker)
         self.initPickers(picker: self.RegionPicker)
@@ -135,7 +167,7 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         DetailsCollectionView.layer.removeAllAnimations()
-        ScrollHeight.constant = DetailsCollectionView.contentSize.height + 650
+        ScrollHeight.constant = DetailsCollectionView.contentSize.height
         UIView.animate(withDuration: 0.5) {
             self.updateViewConstraints()
             self.loadViewIfNeeded()
@@ -167,7 +199,7 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     @IBAction func ConfirmAction(_ sender: Any) {
         
-        if OrderTitleTf.text?.isEmpty != true , PriceTf.text?.isEmpty != true , desTxt.text?.isEmpty != true , directionTf.text?.isEmpty != true ,RegionTf.text?.isEmpty != true {
+        if OrderTitleTf.text?.isEmpty != true , PriceTf.text?.isEmpty != true , desTxt.text?.isEmpty != true , directionTf.text?.isEmpty != true ,RegionTf.text?.isEmpty != true  {
             
             
             updateDetail()
@@ -191,6 +223,14 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
                 ErrorLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: false)
             }
             
+            if CityTf.text?.isEmpty == true {
+                ErrorLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: false)
+            }
+            
+            if BlockTf.text?.isEmpty == true {
+                ErrorLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: false)
+            }
+            
             self.view.shake()
             
         }
@@ -210,16 +250,29 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
             
             EnableLineAnimite(text: directionTf, ImageView: directionImage, imageEnable: #imageLiteral(resourceName: "direction-2"), lineView: directionLineView, ishidden: false)
             
-            if DirectionArray.count > 0 {
-                directionTf.text = DirectionArray[Int(Direction_id) ?? 0].side_name
-            }
-            
         } else if textField == RegionTf {
             
             EnableLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-2"), lineView: RegionLineView, ishidden: false)
             
-            if RegionArray.count > 0 {
-                RegionTf.text = RegionArray[Int(Region_id) ?? 0].block_name
+            
+            
+            
+        } else if textField == CityTf {
+            
+            EnableLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-2"), lineView: RegionLineView, ishidden: false)
+            
+            
+            if CitArray.count > 0 {
+                CityTf.text = CitArray[0].city_name
+            }
+            
+        } else if textField == BlockTf {
+            
+            EnableLineAnimite(text: BlockTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-2"), lineView: RegionLineView, ishidden: false)
+            
+            
+            if BlocksArray.count > 0 {
+                BlockTf.text = BlocksArray[0].block_name
             }
             
         }
@@ -241,10 +294,38 @@ class EditOrderDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDeleg
             
             EnableLineAnimite(text: directionTf, ImageView: directionImage, imageEnable: #imageLiteral(resourceName: "direction"), lineView: directionLineView, ishidden: true)
             
-        } else if textField == RegionTf {
+//            if DirectionArray.count > 0 {
+//                directionTf.text = DirectionArray[Int(Direction_id) ?? 0].side_name
+//            }
+            
+        }  else if textField == RegionTf {
             
             EnableLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
             
+            if RegionArray.count > 0 , Region_id == "" {
+                RegionTf.text = RegionArray[0].region_name
+                Region_id = "\(RegionArray[0].region_id ?? 0)"
+            }
+            getCities()
+            
+            
+        } else if textField == CityTf {
+            
+            EnableLineAnimite(text: CityTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
+            if CitArray.count > 0 , City_id == "" {
+                CityTf.text = CitArray[0].city_name
+                City_id = "\(CitArray[0].city_id ?? 0)"
+            }
+            getBlocks()
+            
+        } else if textField == BlockTf {
+            
+            EnableLineAnimite(text: BlockTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
+            
+            if BlocksArray.count > 0 , Block_id == "" {
+                BlockTf.text = BlocksArray[0].block_name
+                Block_id = "\(BlocksArray[0].block_id ?? "")"
+            }
         }
         
         return true;
@@ -296,6 +377,14 @@ extension EditOrderDetailsVD : UIPickerViewDelegate, UIPickerViewDataSource  {
             
             return RegionArray.count
             
+        }else if pickerView == CityPicker {
+            
+            return CitArray.count
+            
+        }else if pickerView == BlocksPicker {
+            
+            return BlocksArray.count
+            
         }
         return 0
     }
@@ -316,8 +405,26 @@ extension EditOrderDetailsVD : UIPickerViewDelegate, UIPickerViewDataSource  {
             if RegionArray.count != 0 {
                 
                 print(row)
-                Region_id = "\(RegionArray[row].block_id ?? "")"
-                return RegionArray[row].block_name
+                Region_id = "\(RegionArray[row].region_id ?? 0)"
+                return RegionArray[row].region_name
+                
+            }
+        }else if pickerView == CityPicker{
+            
+            if CitArray.count != 0 {
+                
+                print(row)
+                City_id = "\(CitArray[row].city_id ?? 0)"
+                return CitArray[row].city_name
+                
+            }
+        }else if pickerView == BlocksPicker{
+            
+            if BlocksArray.count != 0 {
+                
+                print(row)
+                Block_id = "\(BlocksArray[row].block_id ?? "")"
+                return BlocksArray[row].block_name
                 
             }
         }
@@ -336,8 +443,22 @@ extension EditOrderDetailsVD : UIPickerViewDelegate, UIPickerViewDataSource  {
         }else if pickerView == RegionPicker {
             
             if RegionArray.count != 0 {
-                RegionTf.text = RegionArray[row].block_name
-                Region_id = "\(RegionArray[row].block_id ?? "")"
+                RegionTf.text = RegionArray[row].region_name
+                Region_id = "\(RegionArray[row].region_id ?? 0)"
+              
+            }
+        }else if pickerView == CityPicker {
+            
+            if CitArray.count != 0 {
+                CityTf.text = CitArray[row].city_name
+                City_id = "\(CitArray[row].city_id ?? 0)"
+                
+            }
+        }else if pickerView == BlocksPicker {
+            
+            if BlocksArray.count != 0 {
+                BlockTf.text = BlocksArray[row].block_name
+                Block_id = "\(BlocksArray[row].block_id ?? "")"
                 
             }
         }
@@ -457,15 +578,18 @@ extension EditOrderDetailsVD {
         self.MainView.isHidden = true
         var Parameters = [
         
-                    "order_id" : "\(DetialsData?.order_id ?? 0)",
-                    "title" : OrderTitleTf.text ?? "",
-                    "description" : desTxt.text ?? "",
-                    "location" : "",
-                    "lat" : "\(lat)",
-                    "lng" : "\(lng)",
-                    "price" : PriceTf.text ?? "",
-                    "side_id" : Direction_id,
-                    "block_id" : Region_id
+            "order_id" : "\(DetialsData?.order_id ?? 0)",
+            "title" : OrderTitleTf.text ?? "",
+            "description" : desTxt.text ?? "",
+            "location" : "",
+            "lat" : "\(lat)",
+            "lng" : "\(lng)",
+            "price" : PriceTf.text ?? "",
+            "side_id" : Direction_id,
+            "region_id" : Region_id,
+            "city_id" : City_id ,
+            "district_id" : Block_id
+            
         
                 ] as [String : Any]
         
@@ -558,11 +682,18 @@ extension EditOrderDetailsVD {
                 
                 self.DetialsData = data.data
                 
+                self.RegionTf.text = data.data?.order_region?.region_name ?? ""
+                self.Region_id = "\(data.data?.order_region?.region_id ?? 0)"
+                self.CityTf.text = data.data?.order_city?.city_name
+                self.City_id = "\(data.data?.order_city?.city_id ?? 0)"
+                self.Block_id = "\(data.data?.order_block?.block_id ?? "")"
+                self.BlockTf.text = data.data?.order_block?.block_name
+                
                 self.OrderTitleTf.text = data.data?.order_title ?? ""
                 self.desTxt.text = data.data?.order_description ?? ""
                 self.PriceTf.text = data.data?.order_price ?? ""
-                self.Region_id = "\(data.data?.order_block_id ?? 0)"
-                self.Direction_id = "\(data.data?.order_side_id ?? 0)"
+                self.Region_id = "\(data.data?.order_block?.block_id ?? "")"
+                self.Direction_id = "\(data.data?.order_side?.side_id ?? 0)"
 
                 
                 if self.desTxt.text?.isEmpty == true {
@@ -587,15 +718,18 @@ extension EditOrderDetailsVD {
         }
     }
     
+    
     func getRegion() {
         
+        self.view.lock()
         
-       ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)blocks") { (data : BlocksModel?, String) in
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)regions") { (data : REgionModel?, String) in
+            self.view.unlock()
             
             if String != nil {
                 
                 self.showAlertWithTitle(title: "Error", message: String!, type: .error)
-               self.view.unlock()
+                
                 
             }else {
                 
@@ -604,14 +738,8 @@ extension EditOrderDetailsVD {
                 }
                 
                 self.RegionArray = data.data ?? []
-               
-                if self.RegionArray.count > 0 {
-                    
-                    self.RegionTf.text = self.RegionArray[0].block_name ?? ""
-                    self.Region_id = "\(self.DetialsData?.order_id ?? 0)"
-                    
-                }
                 
+                self.initPickers(picker: self.RegionPicker)
                 print(data)
                 
                 
@@ -619,10 +747,9 @@ extension EditOrderDetailsVD {
         }
     }
     
-    
     func getDirection() {
         
-       ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)sides") { (data : SidesModel?, String) in
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)sides") { (data : SidesModel?, String) in
             
             if String != nil {
                 
@@ -636,19 +763,71 @@ extension EditOrderDetailsVD {
                 
                 self.DirectionArray = data.data ?? []
                 
-                if self.DirectionArray.count > 0 {
-                    
-                    self.directionTf.text = self.DirectionArray[0].side_name ?? ""
-                    self.Direction_id = "\(self.DetialsData?.order_side_id ?? 0)"
-                    
-                }
-               
+                
                 print(data)
                 
                 
             }
         }
     }
+    
+    func getCities() {
+        
+        self.view.lock()
+        
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)cities?region_id=\(Region_id)") { (data : CitiesModel?, String) in
+            
+            self.view.unlock()
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+                
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+                
+                self.CitArray = data.data ?? []
+                
+                self.initPickers(picker: self.CityPicker)
+                
+                print(data)
+                
+                
+            }
+        }
+    }
+    
+    func getBlocks() {
+        
+        self.view.lock()
+        
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil, url: "\(hostName)blocks?city_id=\(City_id)") { (data : BlocksModel?, String) in
+            
+            self.view.unlock()
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+                
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+                
+                self.BlocksArray = data.data ?? []
+                
+                self.initPickers(picker: self.BlocksPicker)
+                print(data)
+                
+                
+            }
+        }
+    }
+    
     
     func getFeature() {
         
