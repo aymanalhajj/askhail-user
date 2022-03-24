@@ -60,9 +60,9 @@ struct Order_details : Codable {
     let order_custom_last_update_date : String?
     let order_description : String?
     let order_specifications : [Order_specifications]?
-    let order_region : String?
-    let order_city : String?
-    let order_block : String?
+    let order_region : Order_region?
+    let order_city : Order_city?
+    let order_block : Order_block?
     let order_side : Order_side?
     let order_main_section : Order_main_section?
     let order_sub_section : Order_sub_section?
@@ -70,13 +70,13 @@ struct Order_details : Codable {
     let order_advertiser_name : String?
     let order_advertiser_advs_count : String?
     let order_if_any_contact_available : Bool?
+    let order_call_number_status : String?
+    let order_call_number : String?
+    let order_whatsapp_number_status : String?
     let order_last_update : String?
     let order_created_at : String?
     let order_updated_at : String?
-    let order_call_number : String?
     let order_whatsapp_number : String?
-    let order_call_number_status : String?
-    let order_whatsapp_number_status : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -97,13 +97,13 @@ struct Order_details : Codable {
         case order_advertiser_name = "order_advertiser_name"
         case order_advertiser_advs_count = "order_advertiser_advs_count"
         case order_if_any_contact_available = "order_if_any_contact_available"
+        case order_call_number_status = "order_call_number_status"
+        case order_call_number = "order_call_number"
+        case order_whatsapp_number_status = "order_whatsapp_number_status"
         case order_last_update = "order_last_update"
         case order_created_at = "order_created_at"
         case order_updated_at = "order_updated_at"
-        case order_call_number = "order_call_number"
         case order_whatsapp_number = "order_whatsapp_number"
-        case order_call_number_status = "order_call_number_status"
-        case order_whatsapp_number_status = "order_whatsapp_number_status"
     }
 
     init(from decoder: Decoder) throws {
@@ -115,9 +115,9 @@ struct Order_details : Codable {
         order_custom_last_update_date = try values.decodeIfPresent(String.self, forKey: .order_custom_last_update_date)
         order_description = try values.decodeIfPresent(String.self, forKey: .order_description)
         order_specifications = try values.decodeIfPresent([Order_specifications].self, forKey: .order_specifications)
-        order_region = try values.decodeIfPresent(String.self, forKey: .order_region)
-        order_city = try values.decodeIfPresent(String.self, forKey: .order_city)
-        order_block = try values.decodeIfPresent(String.self, forKey: .order_block)
+        order_region = try values.decodeIfPresent(Order_region.self, forKey: .order_region)
+        order_city = try values.decodeIfPresent(Order_city.self, forKey: .order_city)
+        order_block = try values.decodeIfPresent(Order_block.self, forKey: .order_block)
         order_side = try values.decodeIfPresent(Order_side.self, forKey: .order_side)
         order_main_section = try values.decodeIfPresent(Order_main_section.self, forKey: .order_main_section)
         order_sub_section = try values.decodeIfPresent(Order_sub_section.self, forKey: .order_sub_section)
@@ -125,16 +125,58 @@ struct Order_details : Codable {
         order_advertiser_name = try values.decodeIfPresent(String.self, forKey: .order_advertiser_name)
         order_advertiser_advs_count = try values.decodeIfPresent(String.self, forKey: .order_advertiser_advs_count)
         order_if_any_contact_available = try values.decodeIfPresent(Bool.self, forKey: .order_if_any_contact_available)
+        order_call_number_status = try values.decodeIfPresent(String.self, forKey: .order_call_number_status)
+        order_call_number = try values.decodeIfPresent(String.self, forKey: .order_call_number)
+        order_whatsapp_number_status = try values.decodeIfPresent(String.self, forKey: .order_whatsapp_number_status)
         order_last_update = try values.decodeIfPresent(String.self, forKey: .order_last_update)
         order_created_at = try values.decodeIfPresent(String.self, forKey: .order_created_at)
         order_updated_at = try values.decodeIfPresent(String.self, forKey: .order_updated_at)
-        order_call_number = try values.decodeIfPresent(String.self, forKey: .order_call_number)
         order_whatsapp_number = try values.decodeIfPresent(String.self, forKey: .order_whatsapp_number)
-        order_call_number_status = try values.decodeIfPresent(String.self, forKey: .order_call_number_status)
-        order_whatsapp_number_status = try values.decodeIfPresent(String.self, forKey: .order_whatsapp_number_status)
     }
 
 }
+struct Order_region : Codable {
+    let region_id : Int?
+    let region_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case region_id = "region_id"
+        case region_name = "region_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        region_id = try values.decodeIfPresent(Int.self, forKey: .region_id)
+        region_name = try values.decodeIfPresent(String.self, forKey: .region_name)
+    }
+
+}
+
+struct Order_city : Codable {
+    let city_id : Int?
+    let city_region : City_region?
+    let city_name : String?
+    let admin_city_name : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case city_id = "city_id"
+        case city_region = "city_region"
+        case city_name = "city_name"
+        case admin_city_name = "admin_city_name"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        city_id = try values.decodeIfPresent(Int.self, forKey: .city_id)
+        city_region = try values.decodeIfPresent(City_region.self, forKey: .city_region)
+        city_name = try values.decodeIfPresent(String.self, forKey: .city_name)
+        admin_city_name = try values.decodeIfPresent(String.self, forKey: .admin_city_name)
+    }
+
+}
+
 struct Order_side : Codable {
     let side_id : Int?
     let side_name : String?
@@ -195,19 +237,26 @@ struct Order_sub_section : Codable {
 
 
 struct Order_block : Codable {
-    let block_id : Int?
+    let block_id : String?
+    let block_city : Block_city?
     let block_name : String?
+    let admin_block_name : String?
 
     enum CodingKeys: String, CodingKey {
 
         case block_id = "block_id"
+        case block_city = "block_city"
         case block_name = "block_name"
+        case admin_block_name = "admin_block_name"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        block_id = try values.decodeIfPresent(Int.self, forKey: .block_id)
+        block_id = try values.decodeIfPresent(String.self, forKey: .block_id)
+        block_city = try values.decodeIfPresent(Block_city.self, forKey: .block_city)
         block_name = try values.decodeIfPresent(String.self, forKey: .block_name)
+        admin_block_name = try values.decodeIfPresent(String.self, forKey: .admin_block_name)
     }
 
 }
+

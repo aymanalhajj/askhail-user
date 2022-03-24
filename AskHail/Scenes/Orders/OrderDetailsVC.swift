@@ -105,7 +105,7 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         PriceTf.setPadding(left: 16, right: 16)
         directionTf.setPadding(left: 16, right: 16)
         RegionTf.setPadding(left: 16, right: 16)
-        RegionTf.setPadding(left: 16, right: 16)
+       
         CityTf.setPadding(left: 16, right: 16)
         BlockTf.setPadding(left: 16, right: 16)
         
@@ -271,7 +271,7 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         
-        if textField.text?.isEmpty == true{
+      //  if textField.text?.isEmpty == true{
             
             if textField == OrderTitleTf {
                 
@@ -290,7 +290,7 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
                 
                 EnableLineAnimite(text: RegionTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
                 
-                if RegionArray.count > 0 || Region_id == "" {
+                if RegionArray.count > 0 , Region_id == "" {
                     RegionTf.text = RegionArray[0].region_name
                     Region_id = "\(RegionArray[0].region_id ?? 0)"
                 }
@@ -300,7 +300,7 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
             } else if textField == CityTf {
                 
                 EnableLineAnimite(text: CityTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
-                if CitArray.count > 0 || City_id == "" {
+                if CitArray.count > 0 , City_id == "" {
                     CityTf.text = CitArray[0].city_name
                     City_id = "\(CitArray[0].city_id ?? 0)"
                 }
@@ -310,12 +310,12 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
                 
                 EnableLineAnimite(text: BlockTf, ImageView: RegionImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: RegionLineView, ishidden: true)
                 
-                if BlocksArray.count > 0 || Block_id == "" {
+                if BlocksArray.count > 0 , Block_id == "" {
                     BlockTf.text = BlocksArray[0].block_name
                     Block_id = "\(BlocksArray[0].block_id ?? "")"
                 }
             }
-        }
+      //  }
         
         
         return true;
