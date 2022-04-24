@@ -9,6 +9,8 @@
 import Foundation
 import Foundation
 import UIKit
+import Cosmos
+
 extension UIApplication {
     class func isRTL() -> Bool{
         return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
@@ -24,6 +26,29 @@ class L102Localizer: NSObject {
         MethodSwizzleGivenClassName(cls: UILabel.self, originalSelector: #selector(UILabel.layoutSubviews), overrideSelector: #selector(UILabel.cstmlayoutSubviews))
         
         
+    }
+    class func editLocalizationView(){
+        if L102Language.currentAppleLanguage() == arabicLang {
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
+            UIImageView.appearance().semanticContentAttribute = .forceLeftToRight
+            UILabel.appearance().semanticContentAttribute = .forceLeftToRight
+            UIStackView.appearance().semanticContentAttribute = .forceLeftToRight
+            UICollectionView.appearance().semanticContentAttribute = .forceRightToLeft
+            CosmosView.appearance().semanticContentAttribute = .forceLeftToRight
+        }else {
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+            UILabel.appearance().semanticContentAttribute = .forceRightToLeft
+            UIStackView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIImageView.appearance().semanticContentAttribute = .forceRightToLeft
+            UICollectionView.appearance().semanticContentAttribute = .forceLeftToRight
+            CosmosView.appearance().semanticContentAttribute = .forceRightToLeft
+           
+            
+        }
     }
 }
 

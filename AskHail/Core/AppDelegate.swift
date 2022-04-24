@@ -14,6 +14,7 @@ import UserNotifications
 import GoogleMaps
 import GooglePlaces
 import FirebaseDynamicLinks
+import Cosmos
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate  {
@@ -42,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         registerForNotifications()
+        L102Localizer.editLocalizationView()
         
         if #available(iOS 10.0, *) {
             
@@ -67,25 +69,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
             Helper.SaveisFirst(token: "true")
             
             L102Language.setAppleLAnguageTo(lang: arabicLang)
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            
-            
-            
-        }
-        
-        
-        if L102Language.currentAppleLanguage() == arabicLang {
-            
-            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
-            
-        }else {
+            CosmosView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIStackView.appearance().semanticContentAttribute = .forceRightToLeft
+            UICollectionView.appearance().semanticContentAttribute = .forceRightToLeft
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
-            UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
-            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+            
+            
+            
         }
         
+        
+     
 //
 //        if Helper.getapitoken() != nil {
 //

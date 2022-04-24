@@ -589,18 +589,22 @@ extension HomeVC {
                     return
                 }
                 
-                let storyboard = UIStoryboard(name: Home, bundle: nil)
-                let vc  = storyboard.instantiateViewController(withIdentifier: "AdsBannerVC") as! AdsBannerVC
-                
-                vc.Banner_url = data.data?.app_banner_url ?? ""
-                vc.imageUrl = data.data?.app_banner ?? ""
-                
-                vc.modalPresentationStyle = .fullScreen
-                self.addChild(vc)
-                vc.view.frame = self.view.frame
-                
-                self.view.addSubview(vc.view)
-                vc.didMove(toParent: self)
+                print(data.data?.app_banner ?? "")
+                if (data.data?.app_banner ?? "") != "" {
+                    let storyboard = UIStoryboard(name: Home, bundle: nil)
+                    let vc  = storyboard.instantiateViewController(withIdentifier: "AdsBannerVC") as! AdsBannerVC
+                    
+                    vc.Banner_url = data.data?.app_banner_url ?? ""
+                    vc.imageUrl = data.data?.app_banner ?? ""
+                    
+                    vc.modalPresentationStyle = .fullScreen
+                    self.addChild(vc)
+                    vc.view.frame = self.view.frame
+                    
+                    self.view.addSubview(vc.view)
+                    vc.didMove(toParent: self)
+                }
+               
                 
                 
                 print(data)

@@ -6,7 +6,6 @@ target 'AskHail' do
   use_frameworks!
 
   # Pods for AskHail
-
 pod 'Alamofire', '~> 4.2'
 pod 'Kingfisher', '~> 4.0'
 pod 'LXStatusAlert'
@@ -38,7 +37,7 @@ pod 'Firebase/DynamicLinks'
 pod 'IQKeyboardManager'
 pod 'Toast-Swift', '~> 5.0.1'
 pod 'lottie-ios'
-pod 'MaterialComponents/Snackbar'
+
 pod 'PMAlertController'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Analytics'

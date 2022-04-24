@@ -13,7 +13,7 @@ import AudioToolbox
 import LXStatusAlert
 import UIView_Shake
 import AJMessage
-import MaterialComponents.MaterialSnackbar
+//import MaterialComponents.MaterialSnackbar
 
 
 extension UIViewController : UIGestureRecognizerDelegate {
@@ -52,41 +52,49 @@ extension UIViewController : UIGestureRecognizerDelegate {
     }
     func alertSkipLogin(){
         
+//
+//        let message = MDCSnackbarMessage()
+//        message.text = ""
+//        let action = MDCSnackbarMessageAction()
+//        let actionHandler = {() in
+//            guard let window = UIApplication.shared.keyWindow else{return}
+//            let sb = UIStoryboard(name: Authontication, bundle: nil)
+//            var vc : UIViewController
+//            vc = sb.instantiateViewController(withIdentifier: "WelcomeVC")
+//            window.rootViewController = vc
+//            UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
+//        }
+//        action.handler = actionHandler
+//        action.title = "Please reLogin".localized
+//        message.action = action
+//        MDCSnackbarManager.default.show(message)
         
-        let message = MDCSnackbarMessage()
-        message.text = ""
-        let action = MDCSnackbarMessageAction()
-        let actionHandler = {() in
+        let alert = UIAlertController.init(title: "Warning".localized , message: "please login first".localized ,  preferredStyle: .alert)
+      alert.view.tintColor = Colors.DarkBlue
+
+
+        let OkBtn = UIAlertAction.init(title: "Ok".localized, style: .default, handler: { (nil) in
+            
             guard let window = UIApplication.shared.keyWindow else{return}
-            let sb = UIStoryboard(name: Authontication, bundle: nil)
-            var vc : UIViewController
-            vc = sb.instantiateViewController(withIdentifier: "WelcomeVC")
-            window.rootViewController = vc
-            UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
-        }
-        action.handler = actionHandler
-        action.title = "Please reLogin".localized
-        message.action = action
-        MDCSnackbarManager.default.show(message)
-//        let alert = UIAlertController.init(title: "Warning" , message: "please login first" ,  preferredStyle: .alert)
-//      alert.view.tintColor = Colors.DarkBlue
-//
-//
-//        let OkBtn = UIAlertAction.init(title: "Ok", style: .default, handler: { (nil) in
-//
-//        })
-//        let Cancel = UIAlertAction.init(title: "Cancel", style: UIAlertAction.Style.destructive, handler: { (nil) in
-//
-//
-//        })
-//
-//
-//
-//        alert.addAction(OkBtn)
-//
-//
-//        alert.addAction(Cancel)
-//        self.present(alert, animated: true, completion: nil)
+                       let sb = UIStoryboard(name: Authontication, bundle: nil)
+                       var vc : UIViewController
+                       vc = sb.instantiateViewController(withIdentifier: "WelcomeVC")
+                       window.rootViewController = vc
+                       UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
+
+        })
+        let Cancel = UIAlertAction.init(title: "Cancel".localized, style: UIAlertAction.Style.destructive, handler: { (nil) in
+
+
+        })
+
+
+
+        alert.addAction(OkBtn)
+
+
+        alert.addAction(Cancel)
+        self.present(alert, animated: true, completion: nil)
         
      
         
@@ -218,6 +226,8 @@ extension UIViewController : UIGestureRecognizerDelegate {
     
     
 }
+
+
 extension UIScreen {
     var minEdge: CGFloat {
         return UIScreen.main.bounds.minEdge

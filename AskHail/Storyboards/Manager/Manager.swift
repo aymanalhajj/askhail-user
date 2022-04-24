@@ -16,9 +16,9 @@ private func checkConnection() -> Bool {
     
 }
 
-//https://askhail.com/api/v1/
-let hostName = "https://www.test.askhail.com/api/v1/"
-
+//https://www.test.askhail.com/api/v1
+let hostName = "https://askhail.com/api/v1/"
+//https://askhail.com/api/v1
 
 
 

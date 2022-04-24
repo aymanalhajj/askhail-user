@@ -6,6 +6,8 @@
 //  Copyright © 2016 ajiejoy. All rights reserved.
 //
 
+
+
 import UIKit
 
 public class AJMessage: UIView {
@@ -65,6 +67,7 @@ public class AJMessage: UIView {
         
         self.config = config
         self.title.attributedText = title
+        self.title.text = ""
         self.message.attributedText = message
         self.status = status
         self.duration = duration
@@ -214,6 +217,8 @@ public class AJMessage: UIView {
             , animations: {
                 self.alpha = 0
                 self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            
+            
         }) { (B) in
             self.removeFromSuperview()
             self.action?(self)
@@ -256,16 +261,7 @@ public class AJMessage: UIView {
         action = sender
     }
     
-    /// show AJMessage Nb:duration = nil to infinite, default is 3
-    ///
-    /// - Parameters:
-    ///   - title: String of title
-    ///   - message: String of message
-    ///   - duration: Optional duration, default value is 3.0
-    ///   - position: Optional Position, default value is .top
-    ///   - status: Optional status, default value is .success
-    ///   - config: Optional config, default is using AJMessageConfig.shared
-    /// - Returns: AJMessage for chaining function like onhide
+    
     @discardableResult public static func show(title : String,message : String,duration: Double? = 3.0 , position: Position = .top,status : Status = .success ,config:AJMessageConfig = AJMessageConfig.shared) -> AJMessage {
         let attrTitle = NSAttributedString(string: title, attributes: [.font:config.titleFont,.foregroundColor:config.titleColor])
         
