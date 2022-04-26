@@ -77,7 +77,7 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
     var Side_Array_ar = ["فرد" , "شركة"]
     
     var Capacity_Array = ["owner" , "delegate"]
-    var Capacity_Array_ar = ["مالك" , "مندوب"]
+    var Capacity_Array_ar = ["مالك" , "مفوض"]
     
     
     var type_id_array = [typeIdData]()
@@ -204,7 +204,7 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
             
         }
         
-        if FullNameTf.text?.isEmpty != true , MailTf.text?.isEmpty != true , PasswordFt.text?.isEmpty != true , checkBox != false {
+        if FullNameTf.text?.isEmpty != true  , PasswordFt.text?.isEmpty != true , checkBox != false {
             
             CompleteRegister()
             view.lock()
@@ -218,11 +218,11 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
                 
             }
             
-            if MailTf.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: MailTf, ImageView: MailImage, imageEnable: #imageLiteral(resourceName: "mail"), lineView: MailLineView, ishidden: false)
-                
-            }
+//            if MailTf.text?.isEmpty == true {
+//
+//                ErrorLineAnimite(text: MailTf, ImageView: MailImage, imageEnable: #imageLiteral(resourceName: "mail"), lineView: MailLineView, ishidden: false)
+//
+//            }
             
             if PasswordFt.text?.isEmpty == true {
                 
@@ -230,29 +230,29 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
                 
             }
             
-            if sideTF.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: sideTF, ImageView: sideImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: sideLineView, ishidden: false)
-                
-            }
+//            if sideTF.text?.isEmpty == true {
+//
+//                ErrorLineAnimite(text: sideTF, ImageView: sideImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: sideLineView, ishidden: false)
+//
+//            }
             
-            if TypeIdTF.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: TypeIdTF, ImageView: typeIdImage, imageEnable: #imageLiteral(resourceName: "user"), lineView: TypeIdLineView, ishidden: false)
-                
-            }
+//            if TypeIdTF.text?.isEmpty == true {
+//
+//                ErrorLineAnimite(text: TypeIdTF, ImageView: typeIdImage, imageEnable: #imageLiteral(resourceName: "user"), lineView: TypeIdLineView, ishidden: false)
+//
+//            }
             
-            if IdTF.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: IdTF, ImageView: IdImage, imageEnable: #imageLiteral(resourceName: "user"), lineView: IdLineView, ishidden: false)
-                
-            }
+//            if IdTF.text?.isEmpty == true {
+//                
+//                ErrorLineAnimite(text: IdTF, ImageView: IdImage, imageEnable: #imageLiteral(resourceName: "user"), lineView: IdLineView, ishidden: false)
+//                
+//            }
             
-            if capacityTF.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: capacityTF, ImageView: capacityImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: capacityLineView, ishidden: false)
-                
-            }
+//            if capacityTF.text?.isEmpty == true {
+//
+//                ErrorLineAnimite(text: capacityTF, ImageView: capacityImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: capacityLineView, ishidden: false)
+//
+//            }
             
 //            if delegation_numberTF.text?.isEmpty == true {
 //
@@ -260,11 +260,11 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
 //
 //            }
             
-            if LicenceTF.text?.isEmpty == true {
-                
-                ErrorLineAnimite(text: LicenceTF, ImageView: LicenceTFImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: LicenceTFLinceView, ishidden: false)
-                
-            }
+//            if LicenceTF.text?.isEmpty == true {
+//
+//                ErrorLineAnimite(text: LicenceTF, ImageView: LicenceTFImg, imageEnable: #imageLiteral(resourceName: "user"), lineView: LicenceTFLinceView, ishidden: false)
+//
+//            }
             
             self.view.shake()
         }

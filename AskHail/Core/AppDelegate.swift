@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         registerForNotifications()
+        L102Localizer.DoTheMagic()
         L102Localizer.editLocalizationView()
         
         if #available(iOS 10.0, *) {
@@ -62,17 +63,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         
         application.registerForRemoteNotifications()
         
-        L102Localizer.DoTheMagic()
+      
         
         if Helper.getisFirst() == nil {
             
             Helper.SaveisFirst(token: "true")
             
             L102Language.setAppleLAnguageTo(lang: arabicLang)
-            CosmosView.appearance().semanticContentAttribute = .forceRightToLeft
-            UIStackView.appearance().semanticContentAttribute = .forceRightToLeft
-            UICollectionView.appearance().semanticContentAttribute = .forceRightToLeft
-            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            L102Localizer.editLocalizationView()
             
             
             

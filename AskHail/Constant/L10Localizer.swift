@@ -29,22 +29,22 @@ class L102Localizer: NSObject {
     }
     class func editLocalizationView(){
         if L102Language.currentAppleLanguage() == arabicLang {
-            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
             UITextField.appearance().semanticContentAttribute = .forceLeftToRight
             UITextView.appearance().semanticContentAttribute = .forceLeftToRight
             UIImageView.appearance().semanticContentAttribute = .forceLeftToRight
             UILabel.appearance().semanticContentAttribute = .forceLeftToRight
             UIStackView.appearance().semanticContentAttribute = .forceLeftToRight
-            UICollectionView.appearance().semanticContentAttribute = .forceRightToLeft
+            UICollectionView.appearance().semanticContentAttribute = .forceLeftToRight
             CosmosView.appearance().semanticContentAttribute = .forceLeftToRight
         }else {
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
             UITextField.appearance().semanticContentAttribute = .forceRightToLeft
             UITextView.appearance().semanticContentAttribute = .forceRightToLeft
             UILabel.appearance().semanticContentAttribute = .forceRightToLeft
             UIStackView.appearance().semanticContentAttribute = .forceRightToLeft
             UIImageView.appearance().semanticContentAttribute = .forceRightToLeft
-            UICollectionView.appearance().semanticContentAttribute = .forceLeftToRight
+            UICollectionView.appearance().semanticContentAttribute = .forceRightToLeft
             CosmosView.appearance().semanticContentAttribute = .forceRightToLeft
            
             

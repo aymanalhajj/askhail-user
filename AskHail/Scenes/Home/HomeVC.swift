@@ -541,6 +541,8 @@ extension HomeVC {
                 
                 self.realtyCollection.hideLoader()
                 self.RealEstateArray = data.data?.real_estate ?? []
+                
+                
                 self.RealEstateData = true
                 
                 if self.RealEstateArray.count <= 3 {

@@ -71,9 +71,17 @@ extension UIViewController : UIGestureRecognizerDelegate {
         
         let alert = UIAlertController.init(title: "Warning".localized , message: "please login first".localized ,  preferredStyle: .alert)
       alert.view.tintColor = Colors.DarkBlue
+        var Ok = "OK"
+        var Cancel_lang = "cancel"
+        
+        if L102Language.currentAppleLanguage() == arabicLang {
+            Ok = "حسنا"
+            Cancel_lang = "الغاء"
+            
+        }
 
 
-        let OkBtn = UIAlertAction.init(title: "Ok".localized, style: .default, handler: { (nil) in
+        let OkBtn = UIAlertAction.init(title: Ok, style: .default, handler: { (nil) in
             
             guard let window = UIApplication.shared.keyWindow else{return}
                        let sb = UIStoryboard(name: Authontication, bundle: nil)
@@ -83,7 +91,7 @@ extension UIViewController : UIGestureRecognizerDelegate {
                        UIView.transition(with: window, duration: 0.5, options: .showHideTransitionViews, animations: nil, completion: nil)
 
         })
-        let Cancel = UIAlertAction.init(title: "Cancel".localized, style: UIAlertAction.Style.destructive, handler: { (nil) in
+        let Cancel = UIAlertAction.init(title: Cancel_lang, style: UIAlertAction.Style.destructive, handler: { (nil) in
 
 
         })

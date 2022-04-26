@@ -126,6 +126,7 @@ extension ForgetPasswordVC_1 {
                 
                 let storyboard = UIStoryboard(name: Authontication, bundle: nil)
                 let vc  = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordVC_2") as! ForgetPasswordVC_2
+                vc.adviser_id = "\(data.data?.advertiser_id ?? 0)"
                 self.navigationController?.pushViewController(vc, animated: true)
                 
                 print(data)

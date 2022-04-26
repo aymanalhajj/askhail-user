@@ -31,6 +31,8 @@ class ForgetPasswordVC_2: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var ResendCodeTimerLabl: UILabel!
     @IBOutlet weak var ResendCodeBtn: UIButton!
     
+    var adviser_id = ""
+    
     var runCount = 60
     
     override func viewDidLoad() {
@@ -309,7 +311,7 @@ extension ForgetPasswordVC_2 {
     func ForgetPassword_2() {
         self.view.lock()
         let Parameters = [
-            "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)",
+            "advertiser_id" : adviser_id,
             "forget_code" : "\(TF1.text ?? "")\(TF2.text ?? "")\(TF3.text ?? "")\(TF4.text ?? "")"
         ]
         
@@ -335,6 +337,7 @@ extension ForgetPasswordVC_2 {
                 
                 let storyboard = UIStoryboard(name: Authontication, bundle: nil)
                 let vc  = storyboard.instantiateViewController(withIdentifier: "ForgetPasswordVC_3") as! ForgetPasswordVC_3
+                vc.adviser_id = "\(data.data?.advertiser_id ?? 0)"
                 self.navigationController?.pushViewController(vc, animated: true)
             
             print(data)

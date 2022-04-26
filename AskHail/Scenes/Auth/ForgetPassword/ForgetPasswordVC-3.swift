@@ -21,6 +21,8 @@ class ForgetPasswordVC_3: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var PasswordView: UIView!
     @IBOutlet weak var PasswordView2: UIView!
     
+    var adviser_id = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -115,7 +117,7 @@ extension ForgetPasswordVC_3 {
         
         
         let Parameters = [
-            "advertiser_id" : "\(AuthService.userData?.advertiser_id ?? 0)" ,
+            "advertiser_id" : adviser_id ,
             "password" : PasswordTf1.text ?? "",
             "password_confirmation" : PasswordTf2.text ?? ""
         ]
