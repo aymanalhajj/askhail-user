@@ -106,8 +106,11 @@ class HomeVC: BaseViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         BusinessSectorCollection.layer.removeAllAnimations()
-        BusnissHeightCollectionView.constant = BusinessSectorCollection.contentSize.height
-        MediaHeightCollectionView.constant = MediaCollectionview.contentSize.height
+        DispatchQueue.main.async {
+            self.BusnissHeightCollectionView.constant = self.BusinessSectorCollection.contentSize.height
+            self.MediaHeightCollectionView.constant = self.MediaCollectionview.contentSize.height
+        }
+        
         
      //   ScrollHeight.constant = BusinessSectorCollection.contentSize.height + 550
         UIView.animate(withDuration: 0.5) {
@@ -193,6 +196,7 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             if !BusinessData {
                 return 12
             }else{
+                print(BusinessArray.count)
                 return BusinessArray.count
             }
             
@@ -311,6 +315,8 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
                 cell.title.text = Model.section_name
                 
             }
+            
+            self.BusnissHeightCollectionView.constant = BusinessSectorCollection.contentSize.height
             
             cell.flipX()
             return cell
@@ -551,6 +557,8 @@ extension HomeVC {
                 
                 self.BusinessSectorCollection.hideLoader()
                 self.BusinessArray = data.data?.business ?? []
+                
+                print(self.BusinessArray.count)
                 self.BusinessData = true
                 
                 self.MediaCollectionview.hideLoader()
