@@ -73,7 +73,7 @@ class EditMyInfoVC: UIViewController, UITextFieldDelegate {
     var Side_Array_ar = ["فرد" , "شركة"]
     
     var Capacity_Array = ["owner" , "delegate"]
-    var Capacity_Array_ar = ["مالك" , "مندوب"]
+    var Capacity_Array_ar = ["مالك" , "مفوض"]
     
     
     var type_id_array = [typeIdData]()
