@@ -10,6 +10,7 @@ import Foundation
 import Foundation
 import UIKit
 import Cosmos
+import STTabbar
 
 extension UIApplication {
     class func isRTL() -> Bool{
@@ -36,8 +37,10 @@ class L102Localizer: NSObject {
             UILabel.appearance().semanticContentAttribute = .forceLeftToRight
             UIStackView.appearance().semanticContentAttribute = .forceLeftToRight
             UICollectionView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITabBar.appearance().semanticContentAttribute = .forceRightToLeft
             CosmosView.appearance().semanticContentAttribute = .forceLeftToRight
         }else {
+            UITabBar.appearance().semanticContentAttribute = .forceLeftToRight
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
             UITextField.appearance().semanticContentAttribute = .forceRightToLeft
             UITextView.appearance().semanticContentAttribute = .forceRightToLeft
