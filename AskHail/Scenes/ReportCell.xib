@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Almarai-Bold.ttf">
+            <string>Almarai-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ttM-Co-NaM" customClass="ReportCell" customModule="AskHail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttM-Co-NaM" id="n3g-tB-0Zz">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54x-gZ-tRN">
+                        <rect key="frame" x="0.0" y="0.0" width="325" height="58"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Communicate with application " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-3k-grR" customClass="addInterLineSpacing" customModule="AskHail" customModuleProvider="target">
+                                <rect key="frame" x="4" y="0.0" width="273" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.29411764705882354" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQk-cJ-XUM">
+                                <rect key="frame" x="217" y="41.5" width="60" height="0.5"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="HKz-rd-FdO"/>
+                                    <constraint firstAttribute="width" constant="60" id="WLZ-pr-ipH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Almarai-Bold" family="Almarai" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-PL-2TG">
+                                <rect key="frame" x="301" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="XMw-oh-etd"/>
+                                    <constraint firstAttribute="height" constant="24" id="oLW-z7-oXB"/>
+                                </constraints>
+                                <state key="normal" image="checkbox-1"/>
+                                <connections>
+                                    <action selector="CheckAction:" destination="ttM-Co-NaM" eventType="touchUpInside" id="LWf-EP-CB5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="otu-PL-2TG" firstAttribute="leading" secondItem="aTF-3k-grR" secondAttribute="trailing" constant="24" id="CB0-so-r3E"/>
+                            <constraint firstItem="aTF-3k-grR" firstAttribute="top" secondItem="54x-gZ-tRN" secondAttribute="top" id="EUu-Lb-fwp"/>
+                            <constraint firstItem="aTF-3k-grR" firstAttribute="leading" secondItem="54x-gZ-tRN" secondAttribute="leading" constant="4" id="GSD-5k-FZg"/>
+                            <constraint firstItem="otu-PL-2TG" firstAttribute="top" secondItem="54x-gZ-tRN" secondAttribute="top" id="IBg-kW-tRY"/>
+                            <constraint firstItem="wQk-cJ-XUM" firstAttribute="trailing" secondItem="aTF-3k-grR" secondAttribute="trailing" id="LEx-t9-H37"/>
+                            <constraint firstAttribute="bottom" secondItem="wQk-cJ-XUM" secondAttribute="bottom" constant="16" id="O3N-bz-vAN"/>
+                            <constraint firstItem="wQk-cJ-XUM" firstAttribute="top" secondItem="aTF-3k-grR" secondAttribute="bottom" constant="18" id="Vgy-gn-AgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="otu-PL-2TG" secondAttribute="trailing" id="ZLM-nz-GbC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="54x-gZ-tRN" firstAttribute="leading" secondItem="n3g-tB-0Zz" secondAttribute="leading" id="2mN-4X-r6T"/>
+                    <constraint firstAttribute="bottom" secondItem="54x-gZ-tRN" secondAttribute="bottom" id="4QV-Bs-cRa"/>
+                    <constraint firstAttribute="trailing" secondItem="54x-gZ-tRN" secondAttribute="trailing" id="4zk-jr-UzM"/>
+                    <constraint firstItem="54x-gZ-tRN" firstAttribute="top" secondItem="n3g-tB-0Zz" secondAttribute="top" id="EzK-z3-DiF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KLv-BR-DLr"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="CheckBtn" destination="otu-PL-2TG" id="uDz-Mn-AA8"/>
+                <outlet property="nameLabel" destination="aTF-3k-grR" id="ci9-6t-2KJ"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox-1" width="24" height="24"/>
+        <namedColor name="MainColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

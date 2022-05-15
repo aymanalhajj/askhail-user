@@ -33,6 +33,7 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     @IBOutlet weak var StarAdsView: UIView!
     @IBOutlet weak var imgVedio: UIImageView!
     @IBOutlet weak var SaveBtn: UIButton!
+    @IBOutlet weak var ViewImg: UIImageView!
     
     @IBOutlet weak var SarLbl: UILabel!
     @IBOutlet weak var DetailsView: UIView!
@@ -181,6 +182,16 @@ class AdsVC: UIViewController , FSPagerViewDataSource , FSPagerViewDelegate , UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if app_enable_show_count == false {
+            ViewImg.isHidden = true
+            AdvViewer.isHidden = true
+        }else {
+            ViewImg.isHidden = false
+            AdvViewer.isHidden = false
+        }
+        
+        
         SarLbl.text = "SAR".localized
         deleteLbl.text = "Delete".localized
         disableLbl.text = "Disable".localized

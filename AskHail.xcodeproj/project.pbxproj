@@ -180,6 +180,11 @@
 		C17851AA2563BDFB008F27E5 /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17851A82563BDFB008F27E5 /* MessagesCell.swift */; };
 		C17851AB2563BDFB008F27E5 /* MessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C17851A92563BDFB008F27E5 /* MessagesCell.xib */; };
 		C17851AF2563BE38008F27E5 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17851AE2563BE38008F27E5 /* MessagesVC.swift */; };
+		C18CFB59282DCD1A00F56428 /* ChooseBlockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CFB58282DCD1A00F56428 /* ChooseBlockVC.swift */; };
+		C18CFB5B282DCF6F00F56428 /* ReportAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CFB5A282DCF6F00F56428 /* ReportAdVC.swift */; };
+		C18CFB5E282DCFC900F56428 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CFB5C282DCFC900F56428 /* ReportCell.swift */; };
+		C18CFB5F282DCFC900F56428 /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18CFB5D282DCFC900F56428 /* ReportCell.xib */; };
+		C18CFB61282DD09D00F56428 /* reportـreasonsـData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CFB60282DD09D00F56428 /* reportـreasonsـData.swift */; };
 		C193CBD225B0A6B5009ECB72 /* ZoomAbleImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C193CBD125B0A6B5009ECB72 /* ZoomAbleImage.storyboard */; };
 		C19FC25A24226BBC00009A58 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19FC25924226BBC00009A58 /* LeftMenuViewController.swift */; };
 		C1A2C671240B9C39003EE54F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2C670240B9C39003EE54F /* AppDelegate.swift */; };
@@ -518,6 +523,11 @@
 		C17851A82563BDFB008F27E5 /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
 		C17851A92563BDFB008F27E5 /* MessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesCell.xib; sourceTree = "<group>"; };
 		C17851AE2563BE38008F27E5 /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
+		C18CFB58282DCD1A00F56428 /* ChooseBlockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBlockVC.swift; sourceTree = "<group>"; };
+		C18CFB5A282DCF6F00F56428 /* ReportAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportAdVC.swift; sourceTree = "<group>"; };
+		C18CFB5C282DCFC900F56428 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		C18CFB5D282DCFC900F56428 /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
+		C18CFB60282DD09D00F56428 /* reportـreasonsـData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "reportـreasonsـData.swift"; sourceTree = "<group>"; };
 		C193CBD125B0A6B5009ECB72 /* ZoomAbleImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZoomAbleImage.storyboard; sourceTree = "<group>"; };
 		C19FC25924226BBC00009A58 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C1A2C66D240B9C39003EE54F /* AskHail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskHail.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1309,6 +1319,7 @@
 				C1A2C692240BB9CA003EE54F /* Core */,
 				C1A2C691240BB99B003EE54F /* Scenes */,
 				C1A2C688240B9EF2003EE54F /* Constant */,
+				C18CFB60282DD09D00F56428 /* reportـreasonsـData.swift */,
 			);
 			path = AskHail;
 			sourceTree = "<group>";
@@ -1344,6 +1355,10 @@
 				CC98B006257EE2D800AFDD88 /* ExtraMore.swift */,
 				C15AFE1E25BA73120011792C /* SplashVC.swift */,
 				C114C74625BDA9DA00E19558 /* VisitorVC.swift */,
+				C18CFB58282DCD1A00F56428 /* ChooseBlockVC.swift */,
+				C18CFB5A282DCF6F00F56428 /* ReportAdVC.swift */,
+				C18CFB5C282DCFC900F56428 /* ReportCell.swift */,
+				C18CFB5D282DCFC900F56428 /* ReportCell.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1843,6 +1858,7 @@
 				4DA64C9925646F8E003A3BFC /* OrederAndAddOreder.storyboard in Resources */,
 				C17851A02563BD95008F27E5 /* SenderCell.xib in Resources */,
 				4D91C41F2548C01300E74A8B /* Tajawal-Bold.ttf in Resources */,
+				C18CFB5F282DCFC900F56428 /* ReportCell.xib in Resources */,
 				C17851A52563BDBD008F27E5 /* ReceverCell.xib in Resources */,
 				CCF55D9725D1D82F00E9C486 /* FavoriteCell.xib in Resources */,
 				4D7FE452255A144A00FE87CE /* AskHailWithPhotoCell.xib in Resources */,
@@ -1954,7 +1970,9 @@
 				CC66B3C92576D14D00EA736B /* ImageCell.swift in Sources */,
 				4D1BDA0E255317FF0043BA3D /* PlaceTypeVC.swift in Sources */,
 				4DA2E5C3256074FF007D847E /* EditMyInfoVC.swift in Sources */,
+				C18CFB5B282DCF6F00F56428 /* ReportAdVC.swift in Sources */,
 				CCF1B91A25D865CB00D8F4C0 /* temppp.swift in Sources */,
+				C18CFB61282DD09D00F56428 /* reportـreasonsـData.swift in Sources */,
 				CC2B3329258B7658005855E1 /* EditMyAskPopupVC.swift in Sources */,
 				CC88668925C6C58E0016BF45 /* CustomMarkerView.swift in Sources */,
 				CC1E9AB925D9AB7B0028C13A /* Extentions+AdvComment.swift in Sources */,
@@ -2036,6 +2054,7 @@
 				C16D3D4327EA162600A38503 /* AdsBannerVC.swift in Sources */,
 				CCE4EC28258E7A07006B0915 /* CommentModel.swift in Sources */,
 				C178519F2563BD95008F27E5 /* SenderCell.swift in Sources */,
+				C18CFB59282DCD1A00F56428 /* ChooseBlockVC.swift in Sources */,
 				CCC11DE82583B58200C6C991 /* ShowOrderModel.swift in Sources */,
 				C167A2422595E0C8006EE4AA /* AdsMediaModel.swift in Sources */,
 				CCC8290625AD05B9001A043B /* PaymenSuccessesVC.swift in Sources */,
@@ -2180,6 +2199,7 @@
 				4D411FEA254BA8C7008105BD /* RegistrationMembershipVC.swift in Sources */,
 				C114C74725BDA9DA00E19558 /* VisitorVC.swift in Sources */,
 				CC45C628258B949300745F37 /* DeleteAskPopupVC.swift in Sources */,
+				C18CFB5E282DCFC900F56428 /* ReportCell.swift in Sources */,
 				4D3415ED25490EFC00EC6879 /* CreateAccount_2.swift in Sources */,
 				CC45C5BB258B812400745F37 /* EditAskImageVC.swift in Sources */,
 				CC03D1F725779E5400A52D18 /* CommentCellTableViewCell.swift in Sources */,
@@ -2540,7 +2560,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QS4RD9C4D4;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator15.0]" = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "$(SRCROOT)/AskHail/Configrations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2566,7 +2586,7 @@
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = QS4RD9C4D4;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator15.0]" = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "$(SRCROOT)/AskHail/Configrations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

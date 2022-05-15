@@ -240,7 +240,118 @@ class AskHailDetailsVC: UIViewController ,UITextViewDelegate {
         
     }
     
+    
+    @IBAction func ReportAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+        
+        guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ChooseBlockVC") as? ChooseBlockVC else { return }
+        
+        popupVC.Delegate = self
+        popupVC.Report_Type = .Ask
+        popupVC.height = 50
+        popupVC.topCornerRadius = 8
+        popupVC.presentDuration = 0.7
+        popupVC.dismissDuration = 0.7
+        //  popupVC.modalPresentationStyle = .overCurrentContext
+        self.present(popupVC, animated: true, completion: nil)
+        
+    }
+    
+    
+
 }
+
+extension AskHailDetailsVC : Choose_Block  {
+    func Report_type(Report_Type: Report_type) {
+        switch Report_Type {
+        case .Adv:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.report_type = "adv"
+            popupVC.report_type_id = "\(self.AskData?.question_advertiser_id ?? 0)"
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        
+        case .Order:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "order"
+            popupVC.report_type_id = self.ask_id
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Ask:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "question"
+            popupVC.report_type_id = self.ask_id
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .adviser:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Publisher".localized
+            popupVC.report_type = "advertiser"
+            popupVC.report_type_id = ask_id
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Block:
+            let alert = UIAlertController.init(title: "Warning".localized , message: "Are You Sure To Ban Adviser".localized ,  preferredStyle: .alert)
+          alert.view.tintColor = Colors.DarkBlue
+            var Ok = "OK"
+            var Cancel_lang = "cancel"
+            
+            if L102Language.currentAppleLanguage() == arabicLang {
+                Ok = "حسنا"
+                Cancel_lang = "الغاء"
+                
+            }
+
+
+            let OkBtn = UIAlertAction.init(title: Ok, style: .default, handler: { (nil) in
+                
+                self.Block()
+                
+
+            })
+            let Cancel = UIAlertAction.init(title: Cancel_lang, style: UIAlertAction.Style.destructive, handler: { (nil) in
+
+
+            })
+
+
+
+            alert.addAction(OkBtn)
+
+
+            alert.addAction(Cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+}
+
 
 //MARK:- Protocol Controller
 
@@ -274,6 +385,40 @@ extension AskHailDetailsVC : EditAsk {
 
 //MARK:-API
 extension AskHailDetailsVC {
+    
+    func Block() {
+        
+        self.view.lock()
+
+        var Parameters = [ "advertiser_id" : "\(self.AskData?.question_advertiser_id ?? 0)"
+       ]
+       
+       print(Parameters)
+       
+       ApiServices.instance.getPosts(methodType: .post, parameters: Parameters as [String : AnyObject] , url: "\(hostName)add-ban") { (data : Add_Report_Model?, String) in
+            
+           self.view.unlock()
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+               
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+               
+               
+                self.showAlertWithTitle(title: "", message: data.data ?? "", type: .success)
+                self.dismiss(animated: true, completion: nil)
+               
+                print(data)
+                
+                
+            }
+        }
+    }
     
     func getAskDetails() {
         

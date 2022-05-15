@@ -41,6 +41,7 @@ struct AboutUsDataData : Codable {
     let app_banner : String?
     let app_banner_url : String?
     let app_real_estate_license : String?
+    let app_enable_show_count : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -56,6 +57,7 @@ struct AboutUsDataData : Codable {
         case app_banner = "app_banner"
         case app_banner_url = "app_banner_url"
         case app_real_estate_license = "app_real_estate_license"
+        case app_enable_show_count = "app_enable_show_count"
     }
 
     init(from decoder: Decoder) throws {
@@ -72,6 +74,7 @@ struct AboutUsDataData : Codable {
         app_banner = try values.decodeIfPresent(String.self, forKey: .app_banner)
         app_banner_url = try values.decodeIfPresent(String.self, forKey: .app_banner_url)
         app_real_estate_license = try values.decodeIfPresent(String.self, forKey: .app_real_estate_license)
+        app_enable_show_count = try values.decodeIfPresent(Bool.self, forKey: .app_enable_show_count)
     }
 
 }

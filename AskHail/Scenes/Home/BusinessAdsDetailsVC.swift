@@ -16,6 +16,7 @@ import FirebaseDynamicLinks
 class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerViewDelegate {
     
     // MARK:OutLet
+    @IBOutlet weak var ViewImg: UIImageView!
     
     @IBOutlet weak var noSocialLabel: UILabel!
     
@@ -74,10 +75,14 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
     @IBOutlet weak var AddNewRateBtn: UIButton!
 
     
+    @IBOutlet weak var FlagBtn: UIButton!
+    
+    
     var refreshControl = UIRefreshControl()
     
     var RateState = false
     var AdId = ""
+ //   var Adviser_id = ""
     var RateArray : [Rate] = []
     var AdData : ShowBusinessAdvData?
     var FeatureArray : [Adv_specifications] = []
@@ -143,6 +148,14 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if app_enable_show_count == false {
+            ViewImg.isHidden = true
+            ViewsNumber.isHidden = true
+        }else {
+            ViewImg.isHidden = false
+            ViewsNumber.isHidden = false
+        }
         
         AdsNumber.text = "\(AdId)"
         NoCommentLable.text = "No rates".localized
@@ -313,6 +326,23 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
         navigationController?.popViewController(animated: true)
         
     }
+    
+    @IBAction func FlagAction(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+        
+        guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ChooseBlockVC") as? ChooseBlockVC else { return }
+        
+        popupVC.Delegate = self
+//        popupVC.Delegate = self
+        popupVC.height = 50
+        popupVC.topCornerRadius = 8
+        popupVC.presentDuration = 0.7
+        popupVC.dismissDuration = 0.7
+        //  popupVC.modalPresentationStyle = .overCurrentContext
+        self.present(popupVC, animated: true, completion: nil)
+    }
+    
     
     @IBAction func SaveAvtion(_ sender: Any) {
         guard AuthService.userData?.advertiser_api_token != nil else {
@@ -514,6 +544,105 @@ class BusinessAdsDetailsVC: UIViewController, FSPagerViewDataSource, FSPagerView
         
     }
     
+    
+    
+    @IBAction func Reportaction(_ sender: Any) {
+        
+        
+    }
+    
+}
+
+
+extension BusinessAdsDetailsVC : Choose_Block  {
+    func Report_type(Report_Type: Report_type) {
+        switch Report_Type {
+        case .Adv:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.report_type = "adv"
+            popupVC.report_type_id = self.AdId
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        
+        case .Order:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "order"
+            popupVC.report_type_id = self.AdId
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Ask:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "question"
+            popupVC.report_type_id = self.AdId
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .adviser:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Publisher".localized
+            popupVC.report_type = "advertiser"
+            popupVC.report_type_id = "\(self.AdData?.advertisement_details?.adv_advertiser_id ?? 0)"
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Block:
+            let alert = UIAlertController.init(title: "Warning".localized , message: "Are You Sure To Ban Adviser".localized ,  preferredStyle: .alert)
+          alert.view.tintColor = Colors.DarkBlue
+            var Ok = "OK"
+            var Cancel_lang = "cancel"
+            
+            if L102Language.currentAppleLanguage() == arabicLang {
+                Ok = "حسنا"
+                Cancel_lang = "الغاء"
+                
+            }
+
+
+            let OkBtn = UIAlertAction.init(title: Ok, style: .default, handler: { (nil) in
+                
+                self.Block()
+                
+
+            })
+            let Cancel = UIAlertAction.init(title: Cancel_lang, style: UIAlertAction.Style.destructive, handler: { (nil) in
+
+
+            })
+
+
+
+            alert.addAction(OkBtn)
+
+
+            alert.addAction(Cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
 }
 
 //MARK:-CollectionView Controller
@@ -586,6 +715,39 @@ extension BusinessAdsDetailsVC : UITableViewDataSource , UITableViewDelegate {
 
 //MARK:-API
 extension BusinessAdsDetailsVC {
+    
+    func Block() {
+        
+        self.view.lock()
+
+       var Parameters = [ "advertiser_id" : "\(self.AdData?.advertisement_details?.adv_advertiser_id ?? 0)"
+       ]
+       
+       print(Parameters)
+       
+       ApiServices.instance.getPosts(methodType: .post, parameters: Parameters as [String : AnyObject] , url: "\(hostName)add-ban") { (data : Add_Report_Model?, String) in
+           self.view.unlock()
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+               self.view.unlock()
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+               
+               
+                self.showAlertWithTitle(title: "", message: data.data ?? "", type: .success)
+                self.dismiss(animated: true, completion: nil)
+               
+                print(data)
+                
+                
+            }
+        }
+    }
     
     func getAdData() {
         self.view.lock()

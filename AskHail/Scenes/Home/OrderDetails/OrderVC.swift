@@ -12,6 +12,8 @@ import GooglePlaces
 import FirebaseDynamicLinks
 
 class OrderVC: UIViewController {
+    
+    var Adviser_id = ""
 
     @IBOutlet weak var ScrollBackGround: UIView!
     @IBOutlet var MainBackRound: UIView!
@@ -389,7 +391,116 @@ class OrderVC: UIViewController {
         vc.didMove(toParent: self)
         
     }
+    
+    @IBAction func ReportAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+        
+        guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ChooseBlockVC") as? ChooseBlockVC else { return }
+        
+        popupVC.Delegate = self
+        popupVC.Report_Type = .Order
+        popupVC.height = 50
+        popupVC.topCornerRadius = 8
+        popupVC.presentDuration = 0.7
+        popupVC.dismissDuration = 0.7
+        //  popupVC.modalPresentationStyle = .overCurrentContext
+        self.present(popupVC, animated: true, completion: nil)
+        
+    }
+    
+    
 
+}
+
+extension OrderVC : Choose_Block  {
+    func Report_type(Report_Type: Report_type) {
+        switch Report_Type {
+        case .Adv:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.report_type = "adv"
+            popupVC.report_type_id = self.Order_id
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        
+        case .Order:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "order"
+            popupVC.report_type_id = self.Order_id
+            popupVC.title_page = "Report Content".localized
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Ask:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Content".localized
+            popupVC.report_type = "question"
+            popupVC.report_type_id = self.Order_id
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .adviser:
+            let storyboard = UIStoryboard(name: "MainAndAds", bundle: nil)
+            guard let popupVC = storyboard.instantiateViewController(withIdentifier: "ReportAdVC") as? ReportAdVC else { return }
+            popupVC.title_page = "Report Publisher".localized
+            popupVC.report_type = "advertiser"
+            popupVC.report_type_id = Adviser_id
+            popupVC.height = 50
+            popupVC.topCornerRadius = 8
+            popupVC.presentDuration = 0.7
+            popupVC.dismissDuration = 0.7
+            //  popupVC.modalPresentationStyle = .overCurrentContext
+            self.present(popupVC, animated: true, completion: nil)
+        case .Block:
+            let alert = UIAlertController.init(title: "Warning".localized , message: "Are You Sure To Ban Adviser".localized ,  preferredStyle: .alert)
+          alert.view.tintColor = Colors.DarkBlue
+            var Ok = "OK"
+            var Cancel_lang = "cancel"
+            
+            if L102Language.currentAppleLanguage() == arabicLang {
+                Ok = "حسنا"
+                Cancel_lang = "الغاء"
+                
+            }
+
+
+            let OkBtn = UIAlertAction.init(title: Ok, style: .default, handler: { (nil) in
+                
+                self.Block()
+                
+
+            })
+            let Cancel = UIAlertAction.init(title: Cancel_lang, style: UIAlertAction.Style.destructive, handler: { (nil) in
+
+
+            })
+
+
+
+            alert.addAction(OkBtn)
+
+
+            alert.addAction(Cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
 }
 
 //MARK:-CollectionView Controller
@@ -438,6 +549,41 @@ extension OrderVC : AddComent{
 
 extension OrderVC {
     
+    
+    func Block() {
+        
+        self.view.lock()
+
+       var Parameters = [ "advertiser_id" : Adviser_id
+       ]
+       
+       print(Parameters)
+       
+       ApiServices.instance.getPosts(methodType: .post, parameters: Parameters as [String : AnyObject] , url: "\(hostName)add-ban") { (data : Add_Report_Model?, String) in
+            
+           self.view.unlock()
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+               self.view.unlock()
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+               
+               
+                self.showAlertWithTitle(title: "", message: data.data ?? "", type: .success)
+                self.dismiss(animated: true, completion: nil)
+               
+                print(data)
+                
+                
+            }
+        }
+    }
+    
     func getOrderDetails() {
         self.view.lock()
         
@@ -457,6 +603,7 @@ extension OrderVC {
                 self.Order = data.data
                 self.CheckIfMyAds()
                 
+                self.Adviser_id = "\(data.data?.order_details?.order_advertiser_id ?? 0)"
                 self.Urer_Id = "\(data.data?.order_details?.order_advertiser_id ?? 0)"
                 self.User_Name = data.data?.order_details?.order_advertiser_name ?? ""
                 self.Order_id = "\(data.data?.order_details?.order_id ?? 0)"

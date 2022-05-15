@@ -8,6 +8,8 @@
 
 import UIKit
 
+var app_enable_show_count = false
+
 class HomeVC: BaseViewController {
     
     @IBOutlet weak var BackGround: UIView!
@@ -598,6 +600,8 @@ extension HomeVC {
                 guard let data = data else {
                     return
                 }
+                
+                app_enable_show_count = data.data?.app_enable_show_count ?? false
                 
                 print(data.data?.app_banner ?? "")
                 if (data.data?.app_banner ?? "") != "" {

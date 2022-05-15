@@ -7,6 +7,7 @@
 */
 
 "Warning" = "تنبيه";
+"Choose" = "اختر";
 "Please insert your phone number" = "من فضلك ادخل رقم الجوال";
 "Please insert message title" = "من فضلك ادخل عنوان الرسالة";
 "Please insert name" = "من فضلك ادخل الاسم";
@@ -143,3 +144,8 @@
 "media and celebrities" = "الاعلام والمشاهير";
 "Updated Successfully" = "تم التعديل بنجاح";
 "please login first" = "من فضلك قم بتسجيل الدخول اولا";
+"Report Content" = "ابلاغ عن المحتوي";
+"Report Publisher" = "ابلاغ عن الناشر";
+"Block Publisher" = "حظر الناشر";
+"Confirm" = "تأكيد";
+"Are You Sure To Ban Adviser" = "هل انت متاكد من حظر المعلن";
