@@ -519,6 +519,8 @@ extension OrderVC : UICollectionViewDataSource , UICollectionViewDelegate , UICo
             cell.CellTitle.text = Model.specification_section_feature?.feature_name ?? ""
             cell.CellAnswer.text = Model.specification_answer
 
+            cell.CellTitle.addInterlineSpacing(isCentered: false)
+            cell.CellAnswer.addInterlineSpacing(isCentered: false)
         }
         
         cell.flipX()
@@ -526,8 +528,9 @@ extension OrderVC : UICollectionViewDataSource , UICollectionViewDelegate , UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = (collectionView.frame.width - 16)/3
-            return CGSize.init(width: width , height:46)
+        let width = (collectionView.frame.width - 16)/2
+        
+        return CGSize.init(width: width , height:60)
     }
     
 }

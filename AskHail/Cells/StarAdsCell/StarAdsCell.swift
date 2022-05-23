@@ -21,6 +21,7 @@ class  StarAdsCell: UICollectionViewCell {
     @IBOutlet weak var SaveBtn: UIButton!
     @IBOutlet weak var SARLbl: UILabel!
 
+    @IBOutlet weak var ViewsStack: UIStackView!
     
     @IBOutlet weak var SubView: UIView!
     var SaveAcrion : (()->())?
@@ -29,6 +30,12 @@ class  StarAdsCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if app_enable_show_count == false {
+            ViewsStack.isHidden = true
+        }else {
+            ViewsStack.isHidden = false
+        }
 
     }
     

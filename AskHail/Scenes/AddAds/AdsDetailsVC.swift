@@ -149,6 +149,52 @@ class AdsDetailsVC: UIViewController,  UITextFieldDelegate, UITextViewDelegate {
     }
     
     
+    
+    @IBAction func DistrictNameAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Authontication, bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "PickerSearchVC") as! PickerSearchVC
+        vc.Delegate = self
+        vc.Search_type = .Region
+        vc.RegionArray = self.RegionArray
+        vc.Search_region_Array = self.RegionArray
+        vc.modalPresentationStyle = .fullScreen
+        self.addChild(vc)
+        vc.view.frame = self.view.frame
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+    }
+    
+    @IBAction func CityNameAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Authontication, bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "PickerSearchVC") as! PickerSearchVC
+        vc.Delegate = self
+        vc.Search_type = .City
+        vc.CitArray = self.CitArray
+        vc.Search_rcity_Array = self.CitArray
+        vc.modalPresentationStyle = .fullScreen
+        self.addChild(vc)
+        vc.view.frame = self.view.frame
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        
+    }
+    
+    @IBAction func NeighbourAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Authontication, bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "PickerSearchVC") as! PickerSearchVC
+        vc.BlocksArray = self.BlocksArray
+        vc.Delegate = self
+        vc.Search_type = .Neighbour
+        vc.Search_Block_Array = self.BlocksArray
+        vc.modalPresentationStyle = .fullScreen
+        self.addChild(vc)
+        vc.view.frame = self.view.frame
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+    }
+    
+    
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         DetailsCollectionView.layer.removeAllAnimations()
         ScrollHeight.constant = DetailsCollectionView.contentSize.height + 680 + 144
@@ -364,6 +410,28 @@ class AdsDetailsVC: UIViewController,  UITextFieldDelegate, UITextViewDelegate {
         
         return true;
     }
+}
+
+extension AdsDetailsVC : Choose_search_key {
+    func Choose_Search_key(id: String, name: String, searchtype: search_type) {
+        switch searchtype {
+        case .Region:
+            Region_id = id
+            self.RegionTf.text = name
+        getCities()
+        case .City:
+            City_id = id
+            self.CityTf.text = name
+            getBlocks()
+        case .Neighbour:
+            Block_id = id
+            self.BlockTf.text = name
+        }
+    }
+    
+  
+    
+    
 }
 
 //MARK:- CollectionView Contoller

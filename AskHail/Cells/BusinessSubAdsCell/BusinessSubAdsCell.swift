@@ -28,6 +28,7 @@ class BusinessSubAdsCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDat
     @IBOutlet weak var SERlbl: UILabel!
     
     
+    @IBOutlet weak var ViewsStack: UIStackView!
     
     @IBOutlet weak var isAvailabelLabel: UILabel!
     
@@ -44,6 +45,12 @@ class BusinessSubAdsCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDat
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if app_enable_show_count == false {
+            ViewsStack.isHidden = true
+        }else {
+            ViewsStack.isHidden = false
+        }
         
         PagerView.dataSource = self
         PagerView.delegate = self

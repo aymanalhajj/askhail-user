@@ -25,6 +25,7 @@ class FavoriteCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDataSourc
     @IBOutlet weak var SaveBtn: UIButton!
     @IBOutlet weak var DeActiveBtn: UIButton!
     
+    @IBOutlet weak var ViewsStack: UIStackView!
     var ImagesUrl = [Adv_media]()
     
     var SaveAcrion : (()->())?
@@ -37,6 +38,13 @@ class FavoriteCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDataSourc
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        if app_enable_show_count == false {
+            ViewsStack.isHidden = true
+        }else {
+            ViewsStack.isHidden = false
+        }
         
         DeActiveBtn.setTitle("Disabled".localized, for: .normal)
         PagerView.dataSource = self
