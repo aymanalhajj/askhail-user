@@ -18,7 +18,7 @@ enum search_type {
     case Neighbour
 }
 
-class PickerSearchVC: UIViewController , UITextFieldDelegate{
+class  PickerSearchVC: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var SearchTf: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -48,6 +48,12 @@ class PickerSearchVC: UIViewController , UITextFieldDelegate{
         
         SearchTf.addTarget(self, action: #selector(PickerSearchVC.textDidChange(_:)),
                            for: .editingChanged)
+        
+        if L102Language.currentAppleLanguage() == arabicLang {
+            SearchTf.textAlignment = .right
+        }else {
+            SearchTf.textAlignment = .left
+        }
         
 
     }

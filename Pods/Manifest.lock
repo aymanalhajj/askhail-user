@@ -549,9 +549,9 @@ PODS:
   - RxSwift (6.5.0)
   - SCSiriWaveformView (1.1.1)
   - SnapKit (5.0.1)
-  - Socket.IO-Client-Swift (16.0.1):
-    - Starscream (~> 4.0)
-  - Starscream (4.0.4)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
   - STTabbar (0.1.0)
   - TextFieldEffects (1.6.0)
   - Toast-Swift (5.0.1)
@@ -587,7 +587,7 @@ DEPENDENCIES:
   - PMAlertController
   - RxCocoa
   - RxSwift
-  - Socket.IO-Client-Swift
+  - Socket.IO-Client-Swift (~> 15.2.0)
   - STTabbar
   - TextFieldEffects
   - Toast-Swift (~> 5.0.1)
@@ -695,13 +695,13 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SCSiriWaveformView: 15b9dd6f94c7536e2032b34a35c6ff74d38c7411
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
-  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   STTabbar: fe93da755010233b348b2d0147c43bb1bef290fa
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
 
-PODFILE CHECKSUM: 8790f64e5d03ba34b916daaeffcf6f03603a9a4e
+PODFILE CHECKSUM: d72173d1bcd9674ad7d59625883ff36690cb290b
 
 COCOAPODS: 1.11.2

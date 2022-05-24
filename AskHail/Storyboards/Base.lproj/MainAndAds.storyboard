@@ -4790,21 +4790,32 @@
                                                                 <color key="textColor" red="0.0092072682459999992" green="0.29380530119999998" blue="0.53738009929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-Tz-azd">
+                                                                <rect key="frame" x="0.0" y="40" width="414" height="792"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="792" id="RCB-Jv-N8w"/>
+                                                                </constraints>
+                                                            </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="gUQ-68-dfI" firstAttribute="centerY" secondItem="0GD-7a-3z6" secondAttribute="centerY" id="BsN-CQ-Vx0"/>
                                                             <constraint firstItem="0GD-7a-3z6" firstAttribute="top" secondItem="fB4-9g-azL" secondAttribute="top" constant="24" id="Cx9-rx-ug9"/>
                                                             <constraint firstAttribute="trailing" secondItem="fTr-49-3lb" secondAttribute="trailing" constant="24" id="K4l-zK-xmL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="e9h-Tz-azd" secondAttribute="trailing" id="KU5-Dg-HN7"/>
                                                             <constraint firstItem="fTr-49-3lb" firstAttribute="top" secondItem="eeD-u5-1CR" secondAttribute="bottom" constant="16" id="QSP-kv-WoN"/>
                                                             <constraint firstItem="0GD-7a-3z6" firstAttribute="leading" secondItem="gUQ-68-dfI" secondAttribute="trailing" constant="4" id="RCp-13-9Ol"/>
                                                             <constraint firstItem="eeD-u5-1CR" firstAttribute="leading" secondItem="fB4-9g-azL" secondAttribute="leading" constant="24" id="Rpd-84-P00"/>
+                                                            <constraint firstItem="e9h-Tz-azd" firstAttribute="top" secondItem="gUQ-68-dfI" secondAttribute="bottom" id="TlA-Pl-Np7"/>
                                                             <constraint firstItem="eeD-u5-1CR" firstAttribute="top" secondItem="0GD-7a-3z6" secondAttribute="bottom" constant="16" id="ZcJ-Hg-gwK"/>
                                                             <constraint firstItem="M2F-BP-fuk" firstAttribute="centerY" secondItem="gUQ-68-dfI" secondAttribute="centerY" id="bd5-kS-9jY"/>
+                                                            <constraint firstItem="fTr-49-3lb" firstAttribute="top" secondItem="e9h-Tz-azd" secondAttribute="bottom" id="ear-ec-DHR"/>
                                                             <constraint firstItem="gUQ-68-dfI" firstAttribute="leading" secondItem="M2F-BP-fuk" secondAttribute="trailing" constant="4" id="fpK-Sd-D9l"/>
                                                             <constraint firstItem="fTr-49-3lb" firstAttribute="leading" secondItem="fB4-9g-azL" secondAttribute="leading" constant="24" id="hIk-RE-urM"/>
                                                             <constraint firstAttribute="trailing" secondItem="eeD-u5-1CR" secondAttribute="trailing" constant="24" id="hYe-nX-cWN"/>
                                                             <constraint firstAttribute="trailing" secondItem="0GD-7a-3z6" secondAttribute="trailing" constant="24" id="ktd-hw-UcS"/>
+                                                            <constraint firstItem="e9h-Tz-azd" firstAttribute="leading" secondItem="fB4-9g-azL" secondAttribute="leading" id="lWv-mP-pXC"/>
                                                             <constraint firstAttribute="bottom" secondItem="fTr-49-3lb" secondAttribute="bottom" constant="24" id="nUd-9o-3hl"/>
                                                         </constraints>
                                                     </view>
@@ -5134,6 +5145,7 @@
                         <outlet property="AdviserNomLbl" destination="yLn-Bl-En1" id="ON4-OM-KZC"/>
                         <outlet property="ChatView" destination="X5I-k1-qgM" id="hst-aG-QvE"/>
                         <outlet property="CommemtView" destination="fB4-9g-azL" id="Epe-GR-33R"/>
+                        <outlet property="CommentsTableView" destination="e9h-Tz-azd" id="wJX-Kw-G1V"/>
                         <outlet property="DetailsCollectionView" destination="RLg-7u-cs5" id="lLN-2c-428"/>
                         <outlet property="DetailsView" destination="xFF-MN-LJc" id="jmQ-u8-jaZ"/>
                         <outlet property="EditView" destination="fMq-H1-21q" id="8Hu-D3-ILy"/>
@@ -5180,6 +5192,7 @@
                         <outlet property="pageControl" destination="bNK-Yx-Xba" id="Fbp-rI-Qj1"/>
                         <outlet property="specialLbl" destination="HRq-6l-nk7" id="SFY-YW-sdO"/>
                         <outlet property="starImage" destination="p7x-kd-hxQ" id="dhm-Xs-bwI"/>
+                        <outlet property="tableviewhight" destination="RCB-Jv-N8w" id="agt-9W-8NK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppe-Xh-1cY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

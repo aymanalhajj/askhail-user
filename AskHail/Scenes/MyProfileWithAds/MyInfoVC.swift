@@ -19,7 +19,15 @@ class MyInfoVC: UIViewController {
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
+    @IBOutlet weak var sideTF: UILabel!
+    @IBOutlet weak var TypeIdTF: UILabel!
+    @IBOutlet weak var IdTF: UILabel!
+    @IBOutlet weak var capacityTF: UILabel!
+    @IBOutlet weak var delegation_numberTF: UILabel!
+    @IBOutlet weak var LicenceTF: UILabel!
     
+    
+    @IBOutlet weak var delegation_numberView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +45,20 @@ class MyInfoVC: UIViewController {
         UserName.text = AuthService.userData?.advertiser_name
         Email.text = AuthService.userData?.advertiser_email
         phoneNumber.text = AuthService.userData?.advertiser_mobile
+        
+        sideTF.text = AuthService.userData?.advertiser_side
+        TypeIdTF.text = AuthService.userData?.advertiser_type
+        IdTF.text = AuthService.userData?.advertiser_id_number
+        capacityTF.text = AuthService.userData?.advertiser_capacity
+        
+        if AuthService.userData?.advertiser_delegation_number != "" , AuthService.userData?.advertiser_delegation_number != nil {
+            delegation_numberView.isHidden = false
+            delegation_numberTF.text = AuthService.userData?.advertiser_delegation_number
+        }else {
+            delegation_numberView.isHidden = true
+        }
+        
+        LicenceTF.text = AuthService.userData?.advertiser_licence_number
         
     }
     
