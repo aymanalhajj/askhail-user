@@ -209,6 +209,24 @@ class OrderDetailsVC: UIViewController, UITextFieldDelegate, UITextViewDelegate 
             
         } else {
             
+            var skip_status = true
+            var x = 0
+            for item in FeatureArray {
+                if item.feature_options == "required" {
+                    let indexPath = IndexPath.init(row: x, section: 0)
+                       let cell = DetailsCollectionView.cellForItem(at: indexPath) as! AddDetailsCell
+                    
+                    if cell.DetailTf.text == "" {
+                        
+                        skip_status = false
+                        
+                        ErrorLineAnimiteNoimage(text: cell.DetailTf, lineView: cell.LineView, ishidden: false)
+                    }
+                }
+                
+                x = x + 1
+            }
+            
             if OrderTitleTf.text?.isEmpty == true {
                 ErrorLineAnimiteNoimage(text: OrderTitleTf, lineView: OrderTitleLineView, ishidden: false)
             }

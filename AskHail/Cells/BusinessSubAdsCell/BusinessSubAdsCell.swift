@@ -46,11 +46,7 @@ class BusinessSubAdsCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDat
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        if app_enable_show_count == false {
-            ViewsStack.isHidden = true
-        }else {
-            ViewsStack.isHidden = false
-        }
+       
         
         PagerView.dataSource = self
         PagerView.delegate = self

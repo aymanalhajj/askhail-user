@@ -73,7 +73,7 @@ class EditMyInfoVC: UIViewController, UITextFieldDelegate {
     var Side_Array_ar = ["فرد" , "شركة"]
     
     var Capacity_Array = ["owner" , "delegate"]
-    var Capacity_Array_ar = ["مالك" , "مفوض"]
+    var Capacity_Array_ar = ["صاحب الاعلان" , "مفوض"]
     
     
     var type_id_array = [typeIdData]()
@@ -105,13 +105,13 @@ class EditMyInfoVC: UIViewController, UITextFieldDelegate {
         MailTf.text = AuthService.userData?.advertiser_email
         PhoneTf.text = AuthService.userData?.advertiser_mobile
         
-        TypeIdTF.text = AuthService.userData?.advertiser_type
+        TypeIdTF.text = AuthService.userData?.advertiser_type?.localized
         type_id_choose = "\(AuthService.userData?.advertiser_type_id ?? 0)"
         
         IdTF.text = AuthService.userData?.advertiser_id_number
-        sideTF.text = AuthService.userData?.advertiser_side
+        sideTF.text = AuthService.userData?.advertiser_side?.localized
         Side_choose = AuthService.userData?.advertiser_side ?? ""
-        capacityTF.text = AuthService.userData?.advertiser_capacity
+        capacityTF.text = AuthService.userData?.advertiser_capacity?.localized
         Capacity_choose = AuthService.userData?.advertiser_capacity ?? ""
         if AuthService.userData?.advertiser_delegation_number != "" , AuthService.userData?.advertiser_delegation_number != nil {
             delegation_numberView.isHidden = false
@@ -374,7 +374,7 @@ extension EditMyInfoVC {
         param["id_number"] =  IdTF.text ?? ""
         
         print(param)
-        ApiServices.instance.getPosts(methodType: .post, parameters: param as [String : AnyObject] , url: "\(hostName)update-personal-data") { (data : LoginModel?, String) in
+        ApiServices.instance.getPosts(methodType: .post, parameters: param as [String : AnyObject] , url: "\(hostName)update-personal-data") { (data : EditLoginModel?, String) in
             
             self.view.unlock()
             
@@ -388,7 +388,11 @@ extension EditMyInfoVC {
                     return
                 }
                 
-                AuthService.userData = data.data
+                
+                print(data)
+                print(data.data)
+                
+                AuthService.userData = data.data?.data
                 
               
                 
@@ -423,6 +427,12 @@ extension EditMyInfoVC {
                 
                 self.type_id_array = data.data ?? []
                 self.initPickers(picker: self.TypeIdPicker)
+                
+                for item in self.type_id_array {
+                    if item.type_id == AuthService.userData?.advertiser_type_id {
+                        self.TypeIdTF.text = item.type_name
+                    }
+                }
                 
                 print(data)
                 

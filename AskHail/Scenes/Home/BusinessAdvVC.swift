@@ -245,6 +245,12 @@ extension BusinessAdvVC : UITableViewDataSource ,UITableViewDelegate {
         
         let cell = tableView.dequeue() as BusinessSubAdsCell
         
+        if app_enable_show_count == false {
+            cell.ViewsStack.isHidden = true
+        }else {
+            cell.ViewsStack.isHidden = false
+        }
+        
         if AdsData {
             
             var Model = BusinessArray[indexPath.row]

@@ -9,6 +9,8 @@
 import UIKit
 
 class MyInfoVC: UIViewController {
+    
+    var type_id_array = [typeIdData]()
 
     @IBOutlet var BackGround: UIView!
     
@@ -42,18 +44,22 @@ class MyInfoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        print(AuthService.userData)
+        
+        getTypeId() 
+        
         UserName.text = AuthService.userData?.advertiser_name
         Email.text = AuthService.userData?.advertiser_email
         phoneNumber.text = AuthService.userData?.advertiser_mobile
         
-        sideTF.text = AuthService.userData?.advertiser_side
-        TypeIdTF.text = AuthService.userData?.advertiser_type
+        sideTF.text = AuthService.userData?.advertiser_side?.localized
+        TypeIdTF.text = AuthService.userData?.advertiser_type?.localized
         IdTF.text = AuthService.userData?.advertiser_id_number
-        capacityTF.text = AuthService.userData?.advertiser_capacity
+        capacityTF.text = AuthService.userData?.advertiser_capacity?.localized
         
         if AuthService.userData?.advertiser_delegation_number != "" , AuthService.userData?.advertiser_delegation_number != nil {
             delegation_numberView.isHidden = false
-            delegation_numberTF.text = AuthService.userData?.advertiser_delegation_number
+            delegation_numberTF.text = AuthService.userData?.advertiser_delegation_number?.localized
         }else {
             delegation_numberView.isHidden = true
         }
@@ -91,5 +97,42 @@ class MyInfoVC: UIViewController {
     }
     
 
+}
+
+extension MyInfoVC {
+    func getTypeId() {
+        
+        self.view.lock()
+        
+        ApiServices.instance.getPosts(methodType: .get, parameters: nil , url: "\(hostName)get-id-types") { (data : typeIdModel?, String) in
+            
+            self.view.unlock()
+            
+            if String != nil {
+                
+                self.showAlertWithTitle(title: "Error", message: String!, type: .error)
+                
+            }else {
+                
+                guard let data = data else {
+                    return
+                }
+                
+                
+                self.type_id_array = data.data ?? []
+                
+                
+                for item in self.type_id_array {
+                    if item.type_id == AuthService.userData?.advertiser_type_id {
+                        self.TypeIdTF.text = item.type_name
+                    }
+                }
+                
+                print(data)
+                
+                
+            }
+        }
+    }
 }
 

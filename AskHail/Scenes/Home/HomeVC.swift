@@ -52,6 +52,8 @@ class HomeVC: BaseViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        App_Info()
         NotificationCenter.default.addObserver(self, selector: #selector(showPopUp), name: NSNotification.Name(rawValue: NotificationCenterpreePlusBtn), object: nil)
         tabBarController?.tabBar.isHidden = false
         getHome()
@@ -60,7 +62,7 @@ class HomeVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        App_Info()
+       
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Tajawal-Regular", size: 12)!], for: .normal)
         
@@ -221,6 +223,12 @@ extension HomeVC : UICollectionViewDataSource , UICollectionViewDelegate{
             
             cell.SubView.backgroundColor = Colors.DarkBlue
             cell.SubView.alpha = 0.5
+            
+            if app_enable_show_count == false {
+                cell.ViewsStack.isHidden = true
+            }else {
+                cell.ViewsStack.isHidden = false
+            }
             
             
             if self.StarDataCount {
@@ -601,7 +609,7 @@ extension HomeVC {
                     return
                 }
                 
-                app_enable_show_count = data.data?.app_enable_show_count ?? false
+               app_enable_show_count = data.data?.app_enable_show_count ?? false
                 
                 print(data.data?.app_banner ?? "")
                 if (data.data?.app_banner ?? "") != "" {
@@ -621,7 +629,7 @@ extension HomeVC {
                
                 
                 
-                print(data)
+                print(app_enable_show_count)
 
             }
         }

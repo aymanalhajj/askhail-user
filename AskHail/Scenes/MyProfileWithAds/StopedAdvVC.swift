@@ -71,6 +71,12 @@ extension StopedAdvVC : UITableViewDelegate,UITableViewDataSource{
         
         let cell = tableView.dequeue() as SubAdsCell
         
+        if app_enable_show_count == false {
+            cell.ViewStack.isHidden = true
+        }else {
+            cell.ViewStack.isHidden = false
+        }
+        
         if AdvData {
             
             cell.DeActiveBtn.isHidden = false

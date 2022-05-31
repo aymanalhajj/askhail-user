@@ -10,6 +10,7 @@ import UIKit
 import FSPagerView
 
 class SubAdsCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDataSource {
+    @IBOutlet weak var ViewStack: UIStackView!
     
     @IBOutlet weak var PagerView: FSPagerView!
     
@@ -37,6 +38,8 @@ class SubAdsCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDataSource 
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+       
         
         DeActiveBtn.setTitle("Disabled".localized, for: .normal)
         PagerView.dataSource = self

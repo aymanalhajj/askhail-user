@@ -31,11 +31,7 @@ class  StarAdsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        if app_enable_show_count == false {
-            ViewsStack.isHidden = true
-        }else {
-            ViewsStack.isHidden = false
-        }
+        
 
     }
     

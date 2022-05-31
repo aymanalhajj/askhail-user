@@ -74,6 +74,11 @@ extension MyFavoriteAdsVC : UITableViewDelegate , UITableViewDataSource {
         if Model.adv_type ?? "" == "business" {
          
             let cell = tableView.dequeue() as BusinessSubAdsCell
+            if app_enable_show_count == false {
+                cell.ViewsStack.isHidden = true
+            }else {
+                cell.ViewsStack.isHidden = false
+            }
             
             cell.ImagesUrl = Model.adv_media ?? []
             cell.pageControl.numberOfPages =  Model.adv_media?.count ?? 0
@@ -148,6 +153,12 @@ extension MyFavoriteAdsVC : UITableViewDelegate , UITableViewDataSource {
             
             let cell = TableView.dequeue() as FavoriteCell
             cell.contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 24, bottom: 4, right: 24))
+            
+            if app_enable_show_count == false {
+                cell.ViewsStack.isHidden = true
+            }else {
+                cell.ViewsStack.isHidden = false
+            }
             
             if MyFavoriteData {
                 

@@ -67,6 +67,12 @@ extension UserProfileVC : UITableViewDataSource ,UITableViewDelegate {
         
         let cell = TableView.dequeue() as SubAdsCell
         
+        if app_enable_show_count == false {
+            cell.ViewStack.isHidden = true
+        }else {
+            cell.ViewStack.isHidden = false
+        }
+        
         if AdsData {
             
             var Model = SpecialAdsArray[indexPath.row]

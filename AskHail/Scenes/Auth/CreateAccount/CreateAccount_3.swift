@@ -77,7 +77,7 @@ class CreateAccount_3: UIViewController, UITextFieldDelegate {
     var Side_Array_ar = ["فرد" , "شركة"]
     
     var Capacity_Array = ["owner" , "delegate"]
-    var Capacity_Array_ar = ["مالك" , "مفوض"]
+    var Capacity_Array_ar = ["صاحب الاعلان" , "مفوض"]
     
     
     var type_id_array = [typeIdData]()
@@ -463,6 +463,8 @@ extension CreateAccount_3 {
                 
                 self.type_id_array = data.data ?? []
                 self.initPickers(picker: self.TypeIdPicker)
+                
+              
                 
                 print(data)
                 

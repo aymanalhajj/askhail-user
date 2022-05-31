@@ -82,6 +82,44 @@ struct LoginData : Codable {
 
 }
 
+struct EditLoginModel : Codable {
+    let status : Bool?
+    let code : String?
+    let data : EditeLoginData?
+
+    enum CodingKeys: String, CodingKey {
+
+        case status = "status"
+        case code = "code"
+        case data = "data"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        status = try values.decodeIfPresent(Bool.self, forKey: .status)
+        code = try values.decodeIfPresent(String.self, forKey: .code)
+        data = try values.decodeIfPresent(EditeLoginData.self, forKey: .data)
+    }
+
+}
+
+struct EditeLoginData : Codable {
+   
+    let data : LoginData?
+
+    enum CodingKeys: String, CodingKey {
+
+        case data = "data"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        data = try values.decodeIfPresent(LoginData.self, forKey: .data)
+    }
+
+}
+
 import Foundation
 import UIKit
 

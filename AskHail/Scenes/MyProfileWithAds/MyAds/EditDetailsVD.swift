@@ -225,6 +225,24 @@ class EditDetailsVD: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             
         } else {
             
+            var skip_status = true
+            var x = 0
+            for item in FeatureArray {
+                if item.feature_options == "required" {
+                    let indexPath = IndexPath.init(row: x, section: 0)
+                       let cell = DetailsCollectionView.cellForItem(at: indexPath) as! AddDetailsCell
+                    
+                    if cell.DetailTf.text == "" {
+                        
+                        skip_status = false
+                        
+                        ErrorLineAnimiteNoimage(text: cell.DetailTf, lineView: cell.LineView, ishidden: false)
+                    }
+                }
+                
+                x = x + 1
+            }
+            
             if LocationTf.text?.isEmpty == true {
                 ErrorLineAnimite(text: LocationTf, ImageView: LocationImage, imageEnable: #imageLiteral(resourceName: "distance-1"), lineView: LocationLineView, ishidden: false)
             }

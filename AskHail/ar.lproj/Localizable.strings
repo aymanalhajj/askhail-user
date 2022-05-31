@@ -142,7 +142,7 @@
 "Street Name" = "إسم الشارع";
 "Real estate license number" = "رقم الترخيص العقاري";
 "type id" = "نوع المعلن";
-"id number" = "رقم الهوية الشخصية";
+"id number" = "الرقم القومي";
 "media and celebrities" = "الاعلام والمشاهير";
 "Updated Successfully" = "تم التعديل بنجاح";
 "please login first" = "من فضلك قم بتسجيل الدخول اولا";
@@ -152,3 +152,7 @@
 "Confirm" = "تأكيد";
 "Are You Sure To Ban Adviser" = "هل انت متاكد من حظر المعلن";
 "Search" = "البحث";
+"individual" = "فرد";
+"company" = "شركة";
+"owner" = "صاحب الاعلان";
+"delegate" = "مفوض";

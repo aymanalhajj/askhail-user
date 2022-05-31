@@ -143,6 +143,12 @@ extension AllSpecialAdsVC : UITableViewDelegate , UITableViewDataSource {
         
         let cell = tableView.dequeue() as SubAdsCell
         
+        if app_enable_show_count == false {
+            cell.ViewStack.isHidden = true
+        }else {
+            cell.ViewStack.isHidden = false
+        }
+        
         if SpecialAdsData {
             
             var Model = SpecialAdsArray[indexPath.row]

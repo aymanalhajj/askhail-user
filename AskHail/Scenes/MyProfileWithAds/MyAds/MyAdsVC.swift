@@ -123,6 +123,12 @@ extension MyAdsVC : UITableViewDelegate , UITableViewDataSource {
         
         let cell = tableView.dequeue() as SubAdsCell
         
+        if app_enable_show_count == false {
+            cell.ViewStack.isHidden = true
+        }else {
+            cell.ViewStack.isHidden = false
+        }
+        
         if MyAdData {
             
             var Model = MyAdsArray[indexPath.row]

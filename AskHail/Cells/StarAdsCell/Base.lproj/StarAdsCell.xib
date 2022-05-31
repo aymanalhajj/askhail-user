@@ -36,13 +36,13 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="للبيع شاليه بحائل حي الشفاء" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ1-YB-1Du">
-                        <rect key="frame" x="52" y="149" width="259" height="14"/>
+                        <rect key="frame" x="52" y="148" width="259" height="14"/>
                         <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-LS-WGW">
-                        <rect key="frame" x="12" y="144" width="24" height="24"/>
+                        <rect key="frame" x="12" y="143" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="Tuf-0a-R7a"/>
                             <constraint firstAttribute="height" constant="24" id="mva-Og-CPj"/>
@@ -73,7 +73,7 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YHv-ql-Vnx">
-                        <rect key="frame" x="16" y="173" width="102" height="17"/>
+                        <rect key="frame" x="16" y="175" width="102" height="17"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-hu-rCL">
                                 <rect key="frame" x="0.0" y="0.0" width="47.5" height="17"/>
@@ -157,14 +157,14 @@
                 <constraint firstItem="YHv-ql-Vnx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Po6-0H-czI"/>
                 <constraint firstAttribute="trailing" secondItem="wV2-Ca-WVF" secondAttribute="trailing" id="TeP-5h-dfv"/>
                 <constraint firstAttribute="trailing" secondItem="eZ1-YB-1Du" secondAttribute="trailing" constant="16" id="Ut6-dU-IfC"/>
-                <constraint firstItem="YHv-ql-Vnx" firstAttribute="centerY" secondItem="kd3-4u-WF6" secondAttribute="centerY" id="YUS-Yg-Yeg"/>
                 <constraint firstItem="eZ1-YB-1Du" firstAttribute="leading" secondItem="eUn-LS-WGW" secondAttribute="trailing" constant="16" id="ZXi-Ug-XUn"/>
                 <constraint firstItem="twz-T5-78M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="dAh-Qi-w7H"/>
-                <constraint firstItem="txg-CV-xHQ" firstAttribute="top" secondItem="eZ1-YB-1Du" secondAttribute="bottom" constant="8" symbolic="YES" id="gwu-c3-Raw"/>
+                <constraint firstAttribute="bottom" secondItem="YHv-ql-Vnx" secondAttribute="bottom" constant="8" id="ecn-Ne-wkr"/>
                 <constraint firstItem="eZ1-YB-1Du" firstAttribute="centerY" secondItem="eUn-LS-WGW" secondAttribute="centerY" id="iji-e6-wsJ"/>
                 <constraint firstItem="wV2-Ca-WVF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mUH-DJ-3cy"/>
                 <constraint firstAttribute="bottom" secondItem="txg-CV-xHQ" secondAttribute="bottom" constant="8" id="qba-px-Rdu"/>
                 <constraint firstItem="eUn-LS-WGW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="rV7-xK-IEP"/>
+                <constraint firstItem="YHv-ql-Vnx" firstAttribute="top" secondItem="eUn-LS-WGW" secondAttribute="bottom" constant="8" id="tej-Mh-4hB"/>
                 <constraint firstItem="eZ1-YB-1Du" firstAttribute="leading" secondItem="eUn-LS-WGW" secondAttribute="trailing" constant="16" id="xpX-Sp-U4F"/>
             </constraints>
             <size key="customSize" width="360" height="179"/>

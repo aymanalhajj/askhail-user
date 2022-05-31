@@ -40,11 +40,7 @@ class FavoriteCell: UITableViewCell , FSPagerViewDelegate , FSPagerViewDataSourc
         super.awakeFromNib()
         
         
-        if app_enable_show_count == false {
-            ViewsStack.isHidden = true
-        }else {
-            ViewsStack.isHidden = false
-        }
+        
         
         DeActiveBtn.setTitle("Disabled".localized, for: .normal)
         PagerView.dataSource = self
