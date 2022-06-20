@@ -30,34 +30,60 @@ class EditMyInfoVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PhoneLineView: UIView!
     @IBOutlet weak var PhoneView: UIView!
     
-    @IBOutlet weak var sideTF: UITextField!
-    @IBOutlet weak var capacityTF: UITextField!
-    @IBOutlet weak var delegation_numberTF: UITextField!
-    @IBOutlet weak var LicenceTF: UITextField!
-    
-    @IBOutlet weak var sideImg: UIImageView!
     @IBOutlet weak var typeIdImage: UIImageView!
-    @IBOutlet weak var IdImage: UIImageView!
-    
-    @IBOutlet weak var capacityImg: UIImageView!
-    @IBOutlet weak var delegation_numberImg: UIImageView!
-    @IBOutlet weak var LicenceTFImg: UIImageView!
-    
-    @IBOutlet weak var sideLineView: UIView!
     @IBOutlet weak var TypeIdLineView: UIView!
+    @IBOutlet weak var TypeIdTF: UITextField!
+    
+    @IBOutlet weak var IdTF: UITextField!
+    @IBOutlet weak var IdImage: UIImageView!
     @IBOutlet weak var IdLineView: UIView!
     
-    @IBOutlet weak var capacityLineView: UIView!
-    @IBOutlet weak var delegation_numberLineView: UIView!
-    @IBOutlet weak var LicenceTFLinceView: UIView!
-    
+    @IBOutlet weak var sideTF: UITextField!
     @IBOutlet weak var sideView: UIView!
+    @IBOutlet weak var sideImg: UIImageView!
+    @IBOutlet weak var sideLineView: UIView!
+    
+    
+    @IBOutlet weak var capacityTF: UITextField!
     @IBOutlet weak var capacityView: UIView!
+    @IBOutlet weak var capacityLineView: UIView!
+    @IBOutlet weak var capacityImg: UIImageView!
+    
+    
+    
+    @IBOutlet weak var delegation_numberTF: UITextField!
+    @IBOutlet weak var delegation_numberImg: UIImageView!
+    @IBOutlet weak var delegation_numberLineView: UIView!
     @IBOutlet weak var delegation_numberView: UIView!
+    
+    
+    
+    @IBOutlet weak var LicenceTF: UITextField!
+    @IBOutlet weak var LicenceTFImg: UIImageView!
+    @IBOutlet weak var LicenceTFLinceView: UIView!
     @IBOutlet weak var LicenceView: UIView!
     
-    @IBOutlet weak var TypeIdTF: UITextField!
-    @IBOutlet weak var IdTF: UITextField!
+  
+  
+    
+   
+   
+    
+    
+   
+   
+    
+   
+   
+   
+    
+   
+   
+   
+    
+    
+   
+   
     
     var sidePicker = UIPickerView()
     var capacityPicker = UIPickerView()

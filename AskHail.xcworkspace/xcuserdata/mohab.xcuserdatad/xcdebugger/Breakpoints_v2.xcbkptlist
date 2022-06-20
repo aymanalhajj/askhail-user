@@ -30,8 +30,8 @@
             filePath = "AskHail/Scenes/MyProfileWithAds/EditProfile/EditMyInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
             landmarkName = "updateProfile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "AskHail/Scenes/MyProfileWithAds/EditProfile/EditMyInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "428"
+            endingLineNumber = "428"
             landmarkName = "updateProfile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "AskHail/Scenes/MyProfileWithAds/EditProfile/EditMyInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "418"
+            endingLineNumber = "418"
             landmarkName = "updateProfile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "AskHail/Scenes/Home/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -87,16 +87,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D6CFB41-D0B1-4DD2-B8A6-8D43337349F3"
-            shouldBeEnabled = "Yes"
+            uuid = "F42E4FB8-3163-4047-9CCE-925A115DC78B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AskHail/Scenes/Home/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "398"
-            endingLineNumber = "398"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "614"
+            endingLineNumber = "614"
+            landmarkName = "App_Info()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

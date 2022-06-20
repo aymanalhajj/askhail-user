@@ -128,7 +128,6 @@
 		4DFFA3DA255611C600D56614 /* AddNewPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFA3D9255611C600D56614 /* AddNewPopUpVC.swift */; };
 		4DFFA4102556175500D56614 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFA40F2556175500D56614 /* BaseViewController.swift */; };
 		4DFFA41B2556202500D56614 /* AdsTermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFA41A2556202500D56614 /* AdsTermsVC.swift */; };
-		7D11D11BCE837202EADFC263 /* Pods_AskHail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00F0CB0C1C9941509B3F44F /* Pods_AskHail.framework */; };
 		B847D53D254B1AD9004985E3 /* RealtySaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B847D53C254B1AD9004985E3 /* RealtySaleVC.swift */; };
 		B847D545254B1DFF004985E3 /* RealtySaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B847D543254B1DFF004985E3 /* RealtySaleCell.swift */; };
 		B847D546254B1DFF004985E3 /* RealtySaleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B847D544254B1DFF004985E3 /* RealtySaleCell.xib */; };
@@ -196,6 +195,7 @@
 		C1A2C68A240B9F02003EE54F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2C689240B9F02003EE54F /* Constant.swift */; };
 		C1C8BC9227EB5B0200D647BE /* TypeIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8BC9127EB5B0200D647BE /* TypeIdModel.swift */; };
 		C1E21C6D25B0A731000E7485 /* PhotoDetialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E21C6C25B0A731000E7485 /* PhotoDetialsVC.swift */; };
+		C1E798D828493B28003ED7F1 /* Pods_AskHail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E798D728493B28003ED7F1 /* Pods_AskHail.framework */; };
 		CC013C722570409800B643BB /* PackagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC013C712570409800B643BB /* PackagesModel.swift */; };
 		CC013CA925704C4300B643BB /* PackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC013CA825704C4300B643BB /* PackageModel.swift */; };
 		CC025D2825B26F8600FD5B08 /* AddDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025D2625B26F8600FD5B08 /* AddDetailsCell.swift */; };
@@ -545,6 +545,7 @@
 		C1BBA471245C56A000CBFA0F /* اوصلك.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "اوصلك.entitlements"; sourceTree = "<group>"; };
 		C1C8BC9127EB5B0200D647BE /* TypeIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeIdModel.swift; sourceTree = "<group>"; };
 		C1E21C6C25B0A731000E7485 /* PhotoDetialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetialsVC.swift; sourceTree = "<group>"; };
+		C1E798D728493B28003ED7F1 /* Pods_AskHail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AskHail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC013C712570409800B643BB /* PackagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesModel.swift; sourceTree = "<group>"; };
 		CC013CA825704C4300B643BB /* PackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageModel.swift; sourceTree = "<group>"; };
 		CC025D2625B26F8600FD5B08 /* AddDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddDetailsCell.swift; path = "../New Group/AddDetailsCell.swift"; sourceTree = "<group>"; };
@@ -713,7 +714,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D11D11BCE837202EADFC263 /* Pods_AskHail.framework in Frameworks */,
+				C1E798D828493B28003ED7F1 /* Pods_AskHail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,6 +1089,7 @@
 		52F0DD6F536B4DDFB3CEFA2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1E798D728493B28003ED7F1 /* Pods_AskHail.framework */,
 				C00F0CB0C1C9941509B3F44F /* Pods_AskHail.framework */,
 			);
 			name = Frameworks;
@@ -2478,6 +2480,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2541,6 +2544,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2580,7 +2584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 4.2;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesal.askHail;
 				PRODUCT_NAME = AskHail;
@@ -2607,7 +2611,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.6;
+				MARKETING_VERSION = 4.2;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wesal.askHail;
 				PRODUCT_NAME = AskHail;

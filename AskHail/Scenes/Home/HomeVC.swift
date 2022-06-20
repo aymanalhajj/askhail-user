@@ -53,6 +53,8 @@ class HomeVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+       
+       
         App_Info()
         NotificationCenter.default.addObserver(self, selector: #selector(showPopUp), name: NSNotification.Name(rawValue: NotificationCenterpreePlusBtn), object: nil)
         tabBarController?.tabBar.isHidden = false
@@ -609,6 +611,16 @@ extension HomeVC {
                     return
                 }
                 
+                print(data.data?.app_messages_count)
+                if data.data?.app_messages_count != 0 , data.data?.app_messages_count != nil {
+                    if let tabItems = self.tabBarController?.tabBar.items {
+                        // In this case we want to modify the badge number of the third tab:
+                        let tabItem = tabItems[1]
+                        tabItem.badgeValue = "\(data.data?.app_messages_count ?? 0)"
+                    }
+                }
+              
+                
                app_enable_show_count = data.data?.app_enable_show_count ?? false
                 
                 print(data.data?.app_banner ?? "")
@@ -635,4 +647,5 @@ extension HomeVC {
         }
     }
     
+
 }
