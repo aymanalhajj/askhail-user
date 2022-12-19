@@ -8,6 +8,7 @@
 
 import Foundation
 import STTabbar
+import UIKit
 
 extension Helper {
     
@@ -43,7 +44,9 @@ class CustomTabViewController: UITabBarController , UITabBarControllerDelegate {
         
         
         if let myTabbar = tabBar as? STTabbar {
-            
+            myTabbar.centerButtonColor = UIColor.init(hexString: "#39CDEE")
+            myTabbar.selectionColor = UIColor.init(hexString: "#034B89")
+            myTabbar.buttonImage = UIImage.init(named: "ic_add")
 //            guard Helper.getapitoken() != nil else {
 //                alertSkipLogin()
 //                return

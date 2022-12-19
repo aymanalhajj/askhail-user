@@ -72,9 +72,6 @@ class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
         let animation = Animation.named("splacsh2", subdirectory: "TestAnimations")
         
         animationView.animation = animation

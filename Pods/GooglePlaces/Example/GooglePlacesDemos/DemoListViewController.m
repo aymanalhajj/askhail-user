@@ -59,7 +59,19 @@ static const CGFloat kEdgeBuffer = 8;
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // Set up the edit selections UI.
+  UINavigationBar *navBar = self.navigationController.navigationBar;
+  if (@available(iOS 13, *)) {
+    UINavigationBarAppearance *navBarAppearance = [[UINavigationBarAppearance alloc] init];
+    [navBarAppearance configureWithOpaqueBackground];
+    navBarAppearance.backgroundColor = [UIColor systemBackgroundColor];
+    [navBarAppearance
+        setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor labelColor]}];
+
+    navBar.standardAppearance = navBarAppearance;
+    navBar.scrollEdgeAppearance = navBarAppearance;
+  } else {
+    navBar.translucent = NO;
+  }
   [self setUpEditSelectionsUI];
 
   // Add button to the header to edit the place field selections.
@@ -384,8 +396,8 @@ static const CGFloat kEdgeBuffer = 8;
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   // Dequeue a table view cell to use.
-  UITableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier
+                                                          forIndexPath:indexPath];
 
   // Grab the demo object.
   Demo *demo = _demoData.sections[indexPath.section].demos[indexPath.row];

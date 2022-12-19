@@ -31,7 +31,7 @@ class ApiServices : UIViewController {
                
                 "Accept-Language": self.lang,
                 "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")" ,
-                "lat" : AuthService.userData?.advertiser_api_token ?? "" ,
+                "lat" : Helper.getUser_lat() ?? "" ,
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{

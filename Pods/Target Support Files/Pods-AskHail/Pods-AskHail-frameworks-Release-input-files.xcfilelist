@@ -9,6 +9,7 @@ ${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework
+${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework
@@ -23,6 +24,7 @@ ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/JHSpinner/JHSpinner.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/LXStatusAlert/LXStatusAlert.framework
+${BUILT_PRODUCTS_DIR}/Libuv-gRPC/uv.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
 ${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework
 ${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework

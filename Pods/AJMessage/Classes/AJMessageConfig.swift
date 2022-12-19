@@ -15,10 +15,10 @@ public struct AJMessageConfig {
     
     public static var shared = AJMessageConfig()
     
-    public var titleFont : UIFont = AppFont.bold.size(15)
+    public var titleFont : UIFont = UIFont.boldSystemFont(ofSize: 15)
     public var titleColor : UIColor = .white
     public var messageColor : UIColor = .white
-    public var messageFont : UIFont = AppFont.bold.size(15)
+    public var messageFont : UIFont = UIFont.systemFont(ofSize: 14)
     
     var images : [AJMessage.Status : UIImage] = [:]
     var backgrounColors : [AJMessage.Status : UIColor] = [:]
@@ -53,23 +53,5 @@ public struct AJMessageConfig {
     public mutating func setBackgroundColor(_ color:UIColor?, status: AJMessage.Status) {
         guard let clr = color else { return }
         backgrounColors[status] = clr
-    }
-}
-let FontfamilyName = "Tajawal"
-enum AppFont: String {
-    case light = "Light"
-    case regular = "Regular"
-    case bold = "Bold"
-
-    func size(_ size: CGFloat) -> UIFont {
-        if let font = UIFont(name: fullFontName, size: size) {
-            return font
-        }
-        fatalError("Font '\(fullFontName)' does not exist.")
-    }
-    fileprivate var fullFontName: String {
-        
-        print(rawValue.isEmpty ? FontfamilyName : FontfamilyName + "-" + rawValue)
-        return rawValue.isEmpty ? FontfamilyName : FontfamilyName + "-" + rawValue
     }
 }
