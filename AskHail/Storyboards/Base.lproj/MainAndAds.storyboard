@@ -7152,6 +7152,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="NB0-yO-rX2">
+            <size key="intrinsicContentSize" width="245" height="45"/>
+        </designable>
         <designable name="OdC-Yx-q9p">
             <size key="intrinsicContentSize" width="-1" height="83"/>
         </designable>
