@@ -964,7 +964,7 @@ extension EditDetailsVD {
         ] as [String : Any]
         
         
-        ApiServices.instance.getPosts(methodType: .post, parameters: Parameters as [String : AnyObject], url: "\(hostName)user-add-advertisement/show-advertisement-features") { (data : FeaturesModel?, String) in
+        ApiServices.instance.getPosts(methodType: .post, parameters: Parameters as [String : AnyObject], url: "\(hostName)user-add-advertisement/show-advertisement-features?new_version=1") { (data : FeaturesModel?, String) in
             
             self.view.unlock()
             

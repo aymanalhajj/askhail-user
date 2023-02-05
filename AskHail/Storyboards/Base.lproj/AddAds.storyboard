@@ -1025,11 +1025,15 @@
                         <outlet property="RegionLineView" destination="Iqc-Si-9Xh" id="vBt-mh-Qxx"/>
                         <outlet property="RegionTf" destination="lb0-5e-IGf" id="xbY-gI-YUN"/>
                         <outlet property="ScrollHeight" destination="fAM-Vz-tY3" id="nxK-n6-541"/>
+                        <outlet property="cityNameView" destination="5ET-WX-iRC" id="bdO-Dm-hM2"/>
                         <outlet property="desLineView" destination="tOy-uC-Vw6" id="lwB-V8-YCb"/>
                         <outlet property="desTxt" destination="A67-t5-jXg" id="svw-ts-07A"/>
                         <outlet property="directionImage" destination="oNC-kI-7Br" id="A0f-mi-zpw"/>
                         <outlet property="directionLineView" destination="6w9-Se-aM2" id="OQd-ev-0Td"/>
                         <outlet property="directionTf" destination="1RC-sx-d9I" id="reI-2N-QD2"/>
+                        <outlet property="distinationView" destination="qJB-Jp-KhW" id="BC7-0W-pM0"/>
+                        <outlet property="districtNameView" destination="dxt-j4-iV0" id="74F-E5-kyQ"/>
+                        <outlet property="districtView" destination="YDG-qD-oac" id="Efm-7U-fbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8j-zg-u34" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1138,7 +1142,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التواصل داخل التطبيق إجباري" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-D3-9Ru">
-                                                        <rect key="frame" x="132.66666666666663" y="26" width="141.33333333333337" height="12"/>
+                                                        <rect key="frame" x="133" y="26" width="141" height="12"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                         <color key="textColor" red="0.0092072682459999992" green="0.29380530119999998" blue="0.53738009929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>

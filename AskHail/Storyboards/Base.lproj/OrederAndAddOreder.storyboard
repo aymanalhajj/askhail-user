@@ -586,7 +586,7 @@
         <!--Order DetailsVC-->
         <scene sceneID="NSj-mw-VDD">
             <objects>
-                <viewController storyboardIdentifier="OrderDetailsVC" id="5n8-E1-5W5" customClass="OrderDetailsVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5n8-E1-5W5" customClass="OrderDetailsVC" customModule="AskHail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oh2-TP-7Vs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1106,11 +1106,15 @@
                         <outlet property="RegionLineView" destination="YvX-8s-WYl" id="c9Y-Gx-fNh"/>
                         <outlet property="RegionTf" destination="yRb-BE-Nk9" id="pVv-H8-3Hh"/>
                         <outlet property="ScrollHeight" destination="8Bi-Fr-HQP" id="APW-uc-KzT"/>
+                        <outlet property="cityNameView" destination="OVo-Xi-Rch" id="mhc-sw-p4D"/>
                         <outlet property="desLineView" destination="St4-0n-Xfa" id="89W-Qk-cJU"/>
                         <outlet property="desTxt" destination="urp-BO-xFY" id="sCx-Jq-r3k"/>
                         <outlet property="directionImage" destination="fgp-gI-1ou" id="3IJ-Sm-3fJ"/>
                         <outlet property="directionLineView" destination="zJH-Hn-UBH" id="20P-1f-nBD"/>
                         <outlet property="directionTf" destination="iA1-dB-RuF" id="8Rb-Ix-S7A"/>
+                        <outlet property="distinationView" destination="fGC-8B-Mi7" id="eo0-op-2cz"/>
+                        <outlet property="districtNameView" destination="1Us-YT-qVf" id="SG6-Ls-yMH"/>
+                        <outlet property="districtView" destination="Wgu-TY-TgZ" id="Sny-m8-eRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoU-ef-2zu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
