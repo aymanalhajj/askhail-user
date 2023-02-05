@@ -338,11 +338,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        
-     //   NotificationCenter.default.post(name: Notification.Name(Notification_Unlock_Screen), object: nil)
-        
-        print("When Unlock Screen")
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("reloadPermission"), object: nil)
+        NotificationCenter.default.removeObserver(self)
+
+        NotificationCenter.default.post(name: Notification.Name("reloadPermission"), object: nil, userInfo: nil)
     }
+
+
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         NotificationCenter.default.post(name: Notification.Name(Notification_Unlock_Screen), object: nil)
