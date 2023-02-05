@@ -78,11 +78,15 @@ class Manager  : UIViewController {
         if AuthService.userData?.advertiser_api_token != "" && AuthService.userData?.advertiser_api_token != nil {
             headers = [
                 "Accept-Language": self.lang,
-                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")"
+                "Authorization": "Bearer \(AuthService.userData?.advertiser_api_token ?? "")",
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
-            headers = [
-                "Accept-Language": self.lang
+             headers = [
+                "Accept-Language": self.lang,
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }
         let net = NetworkReachabilityManager()

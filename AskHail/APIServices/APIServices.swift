@@ -35,8 +35,11 @@ class ApiServices : UIViewController {
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
+           
             headers = [
-                "Accept-Language": self.lang
+                "Accept-Language": self.lang,
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }
         
@@ -163,8 +166,10 @@ class ApiServices : UIViewController {
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
-            headers = [
-                "Accept-Language": self.lang
+             headers = [
+                "Accept-Language": self.lang,
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }
         
@@ -308,8 +313,10 @@ class ApiServices : UIViewController {
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
-            headers = [
-                "Accept-Language": self.lang
+             headers = [
+                "Accept-Language": self.lang,
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }
         
@@ -424,8 +431,10 @@ class ApiServices : UIViewController {
                 "lng" : Helper.getUser_Lng() ?? ""
             ]
         }else{
-            headers = [
-                "Accept-Language": self.lang
+             headers = [
+                "Accept-Language": self.lang,
+                "lat" : Helper.getUser_lat() ?? "" ,
+                "lng" : Helper.getUser_Lng() ?? ""
             ]
         }
         

@@ -111,12 +111,11 @@ class SplashVC: UIViewController {
         NotificationCenter.default.removeObserver(self)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("reloadPermission"), object: nil)
-     
 
     }
     
     func startNavigate() {
-        guard let window = UIApplication.shared.keyWindow else{return}
+        guard let window = UIApplication.shared.keyWindow else { return }
         if AuthService.userData?.advertiser_api_token != nil {
             
             let sb = UIStoryboard(name: Home, bundle: nil)
