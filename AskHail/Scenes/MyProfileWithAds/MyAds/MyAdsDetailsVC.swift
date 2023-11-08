@@ -701,7 +701,7 @@ extension MyAdsDetailsVC {
                 self.CreateMarker(Lat: Double(data.data?.advertisement_details?.adv_latitude ?? "0.0") ?? 0.0, lng: Double(data.data?.advertisement_details?.adv_longitude ?? "0.0") ?? 0.0)
                 
                 
-                if data.data?.advertisement_details?.adv_promotional_image ?? "" == "" || data.data?.advertisement_details?.adv_promotional_image ?? "" == "https://askhail.com/public/images/no_image.png" {
+                if data.data?.advertisement_details?.adv_promotional_image ?? "" == "" || data.data?.advertisement_details?.adv_promotional_image ?? "" == "https://askhail.com.sa/public/images/no_image.png" {
                     self.PromotionalPhotoBtn.isHidden = true
                 }else{
                     self.PromotionalPhotoBtn.isHidden = false

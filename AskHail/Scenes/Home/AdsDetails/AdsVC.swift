@@ -944,7 +944,7 @@ extension AdsVC {
                 }
                 
                 
-                if data.data?.advertisement_details?.adv_promotional_image ?? "" == "" || data.data?.advertisement_details?.adv_promotional_image ?? "" == "https://askhail.com/public/images/no_image.png" {
+                if data.data?.advertisement_details?.adv_promotional_image ?? "" == "" || data.data?.advertisement_details?.adv_promotional_image ?? "" == "https://askhail.com.sa/public/images/no_image.png" {
                     self.PromotionalPhotoBtn.isHidden = true
                     self.PromotionalPhotoHight.constant = 0
                 }else{
